@@ -79,6 +79,12 @@ def scale_features(X_train, X_test):
 class NOxDataset(Dataset):
 
     def __init__(self, X, y):
+        X = np.array(X) if not isinstance(X, np.ndarray) else X
+        y = np.array(y) if not isinstance(y, np.ndarray) else y
+
+        assert len(X) == len(y), \
+            f"X length {len(X)} != y length {len(y)}"
+        
         self.X = torch.tensor(X, dtype=torch.float32)
         self.y = torch.tensor(y, dtype=torch.float32).unsqueeze(1)
 
@@ -119,6 +125,11 @@ def get_logo_splits(df, features, target_col='nox_transformed'):
 
         X_tr_scaled, X_te_scaled, scaler = scale_features(X_tr_raw.values, X_te_raw.values)
 
+        assert len(X_tr_scaled) == len(y_tr), \
+            f"Train size mismatch: {len(X_tr_scaled)} vs {len(y_tr)}"
+        assert len(X_te_scaled) == len(y_te), \
+            f"Test size mismatch: {len(X_te_scaled)} vs {len(y_te)}"
+        
         yield X_tr_scaled, X_te_scaled, y_tr, y_te, held_out, scaler
 
 #Test
