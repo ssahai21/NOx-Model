@@ -6,6 +6,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 import matplotlib.pyplot as plt
 import sys
 import os
+import json
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.data_loader import (
@@ -128,6 +129,11 @@ def run_logo_cv(df, features, device='cpu'):
     results = []
 
     for X_tr, X_te, y_tr, y_te, fire, scaler in get_logo_splits(df, features):
+        print(f"y_tr range: {y_tr.min():.2f} to {y_tr.max():.2f}")
+        print(f"y_te range: {y_te.min():.2f} to {y_te.max():.2f}")
+        print(f"y_tr std: {y_tr.std():.2f}")
+        print(f"y_te std: {y_te.std():.2f}")
+
         print(f"\n{'='*55}")
         print(f"Held-out fire: {fire}")
         print(f"Train: {X_tr.shape} | Test: {X_te.shape}")
@@ -151,22 +157,30 @@ def run_logo_cv(df, features, device='cpu'):
             model, test_loader, criterion, device
         )
 
-        preds_physical = np.sinh(preds_transformed)
+        r2_transformed  = r2_score(labels_transformed, preds_transformed)
+        mae_transformed = mean_absolute_error(labels_transformed, preds_transformed)
+
+        # Also compute physical space but clip predictions first
+        preds_clipped   = np.clip(preds_transformed, y_te.min(), y_te.max())
+        preds_physical  = np.sinh(preds_clipped)
         labels_physical = np.sinh(labels_transformed)
 
-        r2 = r2_score(labels_physical, preds_physical)
-        mae = mean_absolute_error(labels_physical, preds_physical)
-        pb = (np.sum(preds_physical-labels_physical) / np.sum(np.abs(labels_physical))) * 100
+        r2_physical  = r2_score(labels_physical, preds_physical)
+        mae_physical = mean_absolute_error(labels_physical, preds_physical)
+        pb = (np.sum(preds_physical - labels_physical) /
+                np.sum(np.abs(labels_physical))) * 100
 
         print(f"\nResults for {fire}:")
-        print(f"  R²:        {r2:.4f}")
-        print(f"  MAE:       {mae:.4f} ng N/m²/s")
-        print(f"  PB Bias:   {pb:.2f}%")
+        print(f"  R² (transformed): {r2_transformed:.4f}")
+        print(f"  R² (physical):    {r2_physical:.4f}")
+        print(f"  MAE (physical):   {mae_physical:.4f} ng N/m²/s")
+        print(f"  PB Bias:          {pb:.2f}%")
 
         results.append({
             'fire':             fire,
-            'r2':               r2,
-            'mae':              mae,
+            'r2':               r2_transformed,  # use transformed for summary
+            'r2_physical':      r2_physical,
+            'mae':              mae_physical,
             'pb_bias':          pb,
             'preds_physical':   preds_physical,
             'labels_physical':  labels_physical,
@@ -225,5 +239,30 @@ if __name__ == '__main__':
     df['nox_transformed'] = prepare_target(df)
 
     results = run_logo_cv(df, features, device=device)
+
+    baseline_summary = {
+        'mean_r2_transformed': float(np.mean([r['r2'] for r in results])),
+        'std_r2_transformed':  float(np.std([r['r2']  for r in results])),
+        'mean_mae_physical':   float(np.mean([r['mae'] for r in results])),
+        'std_mae_physical':    float(np.std([r['mae']  for r in results])),
+        'mean_pbias':          float(np.mean([r['pb_bias'] for r in results])),
+        'std_pbias':           float(np.std([r['pb_bias']  for r in results])),
+        'per_fire': {
+            r['fire']: {
+                'r2_transformed': float(r['r2']),
+                'r2_physical':    float(r['r2_physical']),
+                'mae_physical':   float(r['mae']),
+                'pbias':          float(r['pb_bias'])
+            }
+            for r in results
+        }
+    }
+
+    os.makedirs('results', exist_ok=True)
+    with open('results/baseline_nn_results.json', 'w') as f:
+        json.dump(baseline_summary, f, indent=2)
+
+    print("\nBaseline results saved to results/baseline_nn_results.json")
+    print(json.dumps(baseline_summary, indent=2))
 
     plot_training_history(results)

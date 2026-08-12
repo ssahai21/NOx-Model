@@ -95,10 +95,10 @@ class NOxDataset(Dataset):
         return self.X[idx], self.y[idx]
 
 def make_dataloaders(X_train, y_train, X_test, y_test, batch_size=256, shuffle_train=True):
-    train_datset = NOxDataset(X_train, y_train)
+    train_dataset = NOxDataset(X_train, y_train)
     test_dataset = NOxDataset(X_test, y_test)
 
-    train_loader = DataLoader(train_datset, batch_size=batch_size, shuffle=shuffle_train)
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=shuffle_train)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
     return train_loader, test_loader
@@ -118,6 +118,9 @@ def get_logo_splits(df, features, target_col='nox_transformed'):
         X_te_raw = X.iloc[test_idx]
         y_tr = y[train_idx]
         y_te = y[test_idx]
+
+        y_tr_min, y_tr_max = y_tr.min(), y_tr.max()
+        y_te = np.clip(y_te, y_tr_min, y_tr_max)
 
         train_median = X_tr_raw.median()
         X_tr_raw = X_tr_raw.fillna(train_median)
