@@ -413,7 +413,7 @@ if __name__ == '__main__':
     features = get_features(df)
     df['nox_transformed'] = prepare_target(df)
 
-
+    """
     stability_results = {}
 
     for lambda_val in [0.005, 0.05, 0.01]:
@@ -458,14 +458,14 @@ if __name__ == '__main__':
         }, f, indent=2)
 
     print(f"Best lambda locked: {BEST_LAMBDA}")
-
+    """
 
     # Run PINN LOGO CV
-    """
+
     pinn_results = run_pinn_logo_cv(df, features,
-        lambda_physics=0.1,
+        lambda_physics=0.01,
         device=device)
-    """
+
 
     """
 
@@ -500,7 +500,7 @@ if __name__ == '__main__':
     # Compare against baseline
 
     """
-    """
+
     plot_pinn_vs_baseline(
         pinn_results,
         'results/baseline_nn_results.json'
@@ -508,7 +508,7 @@ if __name__ == '__main__':
 
     # Save PINN results
     pinn_summary = {
-        'lambda_physics': lambda_val,
+        'lambda_physics': 0.01,
         'mean_r2_transformed': float(np.mean([r['r2']  for r in pinn_results])),
         'mean_mae_physical':   float(np.mean([r['mae'] for r in pinn_results])),
         'mean_pbias':          float(np.mean([r['pb_bias'] for r in pinn_results])),
@@ -522,7 +522,6 @@ if __name__ == '__main__':
             for r in pinn_results
         }
     }
-    with open(f'results/pinn_results_{lambda_val}.json', 'w') as f:
+    with open(f'results/pinn_results.json', 'w') as f:
         json.dump(pinn_summary, f, indent=2)
-    print(f"PINN results saved to results/pinn_results_{lambda_val}.json")\
-    """
+    print(f"PINN results saved to results/pinn_results.json")

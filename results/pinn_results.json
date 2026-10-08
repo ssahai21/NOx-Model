@@ -1,0 +1,32 @@
+{
+  "lambda_physics": 0.01,
+  "mean_r2_transformed": 0.056145429611206055,
+  "mean_mae_physical": 18.997796363885424,
+  "mean_pbias": -38.81794584985249,
+  "per_fire": {
+    "August Complex": {
+      "r2_transformed": 0.019519269466400146,
+      "r2_physical": -0.024599394411263242,
+      "mae_physical": 21.61785498126858,
+      "pbias": -30.318903370627815
+    },
+    "Camp Fire": {
+      "r2_transformed": -0.14558851718902588,
+      "r2_physical": -0.26537350481637145,
+      "mae_physical": 16.134174336608336,
+      "pbias": -57.35323064921527
+    },
+    "Dixie Fire": {
+      "r2_transformed": 0.17077618837356567,
+      "r2_physical": -0.028994348998821362,
+      "mae_physical": 20.47372068504266,
+      "pbias": -28.218522630337727
+    },
+    "North Complex": {
+      "r2_transformed": 0.17987477779388428,
+      "r2_physical": -0.005343249287139473,
+      "mae_physical": 17.765435452622118,
+      "pbias": -39.38112674922914
+    }
+  }
+}

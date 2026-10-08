@@ -1,0 +1,2378 @@
+[
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.18677830696105957,
+    "mean_mae": 18.623114585876465
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.185707688331604,
+    "mean_mae": 18.648208618164062
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1854322850704193,
+    "mean_mae": 18.74858570098877
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1848055124282837,
+    "mean_mae": 18.91738224029541
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.18454435467720032,
+    "mean_mae": 18.840497970581055
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1836184859275818,
+    "mean_mae": 19.026622772216797
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.18360191583633423,
+    "mean_mae": 18.653449058532715
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1832723617553711,
+    "mean_mae": 18.62874126434326
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1812768280506134,
+    "mean_mae": 18.73163604736328
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1804741621017456,
+    "mean_mae": 18.57602310180664
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17908748984336853,
+    "mean_mae": 18.72576141357422
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17902711033821106,
+    "mean_mae": 18.795310020446777
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17835772037506104,
+    "mean_mae": 18.873116493225098
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17777904868125916,
+    "mean_mae": 18.559494018554688
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17735108733177185,
+    "mean_mae": 18.936951637268066
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1769481599330902,
+    "mean_mae": 18.8591890335083
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17689940333366394,
+    "mean_mae": 19.062804222106934
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17642971873283386,
+    "mean_mae": 18.826960563659668
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17632120847702026,
+    "mean_mae": 18.864246368408203
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17623481154441833,
+    "mean_mae": 18.662053108215332
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17607104778289795,
+    "mean_mae": 18.966991424560547
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17593586444854736,
+    "mean_mae": 18.76787281036377
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17580479383468628,
+    "mean_mae": 18.877288818359375
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17579811811447144,
+    "mean_mae": 18.70635986328125
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17578715085983276,
+    "mean_mae": 18.89405632019043
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17574143409729004,
+    "mean_mae": 18.81332492828369
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17568162083625793,
+    "mean_mae": 18.829049110412598
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17549967765808105,
+    "mean_mae": 18.971871376037598
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17536327242851257,
+    "mean_mae": 19.05878448486328
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17484664916992188,
+    "mean_mae": 18.80592441558838
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17478874325752258,
+    "mean_mae": 18.87178897857666
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17404964566230774,
+    "mean_mae": 19.10098171234131
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17393240332603455,
+    "mean_mae": 18.927799224853516
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17360788583755493,
+    "mean_mae": 19.275614738464355
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1735304892063141,
+    "mean_mae": 18.89565086364746
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1734922230243683,
+    "mean_mae": 18.79270839691162
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17338508367538452,
+    "mean_mae": 19.01595401763916
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1731244921684265,
+    "mean_mae": 19.971755027770996
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17277070879936218,
+    "mean_mae": 18.72360324859619
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17250463366508484,
+    "mean_mae": 18.781705856323242
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17199131846427917,
+    "mean_mae": 18.918319702148438
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17195221781730652,
+    "mean_mae": 18.83331871032715
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.17184430360794067,
+    "mean_mae": 19.086705207824707
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.17069455981254578,
+    "mean_mae": 19.12667942047119
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1699860692024231,
+    "mean_mae": 19.172322273254395
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.16955381631851196,
+    "mean_mae": 18.872783660888672
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16892144083976746,
+    "mean_mae": 20.082988739013672
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.16878122091293335,
+    "mean_mae": 18.76363468170166
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.16831612586975098,
+    "mean_mae": 19.316518783569336
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.16808131337165833,
+    "mean_mae": 18.99979305267334
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1672038435935974,
+    "mean_mae": 19.013479232788086
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16693681478500366,
+    "mean_mae": 19.774636268615723
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16592583060264587,
+    "mean_mae": 19.328611373901367
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16535836458206177,
+    "mean_mae": 20.06118392944336
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.16532814502716064,
+    "mean_mae": 18.938657760620117
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16511693596839905,
+    "mean_mae": 19.916680335998535
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16409042477607727,
+    "mean_mae": 18.789209365844727
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16389787197113037,
+    "mean_mae": 19.07891082763672
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1636657416820526,
+    "mean_mae": 20.12144660949707
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.16363874077796936,
+    "mean_mae": 19.82019805908203
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1636250913143158,
+    "mean_mae": 19.011276245117188
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16361945867538452,
+    "mean_mae": 18.64707374572754
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1625629961490631,
+    "mean_mae": 19.785888671875
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16253423690795898,
+    "mean_mae": 18.948345184326172
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16252708435058594,
+    "mean_mae": 18.680779457092285
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1624414324760437,
+    "mean_mae": 20.180747032165527
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16183730959892273,
+    "mean_mae": 19.19622039794922
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16163179278373718,
+    "mean_mae": 19.677810668945312
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.16108053922653198,
+    "mean_mae": 19.196410179138184
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1607723832130432,
+    "mean_mae": 19.990238189697266
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.16053661704063416,
+    "mean_mae": 20.18791961669922
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.16007336974143982,
+    "mean_mae": 19.84635066986084
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.15943235158920288,
+    "mean_mae": 19.572577476501465
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.15923568606376648,
+    "mean_mae": 20.07110023498535
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.15909671783447266,
+    "mean_mae": 19.887174606323242
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.15784487128257751,
+    "mean_mae": 19.77274227142334
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.15765944123268127,
+    "mean_mae": 19.897866249084473
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.15764272212982178,
+    "mean_mae": 19.76138401031494
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.15747490525245667,
+    "mean_mae": 20.05126953125
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.15631529688835144,
+    "mean_mae": 19.80282497406006
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.15579277276992798,
+    "mean_mae": 19.803622245788574
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1543307900428772,
+    "mean_mae": 19.9059419631958
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.153611958026886,
+    "mean_mae": 19.759961128234863
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.15306925773620605,
+    "mean_mae": 20.533336639404297
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.15248936414718628,
+    "mean_mae": 20.039703369140625
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1520395576953888,
+    "mean_mae": 19.317282676696777
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.15188336372375488,
+    "mean_mae": 18.986842155456543
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.15185096859931946,
+    "mean_mae": 20.48330593109131
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.14911001920700073,
+    "mean_mae": 18.995508193969727
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1485804319381714,
+    "mean_mae": 20.210325241088867
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.14784353971481323,
+    "mean_mae": 19.995444297790527
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.14781922101974487,
+    "mean_mae": 20.26778793334961
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1472485363483429,
+    "mean_mae": 20.2199764251709
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1472286880016327,
+    "mean_mae": 19.952035903930664
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1447266936302185,
+    "mean_mae": 18.91644859313965
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.14396068453788757,
+    "mean_mae": 19.839488983154297
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1438329517841339,
+    "mean_mae": 20.242791175842285
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.14332440495491028,
+    "mean_mae": 19.077296257019043
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.14311230182647705,
+    "mean_mae": 19.140238761901855
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.14267441630363464,
+    "mean_mae": 19.038421630859375
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.14262092113494873,
+    "mean_mae": 20.616661071777344
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.14195725321769714,
+    "mean_mae": 19.428229331970215
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1411118507385254,
+    "mean_mae": 19.976555824279785
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.14081886410713196,
+    "mean_mae": 20.025588035583496
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1406397521495819,
+    "mean_mae": 19.23593044281006
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1403043568134308,
+    "mean_mae": 19.205317497253418
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.13960817456245422,
+    "mean_mae": 19.831974029541016
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.13954198360443115,
+    "mean_mae": 19.20190715789795
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.13925692439079285,
+    "mean_mae": 19.290691375732422
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.13865402340888977,
+    "mean_mae": 20.27962017059326
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.13852092623710632,
+    "mean_mae": 19.265830993652344
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.13821494579315186,
+    "mean_mae": 19.84266948699951
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1382034718990326,
+    "mean_mae": 19.817421913146973
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.13782137632369995,
+    "mean_mae": 19.85222339630127
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1366128921508789,
+    "mean_mae": 19.20320224761963
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.13441979885101318,
+    "mean_mae": 19.99931049346924
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.13077309727668762,
+    "mean_mae": 21.43839740753174
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.1307687759399414,
+    "mean_mae": 19.923863410949707
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.12938091158866882,
+    "mean_mae": 19.956829071044922
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.12824389338493347,
+    "mean_mae": 19.380406379699707
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.12819311022758484,
+    "mean_mae": 19.985088348388672
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.1255260705947876,
+    "mean_mae": 19.3851900100708
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.12500381469726562,
+    "mean_mae": 19.898643493652344
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.12358564138412476,
+    "mean_mae": 19.205683708190918
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.12209123373031616,
+    "mean_mae": 21.037707328796387
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.12207105755805969,
+    "mean_mae": 20.222020149230957
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.11504331231117249,
+    "mean_mae": 19.425823211669922
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.11502453684806824,
+    "mean_mae": 20.24370002746582
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.11402034759521484,
+    "mean_mae": 21.332225799560547
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.11388683319091797,
+    "mean_mae": 21.523649215698242
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.11167794466018677,
+    "mean_mae": 20.30744171142578
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.11107221245765686,
+    "mean_mae": 20.181111335754395
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.10825136303901672,
+    "mean_mae": 19.757827758789062
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.10409364104270935,
+    "mean_mae": 20.40545082092285
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.10142907500267029,
+    "mean_mae": 19.22645092010498
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.10052400827407837,
+    "mean_mae": 19.5689058303833
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.09724417328834534,
+    "mean_mae": 20.266587257385254
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.09325683116912842,
+    "mean_mae": 19.80792999267578
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.09312409162521362,
+    "mean_mae": 20.010069847106934
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.09282040596008301,
+    "mean_mae": 21.13599967956543
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.0920957624912262,
+    "mean_mae": 21.247164726257324
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.09116140007972717,
+    "mean_mae": 20.22330665588379
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.08588796854019165,
+    "mean_mae": 19.69161033630371
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.08490467071533203,
+    "mean_mae": 21.09765338897705
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.08471891283988953,
+    "mean_mae": 20.088807106018066
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.0843629240989685,
+    "mean_mae": 19.772836685180664
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.0826931893825531,
+    "mean_mae": 19.655052185058594
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.07943803071975708,
+    "mean_mae": 19.9104585647583
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.07893133163452148,
+    "mean_mae": 21.194467544555664
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.07882741093635559,
+    "mean_mae": 19.63247013092041
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.07643115520477295,
+    "mean_mae": 19.945263862609863
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.07592514157295227,
+    "mean_mae": 19.8622465133667
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.07470428943634033,
+    "mean_mae": 19.7647705078125
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.07427304983139038,
+    "mean_mae": 20.31421661376953
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.07265949249267578,
+    "mean_mae": 20.896281242370605
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.06987062096595764,
+    "mean_mae": 20.734551429748535
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.06985801458358765,
+    "mean_mae": 21.078415870666504
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.06817376613616943,
+    "mean_mae": 20.804861068725586
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.06532421708106995,
+    "mean_mae": 20.123035430908203
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.06412288546562195,
+    "mean_mae": 19.861787796020508
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.06390395760536194,
+    "mean_mae": 19.820565223693848
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.06324228644371033,
+    "mean_mae": 19.950716018676758
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.0630568265914917,
+    "mean_mae": 19.70677089691162
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.06096857786178589,
+    "mean_mae": 20.01149082183838
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.05789443850517273,
+    "mean_mae": 19.784873008728027
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.057163625955581665,
+    "mean_mae": 20.540939331054688
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.057065725326538086,
+    "mean_mae": 21.043842315673828
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.053674280643463135,
+    "mean_mae": 20.815184593200684
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.05204644799232483,
+    "mean_mae": 19.94488525390625
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.0472773015499115,
+    "mean_mae": 20.796908378601074
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.04684135317802429,
+    "mean_mae": 20.025962829589844
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.04626500606536865,
+    "mean_mae": 20.031058311462402
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.04515063762664795,
+    "mean_mae": 20.84701442718506
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.043333351612091064,
+    "mean_mae": 20.9157075881958
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.04215678572654724,
+    "mean_mae": 20.096571922302246
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.04062777757644653,
+    "mean_mae": 19.895297050476074
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.0397908091545105,
+    "mean_mae": 20.25165367126465
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.03887063264846802,
+    "mean_mae": 20.87925148010254
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.0385357141494751,
+    "mean_mae": 21.12971591949463
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.03719481825828552,
+    "mean_mae": 19.987509727478027
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.036199212074279785,
+    "mean_mae": 20.79193115234375
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.0329473614692688,
+    "mean_mae": 20.026150703430176
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.027249038219451904,
+    "mean_mae": 21.230146408081055
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.026972860097885132,
+    "mean_mae": 20.823206901550293
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.026934772729873657,
+    "mean_mae": 20.19598388671875
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.026885569095611572,
+    "mean_mae": 20.059578895568848
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.026165902614593506,
+    "mean_mae": 20.061914443969727
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.025811105966567993,
+    "mean_mae": 20.2113618850708
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.021608173847198486,
+    "mean_mae": 20.158655166625977
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.017737776041030884,
+    "mean_mae": 21.092814445495605
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.014341145753860474,
+    "mean_mae": 19.996323585510254
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.01426956057548523,
+    "mean_mae": 21.12376308441162
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.01108589768409729,
+    "mean_mae": 20.9974946975708
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.010161787271499634,
+    "mean_mae": 21.064406394958496
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.007430046796798706,
+    "mean_mae": 20.12320613861084
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": 0.007240623235702515,
+    "mean_mae": 20.208059310913086
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": 0.0006902515888214111,
+    "mean_mae": 20.073683738708496
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": -0.00019499659538269043,
+    "mean_mae": 21.136320114135742
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.0023867785930633545,
+    "mean_mae": 21.56735324859619
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.004483848810195923,
+    "mean_mae": 21.095032691955566
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.5,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.001
+    },
+    "mean_r2": -0.004655569791793823,
+    "mean_mae": 20.294166564941406
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.005591362714767456,
+    "mean_mae": 20.854376792907715
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.00941842794418335,
+    "mean_mae": 22.190892219543457
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": -0.012098342180252075,
+    "mean_mae": 20.6255464553833
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.016851961612701416,
+    "mean_mae": 21.494464874267578
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.02146291732788086,
+    "mean_mae": 21.94731616973877
+  },
+  {
+    "config": {
+      "hidden_dims": "[512, 256, 128]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": -0.023473352193832397,
+    "mean_mae": 20.965941429138184
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.02675682306289673,
+    "mean_mae": 21.316482543945312
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0005,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.02923169732093811,
+    "mean_mae": 22.148284912109375
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.03587216138839722,
+    "mean_mae": 21.24986457824707
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.05733442306518555,
+    "mean_mae": 21.429173469543457
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 256,
+      "weight_decay": 0.001
+    },
+    "mean_r2": -0.05901724100112915,
+    "mean_mae": 21.334288597106934
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.05986499786376953,
+    "mean_mae": 21.257944107055664
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 512,
+      "weight_decay": 0.0001
+    },
+    "mean_r2": -0.07546615600585938,
+    "mean_mae": 23.21363925933838
+  },
+  {
+    "config": {
+      "hidden_dims": "[128, 64, 32]",
+      "dropout": 0.3,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": -0.10877251625061035,
+    "mean_mae": 23.077119827270508
+  },
+  {
+    "config": {
+      "hidden_dims": "[256, 128, 64]",
+      "dropout": 0.1,
+      "lr": 0.0001,
+      "batch_size": 1024,
+      "weight_decay": 0.001
+    },
+    "mean_r2": -0.27198395133018494,
+    "mean_mae": 22.052244186401367
+  }
+]
