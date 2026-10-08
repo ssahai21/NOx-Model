@@ -362,6 +362,9 @@ class PhysicsLoss(nn.Module):
             'total':       total_loss.item()
         }
 
+        physics_loss = torch.clamp(physics_loss, max=1000.0)
+        total_loss   = data_loss + self.lambda_physics * physics_loss
+
         return total_loss, data_loss, physics_loss, loss_components
 
 
