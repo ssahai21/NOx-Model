@@ -1,0 +1,73 @@
+{
+  "data": "data/phase_2_all_fires_model.csv",
+  "data_sha256": "a70c27c73cddb614eb22781738bf2bc0b115f413575f7724603e73bbf68656d0",
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "feature_count": 55,
+  "preprocessing": "Matches the NN selected land-cover representation for each fire and seed; train-only medians/scaler, input z cap 5.",
+  "training_target": "Training p1/p99 cap; full validation and test labels.",
+  "weighting": "Data weight 3 on days 0\u201330, otherwise 1.",
+  "validation": "Last 20% of observed dates per training fire, unweighted arcsinh MSE; test fire excluded.",
+  "losses": {
+    "arcsinh": "Both algorithms use squared error on arcsinh targets.",
+    "flux": "NN uses SmoothL1 beta=10; XGBoost uses smooth pseudo-Huber with slope=10."
+  },
+  "tree_budget_extension": "8 transformed-target seeds at the 1000-tree ceiling were refit with a 3000-tree ceiling. The other 40 early-stopped models were reused and their predictions checked. All final fits stopped before the ceiling.",
+  "runs": {
+    "arcsinh": {
+      "parameters": {
+        "n_estimators": 3000,
+        "learning_rate": 0.01,
+        "max_depth": 5,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "min_child_weight": 20,
+        "reg_lambda": 1,
+        "tree_method": "hist",
+        "n_jobs": 2,
+        "early_stopping_rounds": 50,
+        "disable_default_eval_metric": true,
+        "objective": "reg:squarederror"
+      },
+      "nn_reference": "results/phase2/all_fires_evaluation",
+      "best_tree_count_range": [
+        406,
+        1195
+      ],
+      "reused_early_stopped_models": 40,
+      "trees_budget_hits": 0
+    },
+    "flux": {
+      "parameters": {
+        "n_estimators": 1000,
+        "learning_rate": 0.01,
+        "max_depth": 5,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "min_child_weight": 20,
+        "reg_lambda": 1,
+        "tree_method": "hist",
+        "n_jobs": 2,
+        "early_stopping_rounds": 50,
+        "disable_default_eval_metric": true,
+        "objective": "reg:pseudohubererror",
+        "huber_slope": 10
+      },
+      "nn_reference": "results/phase2/target_cap_study/flux_capped",
+      "best_tree_count_range": [
+        56,
+        478
+      ],
+      "reused_early_stopped_models": 0,
+      "trees_budget_hits": 0
+    }
+  },
+  "code_sha256": {
+    "src/xgboost_logo.py": "62cb869de92e7292a80d50a5a1677ba733f5b78bbe90a4e0d3fab3829ab03251",
+    "src/compare_xgboost.py": "58b5dd654d538b47611583fc2636438e379ca30512ae3586f5ee9f5eed59e344",
+    "src/data_loader.py": "1de5f9866177a37b2099bfe21f1dd8070deb8c286c8efe8888952e54ed4b1560"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "features": [
+    "no2_previous_observed",
+    "delta_no2_previous_observed",
+    "no2_past_week_mean"
+  ],
+  "interpretation": "Post-evaluation diagnostic of saturation. No new model was selected or fitted from this audit.",
+  "cohorts": {
+    "all": {
+      "rows": 74581,
+      "history_signal_clipped_rows": 742,
+      "history_signal_clipped_fraction": 0.009948914602914952,
+      "history_signal_upper_clipped_rows": 742,
+      "all_history_signals_upper_clipped_rows": 261
+    },
+    "first_month": {
+      "rows": 5771,
+      "history_signal_clipped_rows": 480,
+      "history_signal_clipped_fraction": 0.08317449315543234,
+      "history_signal_upper_clipped_rows": 480,
+      "all_history_signals_upper_clipped_rows": 191
+    },
+    "extreme": {
+      "rows": 726,
+      "history_signal_clipped_rows": 262,
+      "history_signal_clipped_fraction": 0.3608815426997245,
+      "history_signal_upper_clipped_rows": 262,
+      "all_history_signals_upper_clipped_rows": 132
+    }
+  }
+}

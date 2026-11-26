@@ -1,0 +1,412 @@
+{
+  "rows": 74581,
+  "fires": 16,
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "arms": {
+    "previous_history_nn": {
+      "equal_fire_mean_mae": 13.639894183116413,
+      "pooled": {
+        "r2_arcsinh": 0.3898809423351741,
+        "r2_physical": 0.18984094140098662,
+        "mae": 16.149986819803043,
+        "percent_bias": -51.29839589287602
+      },
+      "first_month": {
+        "r2_arcsinh": 0.25582217067172064,
+        "r2_physical": 0.045348249861551615,
+        "mae": 47.85817657857694,
+        "percent_bias": -64.99156806333818
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -13.885450382683898,
+        "r2_physical": -0.2642772238847513,
+        "mae": 109.46313097203935,
+        "percent_bias": -83.40150666432656
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -24.207532967736505,
+        "r2_physical": -1.4960703360014835,
+        "mae": 344.28572474264564,
+        "percent_bias": -88.93676276385928
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.0923994433921385,
+        "r2_physical": -0.1083597628571904,
+        "mae": 16.806461716505563,
+        "percent_bias": -73.02289355092911
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -12.877713315010288,
+        "r2_physical": -0.36852362538836236,
+        "mae": 70.37106084160393,
+        "percent_bias": -79.4368951846521
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_previous": 0,
+      "macro_mae_change_percent": 0.0
+    },
+    "inner_arcsinh_capped": {
+      "equal_fire_mean_mae": 14.180204223158793,
+      "pooled": {
+        "r2_arcsinh": 0.3788252628971651,
+        "r2_physical": 0.18731238759859825,
+        "mae": 16.523005615971176,
+        "percent_bias": -32.005359903519754
+      },
+      "first_month": {
+        "r2_arcsinh": 0.26030603403913943,
+        "r2_physical": 0.0551228294826529,
+        "mae": 47.418425232262074,
+        "percent_bias": -66.55807224796
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -13.309661562452645,
+        "r2_physical": -0.2501675215409662,
+        "mae": 108.69889250872374,
+        "percent_bias": -82.87078877725192
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -23.333563822087534,
+        "r2_physical": -1.4693100351364645,
+        "mae": 342.8538921050446,
+        "percent_bias": -88.56688812063072
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.562695579970432,
+        "r2_physical": -0.3025768886095208,
+        "mae": 18.40164394863703,
+        "percent_bias": -83.64359572474375
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -13.414836213745048,
+        "r2_physical": -0.3863076838441395,
+        "mae": 70.89167325899459,
+        "percent_bias": -80.07242798691068
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_previous": 6,
+      "macro_mae_change_percent": 3.961248033076248
+    },
+    "inner_peak_capped": {
+      "equal_fire_mean_mae": 13.491271578527218,
+      "pooled": {
+        "r2_arcsinh": 0.3693017094942317,
+        "r2_physical": 0.21115432451648375,
+        "mae": 16.110809674487623,
+        "percent_bias": -29.982481765288814
+      },
+      "first_month": {
+        "r2_arcsinh": 0.2430367106018625,
+        "r2_physical": 0.07739289014701978,
+        "mae": 47.271970564563034,
+        "percent_bias": -58.513007123055644
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -13.182785159316838,
+        "r2_physical": -0.2188606182711521,
+        "mae": 105.3816770806159,
+        "percent_bias": -79.75977956628418
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -22.464595484039453,
+        "r2_physical": -1.4149211210870454,
+        "mae": 336.03819291229894,
+        "percent_bias": -86.8062393960048
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.665486139865555,
+        "r2_physical": -0.1797880031032748,
+        "mae": 17.534685618201458,
+        "percent_bias": -76.6225385855922
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -12.889341260246065,
+        "r2_physical": -0.31639642081214436,
+        "mae": 67.76908237971338,
+        "percent_bias": -75.71641318963053
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_previous": 8,
+      "macro_mae_change_percent": -1.0896169911139064
+    },
+    "inner_peak_uncapped": {
+      "equal_fire_mean_mae": 13.598435835233674,
+      "pooled": {
+        "r2_arcsinh": 0.36281495452523005,
+        "r2_physical": 0.25408577064064,
+        "mae": 16.180158496383523,
+        "percent_bias": -15.08525198873221
+      },
+      "first_month": {
+        "r2_arcsinh": 0.24705974602288883,
+        "r2_physical": 0.13727460955687798,
+        "mae": 46.51161710971978,
+        "percent_bias": -48.035972271962784
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -12.802733142699683,
+        "r2_physical": -0.13176035856610624,
+        "mae": 101.93429351116882,
+        "percent_bias": -71.74592403796639
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -19.227849383689424,
+        "r2_physical": -1.1840264291955793,
+        "mae": 312.5110374754193,
+        "percent_bias": -78.07925696647587
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.718903205891298,
+        "r2_physical": -0.2417025660339709,
+        "mae": 18.012106455371033,
+        "percent_bias": -80.05741399605152
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -12.489873562651747,
+        "r2_physical": -0.2253115447786045,
+        "mae": 64.48834609204263,
+        "percent_bias": -68.57606881582214
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_previous": 9,
+      "macro_mae_change_percent": -0.303949189972863
+    },
+    "inner_peak_weighted": {
+      "equal_fire_mean_mae": 14.393993968704132,
+      "pooled": {
+        "r2_arcsinh": 0.2957379469744601,
+        "r2_physical": 0.25141779835380074,
+        "mae": 17.534898144729592,
+        "percent_bias": 44.38962906190301
+      },
+      "first_month": {
+        "r2_arcsinh": 0.09103056359359918,
+        "r2_physical": 0.17469579349047593,
+        "mae": 50.95950779287645,
+        "percent_bias": -28.133926653128675
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -7.139126159172633,
+        "r2_physical": -0.06209402784679474,
+        "mae": 94.42327184520204,
+        "percent_bias": -67.04992153349988
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -11.87032757962376,
+        "r2_physical": -1.1084035339968814,
+        "mae": 302.918960845365,
+        "percent_bias": -78.14160231460036
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -8.079844728791771,
+        "r2_physical": -0.7830276493748778,
+        "mae": 21.935558319478233,
+        "percent_bias": -102.49340190303178
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -7.51473097499507,
+        "r2_physical": -0.12536226436625286,
+        "mae": 57.944524331143135,
+        "percent_bias": -61.30104811619425
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_previous": 4,
+      "macro_mae_change_percent": 5.528633693662743
+    },
+    "validation_selected": {
+      "equal_fire_mean_mae": 13.845449756891334,
+      "pooled": {
+        "r2_arcsinh": 0.34238572340161355,
+        "r2_physical": 0.25157042012776454,
+        "mae": 16.58205185254132,
+        "percent_bias": -1.5685426403075229
+      },
+      "first_month": {
+        "r2_arcsinh": 0.18906816990258235,
+        "r2_physical": 0.13914252564755392,
+        "mae": 48.640915366095115,
+        "percent_bias": -40.56170037594428
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -12.464641115216708,
+        "r2_physical": -0.12386800702775513,
+        "mae": 100.33824231974721,
+        "percent_bias": -70.796319852218
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -18.45578841989085,
+        "r2_physical": -1.1784288820708295,
+        "mae": 312.3003965003978,
+        "percent_bias": -78.0248436548643
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -6.04235060232261,
+        "r2_physical": -0.3044517988758628,
+        "mae": 18.575312648970232,
+        "percent_bias": -83.03017959676646
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -12.059942388059937,
+        "r2_physical": -0.15674080349723396,
+        "mae": 61.39918888681325,
+        "percent_bias": -64.85343205388234
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_previous": 7,
+      "macro_mae_change_percent": 1.5070173640302942
+    },
+    "refit_control": {
+      "equal_fire_mean_mae": 13.72705494043383,
+      "pooled": {
+        "r2_arcsinh": 0.3902312534995809,
+        "r2_physical": 0.19437644104932983,
+        "mae": 16.130291717465322,
+        "percent_bias": -39.156198732223004
+      },
+      "first_month": {
+        "r2_arcsinh": 0.23606809329889689,
+        "r2_physical": 0.053555664109781964,
+        "mae": 47.77208437119238,
+        "percent_bias": -65.060612654832
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -13.030319286729233,
+        "r2_physical": -0.2522651227772952,
+        "mae": 108.23298485682461,
+        "percent_bias": -82.50774352211322
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -23.515010124086736,
+        "r2_physical": -1.4759916088262997,
+        "mae": 343.1337873165643,
+        "percent_bias": -88.63919136249261
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.221469089580061,
+        "r2_physical": -0.16792978300986805,
+        "mae": 17.358519616926063,
+        "percent_bias": -76.41350277618592
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -12.580689811425719,
+        "r2_physical": -0.3875675069620057,
+        "mae": 70.0928170869069,
+        "percent_bias": -79.12978801465232
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_previous": 10,
+      "macro_mae_change_percent": 0.6390134420932947
+    },
+    "refit_selected": {
+      "equal_fire_mean_mae": 13.513076997415968,
+      "pooled": {
+        "r2_arcsinh": 0.3682416261859224,
+        "r2_physical": 0.24198448462481448,
+        "mae": 16.203244787781667,
+        "percent_bias": -13.313459560874886
+      },
+      "first_month": {
+        "r2_arcsinh": 0.2136115959407674,
+        "r2_physical": 0.12218741200424987,
+        "mae": 47.53185671372367,
+        "percent_bias": -52.33034668533362
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -12.391209581492532,
+        "r2_physical": -0.15770259668648934,
+        "mae": 102.63300395431763,
+        "percent_bias": -75.84777790651529
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -20.84027890390332,
+        "r2_physical": -1.2807384727671742,
+        "mae": 321.2887548308416,
+        "percent_bias": -82.6370394866578
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.85800405890616,
+        "r2_physical": -0.2153558322408784,
+        "mae": 17.969635664313273,
+        "percent_bias": -79.69310323337
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -11.199307339659109,
+        "r2_physical": -0.19546712249144482,
+        "mae": 62.623899237894946,
+        "percent_bias": -68.40646858413481
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_previous": 9,
+      "macro_mae_change_percent": -0.9297519760631312
+    }
+  },
+  "checkpoint_replay": {
+    "fire": "August Complex",
+    "arms": 4,
+    "seeds_per_arm": 3,
+    "partitions": [
+      "validation",
+      "test"
+    ]
+  },
+  "selection_counts": {
+    "inner_peak_uncapped": 9,
+    "inner_peak_weighted": 6,
+    "inner_peak_capped": 1
+  },
+  "comparison_note": "Four candidate arms share whole-fire inner validation and training rows. The previous history NN used late-date validation and different training rows. Refit pipelines train on all 15 outer-training fires after validation freezes settings. Outer evaluation rows and reporting thresholds are identical.",
+  "epoch_ceiling": {
+    "inner_arcsinh_capped": {
+      "candidates": 0,
+      "total_candidates": 96
+    },
+    "inner_peak_capped": {
+      "candidates": 0,
+      "total_candidates": 96
+    },
+    "inner_peak_uncapped": {
+      "candidates": 0,
+      "total_candidates": 96
+    },
+    "inner_peak_weighted": {
+      "candidates": 0,
+      "total_candidates": 96
+    }
+  }
+}

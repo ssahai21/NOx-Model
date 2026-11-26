@@ -1,0 +1,70 @@
+{
+  "fires": 16,
+  "rows": 74581,
+  "results": [
+    {
+      "loss": "arcsinh",
+      "model": "nn",
+      "equal_fire_mean_mae": 14.782780971466916,
+      "pooled_mae": 17.752556116746746,
+      "r2_physical": 0.08452231191119819,
+      "r2_arcsinh": 0.4224800411879954,
+      "first_month_mae": 52.96278372069327,
+      "first_month_bias": -78.55281236255614,
+      "extreme_flux_mae": 374.943725832568,
+      "extreme_flux_bias": -96.85641546449543,
+      "peak_day_mae": 79.81463223578847,
+      "peak_day_bias": -90.29237038408309
+    },
+    {
+      "loss": "arcsinh",
+      "model": "xgb",
+      "equal_fire_mean_mae": 14.89210217377986,
+      "pooled_mae": 17.76564207911196,
+      "r2_physical": 0.071137373929537,
+      "r2_arcsinh": 0.4195792656443542,
+      "first_month_mae": 52.55439637309583,
+      "first_month_bias": -79.32467425688526,
+      "extreme_flux_mae": 377.81247390974096,
+      "extreme_flux_bias": -97.59747775326596,
+      "peak_day_mae": 79.57487631231173,
+      "peak_day_bias": -90.02114028456467
+    },
+    {
+      "loss": "flux",
+      "model": "nn",
+      "equal_fire_mean_mae": 14.074597215772318,
+      "pooled_mae": 17.12851870510406,
+      "r2_physical": 0.13074363734627814,
+      "r2_arcsinh": 0.3649189267987888,
+      "first_month_mae": 53.94682043994194,
+      "first_month_bias": -66.37461932828238,
+      "extreme_flux_mae": 363.6086280274458,
+      "extreme_flux_bias": -93.9086999877692,
+      "peak_day_mae": 75.58005741904137,
+      "peak_day_bias": -85.37061864652064
+    },
+    {
+      "loss": "flux",
+      "model": "xgb",
+      "equal_fire_mean_mae": 14.23592650447657,
+      "pooled_mae": 16.82506386813191,
+      "r2_physical": 0.11795855242504627,
+      "r2_arcsinh": 0.32548310342114717,
+      "first_month_mae": 53.38727788628862,
+      "first_month_bias": -65.84424921293667,
+      "extreme_flux_mae": 368.1628193821931,
+      "extreme_flux_bias": -95.1047544894384,
+      "peak_day_mae": 77.43196878784907,
+      "peak_day_bias": -87.32329335136986
+    }
+  ],
+  "xgb_wins_by_loss": {
+    "arcsinh": 7,
+    "flux": 7
+  },
+  "budget_hits_by_loss": {
+    "arcsinh": 0,
+    "flux": 0
+  }
+}

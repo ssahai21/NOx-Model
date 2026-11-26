@@ -1,0 +1,35 @@
+{
+  "source_sha256": {
+    "data/phase_2_all_fires_model.csv": "a70c27c73cddb614eb22781738bf2bc0b115f413575f7724603e73bbf68656d0",
+    "data/phase_2_daily_clean.csv": "f5f4778f24b74997f10d67f490d502743f35bd802c7e9313f021493e310e5010"
+  },
+  "features": [
+    "no2_previous_observed",
+    "delta_no2_previous_observed",
+    "no2_past_week_mean",
+    "no2_history_age_days",
+    "no2_history_available"
+  ],
+  "lookback_days": 7,
+  "row_count": 75136,
+  "history_available_fraction": 0.9869836030664395,
+  "history_available_per_fire": {
+    "August Complex": 0.9921780175320297,
+    "Camp Fire": 0.9815480469686078,
+    "Carr": 0.9734380845491957,
+    "Cascade": 0.988950276243094,
+    "Cherokee": 0.9888268156424581,
+    "Dixie Fire": 0.9815746159473299,
+    "Fawn": 0.9947552447552448,
+    "Gold": 0.9823702252693438,
+    "Hog": 0.9850467289719627,
+    "North Complex": 0.992997863755044,
+    "Red Bank": 0.9892857142857143,
+    "Sheep": 0.9903560830860534,
+    "Sugar": 0.9954233409610984,
+    "Walker": 0.9870069605568446,
+    "Whaleback": 0.9850948509485095,
+    "Zogg": 0.9930100480559196
+  },
+  "interpretation": "Past satellite assisted estimation. Prior observations from the held-out fire are available as inputs, while its target labels stay outside training and validation."
+}

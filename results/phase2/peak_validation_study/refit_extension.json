@@ -1,0 +1,23 @@
+{
+  "status": "predeclared before any outer-test prediction files were read in this study",
+  "reason": "Final nested-validation refits reclaim the three inner-validation fires for training after objective, input mode, epoch budget and learning-rate schedule are fixed.",
+  "strategies": [
+    "refit_control",
+    "refit_selected"
+  ],
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "training": "All post-ignition rows from all 15 outer-training fires. Refit imputation, scaling, clipping thresholds and weight thresholds on those rows. The outer fire stays excluded.",
+  "schedule": "Replay the selected inner mode learning-rate schedule for its best_epoch count, with no validation or test feedback during refit.",
+  "reuse": "If validation chooses the inner_arcsinh_capped control, reuse its identical refit for the selected strategy.",
+  "code_sha256": {
+    "src/refit_peak_selection.py": "bf428d1b7098338910f030055d069b658b95f005b92b6ff0552e9cac18f6c76b",
+    "src/peak_validation_study.py": "a76abbb7d1db71db0b6e5d27d3a7ad8eb5a6b68a96fa596376379dd6b2cea241",
+    "src/baseline_nn.py": "e81fd6d6d4e3b87b948b69b4c6e3379a0a76a8e21fbcc7b86e2e630f0516e57b",
+    "src/data_loader.py": "1de5f9866177a37b2099bfe21f1dd8070deb8c286c8efe8888952e54ed4b1560"
+  },
+  "implementation_note": "The original no-refit candidate study remains frozen and will be reported as a paired comparison. This prospective extension adds refitted control/selected pipelines, with extra data use disclosed."
+}

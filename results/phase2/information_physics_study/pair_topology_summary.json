@@ -1,0 +1,8 @@
+{
+  "audit_scope": "First training epoch, seed 42, all 16 outer folds, same DataLoader shuffle.",
+  "legacy_pairs": 18410849,
+  "eligible_legacy_pairs": 53032,
+  "eligible_fraction": 0.002880475528314854,
+  "median_repaired_pairs_per_batch": 35.35679806918745,
+  "max_zero_pair_batch_fraction": 0.009009009009009009
+}

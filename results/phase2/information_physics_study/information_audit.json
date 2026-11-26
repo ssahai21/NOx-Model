@@ -1,0 +1,12 @@
+{
+  "rows": 74581,
+  "negative_label_fraction": 0.36351081374612837,
+  "label_advection_correlation": 0.9833125572084251,
+  "current_delta_no2_correlation": 0.8995650849907701,
+  "previous_delta_no2_correlation": 0.4504399800813083,
+  "previous_no2_correlation": 0.4247341922926368,
+  "reconstruction_offset_mean": 0.012375181254406415,
+  "reconstruction_offset_std": 3.6235725810426084e-12,
+  "largest_missed_days_advection_share_of_label_sum": 0.6955955147248518,
+  "interpretation": "Contemporaneous NO2 and box components are label-construction diagnostics, not independent predictive features or field validation."
+}

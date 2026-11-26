@@ -1,0 +1,16 @@
+{
+  "fire": "August Complex",
+  "arms": [
+    "inner_arcsinh_capped",
+    "inner_peak_capped",
+    "inner_peak_uncapped",
+    "inner_peak_weighted"
+  ],
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "partition": "validation only",
+  "passed": true
+}

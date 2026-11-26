@@ -1,0 +1,99 @@
+{
+  "sources": {
+    "data/phase_2_all_fires_model.csv": "a70c27c73cddb614eb22781738bf2bc0b115f413575f7724603e73bbf68656d0",
+    "data/phase_2_daily_clean.csv": "f5f4778f24b74997f10d67f490d502743f35bd802c7e9313f021493e310e5010",
+    "data/phase_2_no2_history_model.csv": "b9dd7e4f1941b66671c0b215c01582c4c66737c11f17ca369d3b69d14457b638"
+  },
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "batch_size": 512,
+  "input_z_limit": 5,
+  "acute_weight": 3,
+  "data_loss": "SmoothL1 in physical flux units, beta=10.",
+  "training_target_cap": [
+    1,
+    99
+  ],
+  "validation": "Last 20% of observed dates within the training fires; unweighted arcsinh MSE.",
+  "history": "Newest strictly earlier satellite observation within 7 days, past-week mean excluding today, age and availability.",
+  "physics_weight": 0.01,
+  "physics_term_weights": {
+    "nonnegative": 2,
+    "decay": 0.1,
+    "spatial": 0.3,
+    "wind": 0.3,
+    "box": 0,
+    "deposition": 0
+  },
+  "repairs": [
+    "Spatial/wind pairs must have equal absolute UTC date and fire ID; self-pairs excluded.",
+    "Longitude distances use mean-latitude cosine; transport vector points from source to destination.",
+    "Decay normalization uses mean absolute predicted flux with a 1 ng floor.",
+    "Effective physics penalty is 1000*log1p(raw/1000), replacing the hard zero-gradient ceiling."
+  ],
+  "pair_only_ablation": "Nonnegative and decay weights set to zero because these assumptions conflict with some signed labels.",
+  "arms": {
+    "environment_nn": {
+      "directory": "results/phase2/target_cap_study/flux_capped",
+      "model": "baseline",
+      "features": 55,
+      "reused": true
+    },
+    "history_nn": {
+      "directory": "results/phase2/information_physics_study/lagged_nn",
+      "model": "baseline",
+      "features": 60
+    },
+    "legacy_pinn": {
+      "directory": "results/phase2/information_physics_study/legacy_pinn",
+      "model": "legacy_pinn",
+      "features": 55
+    },
+    "repaired_pinn": {
+      "directory": "results/phase2/information_physics_study/repaired_pinn",
+      "model": "repaired_pinn",
+      "features": 55
+    },
+    "pair_only_pinn": {
+      "directory": "results/phase2/information_physics_study/pair_only_pinn",
+      "model": "pair_only_pinn",
+      "features": 55
+    }
+  },
+  "code_sha256": {
+    "src/final_pinn.py": "3116ea034070f2c356adae5ec63dd07b9537af7131fb097fe74a907bdb6fe241",
+    "src/physics_loss.py": "cc3a846afce005fbe44a428da99c87f72d102f840961130d8ce094595bf51a23",
+    "src/pinn.py": "b87ae915a71f4632d07f7500b863937ffa44de8d32360342607fe6ee8dcc484d",
+    "src/build_no2_history.py": "b5a5e62833eb88bc08490bcfb9c8113d362f4a2a9802254be3c0d9f0fec70742",
+    "src/data_loader.py": "1de5f9866177a37b2099bfe21f1dd8070deb8c286c8efe8888952e54ed4b1560"
+  },
+  "caveat": "History NN intentionally uses prior satellite observations from the held-out fire as prediction-time covariates; its labels are excluded from training/validation.",
+  "initial_code_sha256": {
+    "src/final_pinn.py": "3116ea034070f2c356adae5ec63dd07b9537af7131fb097fe74a907bdb6fe241",
+    "src/physics_loss.py": "abf6ed8ac7b77a8947c4fee220d1cc78e4f142b5b2115778b12dcc5fe875f404",
+    "src/pinn.py": "b87ae915a71f4632d07f7500b863937ffa44de8d32360342607fe6ee8dcc484d",
+    "src/build_no2_history.py": "b5a5e62833eb88bc08490bcfb9c8113d362f4a2a9802254be3c0d9f0fec70742",
+    "src/data_loader.py": "1de5f9866177a37b2099bfe21f1dd8070deb8c286c8efe8888952e54ed4b1560"
+  },
+  "provenance_note": "History NN and legacy PINN started with initial_code_sha256. Final physics_loss change wires stable decay only for repaired arms and skips zero-weight decay. Legacy settings have stable_regularization=False and decay weight 0.1, so the legacy calculation is unchanged. Repaired and pair-only runs restarted from scratch. Superseded incomplete outputs are excluded.",
+  "analysis_code_sha256": {
+    "src/compare_information_physics.py": "92c71c29b37b668e5d297d1909b8fae380b0bf8b334b26ddb20e6ace03195b62",
+    "src/audit_peak_information.py": "dba78a89a49e0cbabe761c8f9698c0283a5ccf8f3be3a7a49dd74f46876be425",
+    "src/audit_physics_pairs.py": "642ab5e26383cacf937d7e55b84c0ae4b27a00e5b90cfdaf7f801c415062617c",
+    "tests/test_no2_history.py": "771c8dc82986b5472f25394a5cb4b49b85118c40c1e7cfdf984ae90da0bdad0a",
+    "tests/test_physics_repairs.py": "d027abccf00eb1da4e0a019ef285322dc1d33d08321b2fe5d6177aa971552d5e"
+  },
+  "completion": {
+    "status": "complete",
+    "held_out_fires": 16,
+    "seeds_per_fire": 3,
+    "shared_test_rows": 74581,
+    "new_arms": 4,
+    "reused_control_arms": 1,
+    "regression_tests_passed": 9,
+    "verification": "Source hashes, unchanged base inputs and raw labels, fold sizes, model input dimensions, finite predictions, saved ensemble arithmetic and recomputed metrics passed."
+  }
+}

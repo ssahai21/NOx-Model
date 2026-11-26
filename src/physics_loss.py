@@ -109,37 +109,36 @@ def box_model_residual(pred_nox, no2_vcd, no2_upwind, wind_speed,
 
 def non_negativity_loss(pred_nox):
     """
-    Term 2: Penalize negative NOx predictions.
-    Soil emissions physically cannot be negative
-    (or at most very slightly negative for uptake).
+    Penalize negative flux predictions as an explicit modeling assumption.
+    Signed satellite-derived labels can violate this assumption; ablate this term.
     """
     pred_physical = torch.sinh(pred_nox)
     violations    = torch.clamp(-pred_physical, min=0.0)
     return (violations ** 2).mean()
 
 
-def temporal_decay_loss(pred_nox, days_post_fire):
+def temporal_decay_loss(pred_nox, days_post_fire, stable_normalization=False):
     """
-    Term 3: NOx should decay exponentially after fire.
-    Within a batch, predictions for later days should generally
-    be lower than predictions for earlier days.
-
-    We penalize cases where pred(day_late) > pred(day_early)
-    by more than a physically reasonable amount.
-
-    Decay timescale ~30 days based on literature.
+    Penalize positive flux above a 30-day exponential batch-scaled envelope.
+    This heuristic does not compare pairs of dates or establish a measured decay law.
+    Stable normalization avoids division by a cancelling signed batch mean.
     """
     pred_physical  = torch.sinh(pred_nox).flatten()
     days           = days_post_fire.squeeze().float()
 
-    # Expected decay: E(t) = E(0) * exp(-t/30)
+    # Heuristic envelope relative to the batch's flux scale.
     # Normalized relative to day 0
     decay_rate     = 1.0 / 30.0
     expected_decay = torch.exp(-decay_rate * days)
 
     # Penalize predictions that are too HIGH relative to expected decay
     # i.e. model thinks NOx is still very high long after fire
-    pred_normalized = pred_physical / (pred_physical.mean() + 1e-8)
+    if stable_normalization:
+        # A signed mean can approach zero even when individual fluxes are large.
+        denominator = pred_physical.abs().mean().clamp_min(1.0)
+    else:
+        denominator = pred_physical.mean() + 1e-8
+    pred_normalized = pred_physical / denominator
     violation       = torch.clamp(pred_normalized - expected_decay * 3, min=0.0)
 
     return (violation ** 2).mean()
@@ -241,6 +240,32 @@ def wind_advection_consistency_loss(pred_nox, wind_u, wind_v,
     return penalty
 
 
+def same_day_pair_losses(pred_nox, latitude, longitude, wind_u, wind_v, dates, fires):
+    """Spatial and downwind penalties for distinct plots in the same fire and UTC date."""
+    same_context = (dates[:, None] == dates[None, :]) & (fires[:, None] == fires[None, :])
+    same_context.fill_diagonal_(False)
+    source, destination = same_context.nonzero(as_tuple=True)
+    mean_latitude = (latitude[source] + latitude[destination]) / 2
+    north = (latitude[destination] - latitude[source]) * 111320.0
+    east = ((longitude[destination] - longitude[source]) * 111320.0
+            * torch.cos(torch.deg2rad(mean_latitude)))
+    squared_distance = east.square() + north.square()
+    nearby = (squared_distance > 0) & (squared_distance < 20000.0 ** 2)
+    source, destination = source[nearby], destination[nearby]
+    east, north = east[nearby], north[nearby]
+    zero = pred_nox.sum() * 0
+    if source.numel() == 0:
+        return zero, zero, 0
+    flux = torch.sinh(pred_nox).flatten()
+    spatial = (flux[source] - flux[destination]).square().mean()
+    speed = torch.sqrt(wind_u[source].square() + wind_v[source].square() + 1e-8)
+    # This vector points from the source plot to the destination plot.
+    downwind = (wind_u[source] * east + wind_v[source] * north) / speed > 0
+    violation = torch.relu(flux[source] - flux[destination] - 5.0)
+    wind = (violation * downwind).sum() / downwind.sum().clamp_min(1)
+    return spatial, wind, source.numel()
+
+
 # =====================================================================
 # COMBINED PHYSICS LOSS
 # =====================================================================
@@ -265,7 +290,9 @@ class PhysicsLoss(nn.Module):
                  min_lifetime_hr=5.0,
                  molar_columns=False,
                  acute_weight=1.0,
-                 flux_loss_beta=None):
+                 flux_loss_beta=None,
+                 same_day_pairs=False,
+                 stable_regularization=False):
 
         super(PhysicsLoss, self).__init__()
 
@@ -281,6 +308,8 @@ class PhysicsLoss(nn.Module):
         self.molar_columns = molar_columns
         self.acute_weight = acute_weight
         self.flux_loss_beta = flux_loss_beta
+        self.same_day_pairs = same_day_pairs
+        self.stable_regularization = stable_regularization
 
     def forward(self, pred, target, batch_features, feature_names):
         """
@@ -318,6 +347,13 @@ class PhysicsLoss(nn.Module):
                 return batch_features[:, idx]
             return torch.zeros(pred.shape[0], device=pred.device)
 
+        if self.same_day_pairs:
+            required = ['_physics_date', '_physics_fire', 'centroid_lat', 'centroid_lon',
+                        'wind_u', 'wind_v', 'days_post_fire']
+            missing = [name for name in required if name not in feature_names]
+            if missing:
+                raise ValueError(f'Missing physical context: {missing}')
+
         # Extract needed features
         no2_vcd    = get_feat('no2')     # keep in mol/m² scaled units
         no2_upwind = get_feat('ref_no2') # keep in mol/m² scaled units
@@ -347,17 +383,24 @@ class PhysicsLoss(nn.Module):
             wind_speed, day_of_year.float(), month, self.min_lifetime_hr,
             molar_columns=self.molar_columns,
         ) if self.lambda_box else pred.new_zeros(())
-        loss_nonneg     = non_negativity_loss(pred.flatten())
-        loss_decay      = temporal_decay_loss(pred.flatten(), days_post)
+        loss_nonneg = non_negativity_loss(pred.flatten()) if self.lambda_nonneg else pred.sum() * 0
+        loss_decay = temporal_decay_loss(
+            pred.flatten(), days_post, stable_normalization=self.stable_regularization,
+        ) if self.lambda_decay else pred.sum() * 0
         loss_deposition = deposition_consistency_loss(
             pred.flatten(), no2_vcd, month, molar_columns=self.molar_columns,
         ) if self.lambda_deposition else pred.new_zeros(())
-        loss_spatial    = spatial_smoothness_loss(
-            pred.flatten(), centroid_lat, centroid_lon
-        )
-        loss_wind       = wind_advection_consistency_loss(
-            pred.flatten(), wind_u, wind_v, centroid_lat, centroid_lon
-        )
+        if self.same_day_pairs:
+            loss_spatial, loss_wind, pair_count = same_day_pair_losses(
+                pred.flatten(), centroid_lat, centroid_lon, wind_u, wind_v,
+                get_feat('_physics_date'), get_feat('_physics_fire'),
+            )
+        else:
+            loss_spatial = spatial_smoothness_loss(pred.flatten(), centroid_lat, centroid_lon)
+            loss_wind = wind_advection_consistency_loss(
+                pred.flatten(), wind_u, wind_v, centroid_lat, centroid_lon,
+            )
+            pair_count = None
 
         # Weighted sum of physics terms
         physics_loss = (
@@ -369,22 +412,26 @@ class PhysicsLoss(nn.Module):
             self.lambda_wind       * loss_wind
         )
 
+        raw_physics = physics_loss
+        if self.stable_regularization:
+            # Log compression keeps a positive derivative beyond the old hard ceiling.
+            physics_loss = 1000.0 * torch.log1p(raw_physics / 1000.0)
+        else:
+            physics_loss = torch.clamp(raw_physics, max=1000.0)
         total_loss = data_loss + self.lambda_physics * physics_loss
 
+        above_cap = float(raw_physics.detach().item() > 1000.0)
         loss_components = {
-            'data':        data_loss.item(),
-            'box_model':   loss_box.item(),
-            'non_neg':     loss_nonneg.item(),
-            'decay':       loss_decay.item(),
-            'deposition':  loss_deposition.item(),
-            'spatial':     loss_spatial.item(),
-            'wind':        loss_wind.item(),
-            'physics_total': physics_loss.item(),
-            'total':       total_loss.item()
+            'data': data_loss.item(), 'box_model': loss_box.item(),
+            'non_neg': loss_nonneg.item(), 'decay': loss_decay.item(),
+            'deposition': loss_deposition.item(), 'spatial': loss_spatial.item(),
+            'wind': loss_wind.item(), 'physics_total': raw_physics.item(),
+            'physics_effective': physics_loss.item(), 'raw_above_cap': above_cap,
+            'hard_clamp_active': above_cap if not self.stable_regularization else 0.0,
+            'total': total_loss.item(),
         }
-
-        physics_loss = torch.clamp(physics_loss, max=1000.0)
-        total_loss   = data_loss + self.lambda_physics * physics_loss
+        if pair_count is not None:
+            loss_components['same_day_pair_count'] = pair_count
 
         return total_loss, data_loss, physics_loss, loss_components
 

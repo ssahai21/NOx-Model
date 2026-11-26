@@ -1,0 +1,467 @@
+{
+  "rows": 74581,
+  "fires": 16,
+  "thresholds": {
+    "August Complex": {
+      "high_flux_row": 41.79089425939864,
+      "extreme_flux_row": 221.78726757546428,
+      "peak_day_mean": 32.107985645644916
+    },
+    "Camp Fire": {
+      "high_flux_row": 37.734099169168715,
+      "extreme_flux_row": 201.89993351924858,
+      "peak_day_mean": 31.890295096064726
+    },
+    "Carr": {
+      "high_flux_row": 37.64551855676858,
+      "extreme_flux_row": 199.20830884171147,
+      "peak_day_mean": 31.360264469819068
+    },
+    "Cascade": {
+      "high_flux_row": 37.86867619645045,
+      "extreme_flux_row": 194.6657973311559,
+      "peak_day_mean": 31.29901096789732
+    },
+    "Cherokee": {
+      "high_flux_row": 37.87316621917663,
+      "extreme_flux_row": 194.6657973311559,
+      "peak_day_mean": 31.29901096789732
+    },
+    "Dixie Fire": {
+      "high_flux_row": 32.852809850607294,
+      "extreme_flux_row": 126.7856321233008,
+      "peak_day_mean": 30.355559336979308
+    },
+    "Fawn": {
+      "high_flux_row": 37.957560606823435,
+      "extreme_flux_row": 194.9479552852907,
+      "peak_day_mean": 31.934218354572607
+    },
+    "Gold": {
+      "high_flux_row": 38.26087311156218,
+      "extreme_flux_row": 196.67993728897673,
+      "peak_day_mean": 32.55870588445482
+    },
+    "Hog": {
+      "high_flux_row": 38.07854227470091,
+      "extreme_flux_row": 194.84284224784068,
+      "peak_day_mean": 32.55870588445482
+    },
+    "North Complex": {
+      "high_flux_row": 38.29352736537153,
+      "extreme_flux_row": 203.5408223464363,
+      "peak_day_mean": 32.13021113900198
+    },
+    "Red Bank": {
+      "high_flux_row": 38.0932430595734,
+      "extreme_flux_row": 195.52743418811647,
+      "peak_day_mean": 32.78392219036348
+    },
+    "Sheep": {
+      "high_flux_row": 38.296320435052074,
+      "extreme_flux_row": 196.84606137112993,
+      "peak_day_mean": 32.45429822432911
+    },
+    "Sugar": {
+      "high_flux_row": 37.64370659102713,
+      "extreme_flux_row": 179.12250212511628,
+      "peak_day_mean": 31.34790142115134
+    },
+    "Walker": {
+      "high_flux_row": 38.49777319515391,
+      "extreme_flux_row": 196.53993111183902,
+      "peak_day_mean": 32.63625481352262
+    },
+    "Whaleback": {
+      "high_flux_row": 38.26236136183665,
+      "extreme_flux_row": 196.2396617424484,
+      "peak_day_mean": 32.79997971875527
+    },
+    "Zogg": {
+      "high_flux_row": 38.66273024267245,
+      "extreme_flux_row": 199.17483606219875,
+      "peak_day_mean": 32.879463029636035
+    }
+  },
+  "arms": {
+    "environment_nn": {
+      "equal_fire_mean_mae": 14.074597215772318,
+      "pooled": {
+        "r2_arcsinh": 0.3649189267987888,
+        "r2_physical": 0.13074363734627814,
+        "mae": 17.12851870510406,
+        "percent_bias": -52.66937035641189
+      },
+      "max_selected_epochs_run": 56,
+      "selected_models_at_epoch_ceiling": 0,
+      "first_month": {
+        "r2_arcsinh": 0.014049482603069818,
+        "r2_physical": -0.0024573386173081246,
+        "mae": 53.94682043994194,
+        "percent_bias": -66.37461932828238
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -20.072224868550887,
+        "r2_physical": -0.3444997530051557,
+        "mae": 119.07607964921537,
+        "percent_bias": -90.46308612085436
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -53.50432300838041,
+        "r2_physical": -1.6212566755871416,
+        "mae": 363.6086280274458,
+        "percent_bias": -93.9086999877692
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.0507659632079545,
+        "r2_physical": -0.26094673654614686,
+        "mae": 17.65476245435381,
+        "percent_bias": -78.47766923886913
+      },
+      "negative_label_rows": 27111,
+      "nonnegative_label": {
+        "r2_arcsinh": -3.30006020620114,
+        "r2_physical": 0.007337692871947743,
+        "mae": 16.82797111113081,
+        "percent_bias": -67.47133210076665
+      },
+      "nonnegative_label_rows": 47470,
+      "peak_days": {
+        "r2_arcsinh": -16.810797866124982,
+        "r2_physical": -0.44772965129560083,
+        "mae": 75.58005741904137,
+        "percent_bias": -85.37061864652064
+      },
+      "peak_days_rows": 214,
+      "per_seed_macro_mae": {
+        "7": 14.138343975063776,
+        "42": 14.178894297275452,
+        "123": 14.184763736700935
+      },
+      "fires_better_than_control": 0,
+      "macro_mae_change_percent": 0.0
+    },
+    "history_nn": {
+      "equal_fire_mean_mae": 13.639894183116413,
+      "pooled": {
+        "r2_arcsinh": 0.3898809423351741,
+        "r2_physical": 0.18984094140098662,
+        "mae": 16.149986819803043,
+        "percent_bias": -51.29839589287602
+      },
+      "max_selected_epochs_run": 77,
+      "selected_models_at_epoch_ceiling": 0,
+      "first_month": {
+        "r2_arcsinh": 0.25582217067172064,
+        "r2_physical": 0.045348249861551615,
+        "mae": 47.85817657857694,
+        "percent_bias": -64.99156806333818
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -13.885450382683898,
+        "r2_physical": -0.2642772238847513,
+        "mae": 109.46313097203935,
+        "percent_bias": -83.40150666432656
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -24.207532967736505,
+        "r2_physical": -1.4960703360014835,
+        "mae": 344.28572474264564,
+        "percent_bias": -88.93676276385928
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.0923994433921385,
+        "r2_physical": -0.1083597628571904,
+        "mae": 16.806461716505563,
+        "percent_bias": -73.02289355092911
+      },
+      "negative_label_rows": 27111,
+      "nonnegative_label": {
+        "r2_arcsinh": -2.910719758171167,
+        "r2_physical": 0.06931671014372076,
+        "mae": 15.775061795061058,
+        "percent_bias": -63.75815485313842
+      },
+      "nonnegative_label_rows": 47470,
+      "peak_days": {
+        "r2_arcsinh": -12.877713315010288,
+        "r2_physical": -0.36852362538836236,
+        "mae": 70.37106084160393,
+        "percent_bias": -79.4368951846521
+      },
+      "peak_days_rows": 214,
+      "per_seed_macro_mae": {
+        "7": 13.578419239347411,
+        "42": 14.004966235579131,
+        "123": 13.65838120737617
+      },
+      "fires_better_than_control": 12,
+      "macro_mae_change_percent": -3.088564638771807
+    },
+    "legacy_pinn": {
+      "equal_fire_mean_mae": 15.057311488168768,
+      "pooled": {
+        "r2_arcsinh": 0.37020248529198707,
+        "r2_physical": 0.08920420355774905,
+        "mae": 17.978989008910222,
+        "percent_bias": -24.690345638104656
+      },
+      "max_selected_epochs_run": 71,
+      "selected_models_at_epoch_ceiling": 0,
+      "first_month": {
+        "r2_arcsinh": 0.026058457681563674,
+        "r2_physical": -0.03591160515844205,
+        "mae": 53.70695067655768,
+        "percent_bias": -71.38303784421137
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -17.149567561036697,
+        "r2_physical": -0.38132432745989875,
+        "mae": 119.93469097789257,
+        "percent_bias": -91.69889240740936
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -53.3797008595188,
+        "r2_physical": -1.7030408368174057,
+        "mae": 369.5755439431668,
+        "percent_bias": -95.4696930857857
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -6.17943500765837,
+        "r2_physical": -0.6667829260453684,
+        "mae": 20.828074970601627,
+        "percent_bias": -98.39862867426835
+      },
+      "negative_label_rows": 27111,
+      "nonnegative_label": {
+        "r2_arcsinh": -2.3347596838333144,
+        "r2_physical": -0.011629017027875888,
+        "mae": 16.35182301970829,
+        "percent_bias": -66.964623021221
+      },
+      "nonnegative_label_rows": 47470,
+      "peak_days": {
+        "r2_arcsinh": -14.298511579497825,
+        "r2_physical": -0.5133903414518013,
+        "mae": 77.43942417889116,
+        "percent_bias": -87.59595688531486
+      },
+      "peak_days_rows": 214,
+      "per_seed_macro_mae": {
+        "7": 15.150669766747567,
+        "42": 15.051403023153801,
+        "123": 15.145326498853416
+      },
+      "fires_better_than_control": 3,
+      "macro_mae_change_percent": 6.982183982467349
+    },
+    "repaired_pinn": {
+      "equal_fire_mean_mae": 14.940291560342654,
+      "pooled": {
+        "r2_arcsinh": 0.36901437758580946,
+        "r2_physical": 0.10706546098777991,
+        "mae": 17.938780311377734,
+        "percent_bias": -21.386690536674834
+      },
+      "max_selected_epochs_run": 73,
+      "selected_models_at_epoch_ceiling": 0,
+      "first_month": {
+        "r2_arcsinh": 0.04254356703436568,
+        "r2_physical": -0.008483469690353296,
+        "mae": 54.39850136919959,
+        "percent_bias": -65.58280484693076
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -16.78587269779356,
+        "r2_physical": -0.34382021140439756,
+        "mae": 118.46483180445895,
+        "percent_bias": -90.07184359163313
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -47.790610269356634,
+        "r2_physical": -1.6271995965301587,
+        "mae": 364.2968633311451,
+        "percent_bias": -94.08734739530571
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.985197092331663,
+        "r2_physical": -0.6646975942254714,
+        "mae": 20.64047186885103,
+        "percent_bias": -97.27877042685907
+      },
+      "negative_label_rows": 27111,
+      "nonnegative_label": {
+        "r2_arcsinh": -2.5048651809145275,
+        "r2_physical": 0.010730679106047747,
+        "mae": 16.395794008140776,
+        "percent_bias": -64.91345176763697
+      },
+      "nonnegative_label_rows": 47470,
+      "peak_days": {
+        "r2_arcsinh": -14.424736342772512,
+        "r2_physical": -0.4576036234245118,
+        "mae": 75.84983285056371,
+        "percent_bias": -85.65840358341167
+      },
+      "peak_days_rows": 214,
+      "per_seed_macro_mae": {
+        "7": 15.085152177791809,
+        "42": 14.924614438986389,
+        "123": 15.041023764449779
+      },
+      "fires_better_than_control": 2,
+      "macro_mae_change_percent": 6.150757505161275
+    },
+    "pair_only_pinn": {
+      "equal_fire_mean_mae": 14.181701058110011,
+      "pooled": {
+        "r2_arcsinh": 0.3713086401100031,
+        "r2_physical": 0.12601696143877406,
+        "mae": 17.197548775251473,
+        "percent_bias": -48.46529107500742
+      },
+      "max_selected_epochs_run": 80,
+      "selected_models_at_epoch_ceiling": 0,
+      "first_month": {
+        "r2_arcsinh": 0.019194805471482,
+        "r2_physical": -0.00867429449893331,
+        "mae": 54.011845039838256,
+        "percent_bias": -68.06697594176518
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -19.303394039013455,
+        "r2_physical": -0.349777053337744,
+        "mae": 119.23060377135646,
+        "percent_bias": -90.74122148821182
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -52.147453603899336,
+        "r2_physical": -1.6333402887570152,
+        "mae": 364.8138914625859,
+        "percent_bias": -94.23820069423867
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.217012511574591,
+        "r2_physical": -0.30117024753866817,
+        "mae": 18.049895028850905,
+        "percent_bias": -81.37893298530498
+      },
+      "negative_label_rows": 27111,
+      "nonnegative_label": {
+        "r2_arcsinh": -3.0777317475315753,
+        "r2_physical": 0.004688868383077027,
+        "mae": 16.7107579751391,
+        "percent_bias": -67.34241546985753
+      },
+      "nonnegative_label_rows": 47470,
+      "peak_days": {
+        "r2_arcsinh": -17.13954595759527,
+        "r2_physical": -0.4671989687106983,
+        "mae": 76.52875389636978,
+        "percent_bias": -86.5024019942314
+      },
+      "peak_days_rows": 214,
+      "per_seed_macro_mae": {
+        "7": 14.328547964043404,
+        "42": 14.283315717954935,
+        "123": 14.178727072150041
+      },
+      "fires_better_than_control": 8,
+      "macro_mae_change_percent": 0.7609726992234611
+    }
+  },
+  "caveat": "History NN intentionally uses prior satellite observations from the held-out fire as prediction-time covariates; its labels are excluded from training/validation.",
+  "physics_telemetry": {
+    "legacy_pinn": {
+      "all_candidates": {
+        "training_batches": 364133,
+        "hard_clamp_active": 0.0014719896301626054,
+        "raw_above_cap": 0.0014719896301626054,
+        "physics_total": 1228.3033253804467,
+        "physics_effective": 95.88692197260681,
+        "non_neg": 12.163024509494157,
+        "decay": 11324.9554283034,
+        "spatial": 235.74955488577746,
+        "wind": 2.522721018447542
+      },
+      "selected_candidates": {
+        "training_batches": 186594,
+        "hard_clamp_active": 0.0015702541346452727,
+        "raw_above_cap": 0.0015702541346452727,
+        "physics_total": 2298.051105160188,
+        "physics_effective": 95.65220526181675,
+        "non_neg": 12.18783117090315,
+        "decay": 22026.34688607121,
+        "spatial": 234.2824658393306,
+        "wind": 2.5197280188601905
+      }
+    },
+    "pair_only_pinn": {
+      "all_candidates": {
+        "training_batches": 452311,
+        "hard_clamp_active": 0.0,
+        "raw_above_cap": 0.006024615806381008,
+        "physics_total": 66.35577425038461,
+        "physics_effective": 50.524824555413836,
+        "non_neg": 0.0,
+        "decay": 0.0,
+        "spatial": 219.53808495855588,
+        "wind": 1.6478204618317196,
+        "same_day_pair_count": 35.891888545713016
+      },
+      "selected_candidates": {
+        "training_batches": 222254,
+        "hard_clamp_active": 0.0,
+        "raw_above_cap": 0.005853662926201553,
+        "physics_total": 64.25204170009548,
+        "physics_effective": 49.71962518107418,
+        "non_neg": 0.0,
+        "decay": 0.0,
+        "spatial": 212.54185946066224,
+        "wind": 1.6316043532159752,
+        "same_day_pair_count": 35.93946565641113
+      }
+    },
+    "repaired_pinn": {
+      "all_candidates": {
+        "training_batches": 389747,
+        "hard_clamp_active": 0.0,
+        "raw_above_cap": 0.006319484178197651,
+        "physics_total": 84.27777868544275,
+        "physics_effective": 67.70833172095516,
+        "non_neg": 17.04363963028179,
+        "decay": 2.1601586755533426,
+        "spatial": 165.62936450069037,
+        "wind": 0.9522408721521982,
+        "same_day_pair_count": 35.88186182318273
+      },
+      "selected_candidates": {
+        "training_batches": 188444,
+        "hard_clamp_active": 0.0,
+        "raw_above_cap": 0.006081382267411008,
+        "physics_total": 83.96438026690576,
+        "physics_effective": 66.88016511493912,
+        "non_neg": 17.030412960638202,
+        "decay": 2.1403664079932323,
+        "spatial": 164.69442390720124,
+        "wind": 0.9372953735320227,
+        "same_day_pair_count": 35.92581350427713
+      }
+    }
+  }
+}

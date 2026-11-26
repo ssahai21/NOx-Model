@@ -40,7 +40,8 @@ def metrics(actual, predicted):
 def run_comparison(df, output, seeds, epochs, device, input_z_limit=None,
                    select_land_cover=False, post_fire_only=False, physics_ablation=False,
                    acute_weight=1.0, flux_loss_beta=None,
-                   clip_training_target=True, baseline_only=False):
+                   clip_training_target=True, baseline_only=False,
+                   physics_repairs=False, model_names=None, save_histories=False):
     excluded_rows = 0
     if post_fire_only:
         days = df['days_post_fire']
@@ -67,11 +68,40 @@ def run_comparison(df, output, seeds, epochs, device, input_z_limit=None,
             name: {**model_configs[name], 'acute_weight': acute_weight}
             for name in ('baseline', 'pinn_without_box_deposition')
         }
+    if physics_repairs:
+        for name in ['day_of_year', 'month']:
+            if name not in physics_features:
+                physics_features.append(name)
+        common = {
+            'lambda_physics': .01, 'lambda_box': 0.0, 'lambda_deposition': 0.0,
+            'molar_columns': True, 'acute_weight': acute_weight,
+        }
+        repaired = {**common, 'same_day_pairs': True, 'stable_regularization': True}
+        model_configs = {
+            'baseline': {'lambda_physics': 0.0, 'acute_weight': acute_weight},
+            'legacy_pinn': common,
+            'repaired_pinn': repaired,
+            'pair_only_pinn': {**repaired, 'lambda_nonneg': 0.0, 'lambda_decay': 0.0},
+        }
     if flux_loss_beta is not None:
-        model_configs = {'baseline': {**model_configs['baseline'], 'flux_loss_beta': flux_loss_beta}}
+        if physics_repairs:
+            model_configs = {name: {**config, 'flux_loss_beta': flux_loss_beta}
+                             for name, config in model_configs.items()}
+        else:
+            model_configs = {'baseline': {**model_configs['baseline'], 'flux_loss_beta': flux_loss_beta}}
     if baseline_only:
         model_configs = {'baseline': model_configs['baseline']}
+    if model_names is not None:
+        missing_models = set(model_names) - set(model_configs)
+        if missing_models:
+            raise ValueError(f'Unknown model configurations: {sorted(missing_models)}')
+        model_configs = {name: model_configs[name] for name in model_names}
     physics = df[physics_features].replace([np.inf, -np.inf], np.nan)
+    if physics_repairs:
+        # Absolute dates and fire IDs are physical context only, never NN inputs.
+        physics['_physics_date'] = pd.to_datetime(df.date).to_numpy(dtype='datetime64[D]').astype(np.int64)
+        physics['_physics_fire'] = pd.factorize(df.fire_name, sort=True)[0]
+        physics_features = physics.columns.tolist()
     target = df['soil_nox_tau5hr'].to_numpy()
     if not np.isfinite(target).all():
         raise ValueError('The tau5hr target must be finite.')
@@ -160,6 +190,7 @@ def run_comparison(df, output, seeds, epochs, device, input_z_limit=None,
                 criterion = PhysicsLoss(**config)
                 validation_mse = {}
                 best_model = None
+                candidate_histories = {}
                 for mode, (training, validation, _) in datasets.items():
                     torch.manual_seed(seed)
                     model = BaselineNN(len(features)).to(device)
@@ -174,6 +205,7 @@ def run_comparison(df, output, seeds, epochs, device, input_z_limit=None,
                         criterion, physics_features, n_epochs=epochs, device=device,
                         data_only_validation=True,
                     )
+                    candidate_histories[mode] = history
                     score = min(history['val_loss'])
                     validation_mse[mode] = score
                     if best_model is None or score < validation_mse[selected_mode]:
@@ -194,6 +226,10 @@ def run_comparison(df, output, seeds, epochs, device, input_z_limit=None,
                     'validation_mse': validation_mse,
                 }
                 torch.save(best_model.state_dict(), output / f'{fire}_{column}.pt')
+                if save_histories:
+                    (output / f'{fire}_{column}_history.json').write_text(json.dumps({
+                        'selected_mode': selected_mode, 'candidates': candidate_histories,
+                    }, indent=2, allow_nan=False))
 
             ensemble = predictions[columns].mean(axis=1)
             predictions[f'{name}_ensemble'] = ensemble
@@ -234,6 +270,11 @@ if __name__ == '__main__':
                         help='Retain all training label values, including the extreme tails.')
     parser.add_argument('--baseline-only', action='store_true',
                         help='Evaluate only the plain neural network.')
+    parser.add_argument('--physics-repairs', action='store_true',
+                        help='Expose legacy, corrected, and pair-only physics configurations.')
+    parser.add_argument('--models', nargs='+', help='Restrict the model configurations to evaluate.')
+    parser.add_argument('--save-histories', action='store_true',
+                        help='Save all candidate histories, including physics clamp telemetry.')
     parser.add_argument('--device', default='mps' if torch.backends.mps.is_available() else 'cpu')
     args = parser.parse_args()
     if args.epochs < 1 or len(set(args.seeds)) != len(args.seeds):
@@ -252,6 +293,8 @@ if __name__ == '__main__':
         not np.isfinite(args.flux_loss_beta) or args.flux_loss_beta <= 0
     ):
         parser.error('Flux loss beta must be finite and positive.')
+    if args.baseline_only and args.models is not None:
+        parser.error('Choose either --baseline-only or --models.')
     if args.device == 'cpu':
         torch.set_num_threads(2)
     run_comparison(
@@ -260,4 +303,6 @@ if __name__ == '__main__':
         post_fire_only=args.post_fire_only, physics_ablation=args.physics_ablation, acute_weight=args.acute_weight,
         flux_loss_beta=args.flux_loss_beta,
         clip_training_target=not args.uncapped_target, baseline_only=args.baseline_only,
+        physics_repairs=args.physics_repairs, model_names=args.models,
+        save_histories=args.save_histories,
     )
