@@ -1,0 +1,37 @@
+{
+  "dataset": "data/phase_2_all_fires_model.csv",
+  "rows": 75136,
+  "fires": 16,
+  "plots": 289,
+  "model_features": 55,
+  "new_rows": 18420,
+  "new_plots": 72,
+  "original_rows_preserved": 56716,
+  "post_fire_rows": 74581,
+  "duplicate_keys": 0,
+  "new_feature_missing_counts": {},
+  "source_labels_verified": true,
+  "original_file_hashes_verified": true,
+  "rows_per_fire": {
+    "August Complex": 22245,
+    "Camp Fire": 4173,
+    "Carr": 5346,
+    "Cascade": 181,
+    "Cherokee": 179,
+    "Dixie Fire": 21872,
+    "Fawn": 572,
+    "Gold": 1021,
+    "Hog": 535,
+    "North Complex": 8426,
+    "Red Bank": 560,
+    "Sheep": 1348,
+    "Sugar": 3496,
+    "Walker": 2155,
+    "Whaleback": 738,
+    "Zogg": 2289
+  },
+  "burn_severity_observation_minimums": {
+    "pre_observations": 13,
+    "post_observations": 33
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "dataset": "data/phase_2_all_fires_model.csv",
+  "sha256": {
+    "data/phase_2_all_fires_model.csv": "a70c27c73cddb614eb22781738bf2bc0b115f413575f7724603e73bbf68656d0",
+    "src/final_pinn.py": "0729e071bff149746d0667c528c70c7aa645e15ea3f93f3089cb6d6932e375af",
+    "src/pinn.py": "b87ae915a71f4632d07f7500b863937ffa44de8d32360342607fe6ee8dcc484d",
+    "src/physics_loss.py": "07c6e2caf80648ec4bb2a6446eee6d88a01a48d57df7141044d29df3d066bd70",
+    "src/baseline_nn.py": "e81fd6d6d4e3b87b948b69b4c6e3379a0a76a8e21fbcc7b86e2e630f0516e57b",
+    "src/data_loader.py": "1de5f9866177a37b2099bfe21f1dd8070deb8c286c8efe8888952e54ed4b1560"
+  },
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "device": "cpu",
+  "maximum_epochs": 200,
+  "validation": "Last 20% of observed dates within each training fire.",
+  "input_z_limit": 5,
+  "land_cover_selection": "Validation arcsinh MSE per model and seed.",
+  "training_target_clip_percentiles": [
+    1,
+    99
+  ],
+  "acute_data_weight": 3,
+  "physics_weight": 0.01,
+  "disabled_physics_terms": [
+    "box",
+    "deposition"
+  ]
+}

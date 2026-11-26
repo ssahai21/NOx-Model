@@ -78,16 +78,14 @@ def get_tau(day_of_year_tensor, min_lifetime_hr=5.0):
 # =====================================================================
 
 def box_model_residual(pred_nox, no2_vcd, no2_upwind, wind_speed,
-                        day_of_year, month, min_lifetime_hr=5.0):
+                        day_of_year, month, min_lifetime_hr=5.0, molar_columns=False):
     """
-    Compute box model residual entirely in arcsinh-transformed space.
-    Instead of converting to physical units, we normalize both sides
-    to have unit variance to avoid numerical explosion.
+    Compare batch-normalized predictions and box estimates in flux units.
     """
     pred_physical = torch.sinh(pred_nox)
 
-    AVOGADRO     = 6.022e23
-    N_MOLAR_MASS = 14.0067
+    # The molar input is already in mol/m². Legacy inputs were treated as molecules/m².
+    column_conversion = 1.0 if molar_columns else 6.022e23
 
     delta_no2       = no2_vcd - no2_upwind
     vd              = get_vd(month)
@@ -98,7 +96,7 @@ def box_model_residual(pred_nox, no2_vcd, no2_upwind, wind_speed,
     chemical_term   = no2_vcd / tau
 
     box_physical = (advection_term + deposition_term + chemical_term) \
-                   * (N_MOLAR_MASS / AVOGADRO) * 1e9
+                   * 14.0067e9 / column_conversion
 
     # Normalize both to zero mean unit variance before comparing
     pred_norm = (pred_physical - pred_physical.mean()) / \
@@ -131,7 +129,7 @@ def temporal_decay_loss(pred_nox, days_post_fire):
 
     Decay timescale ~30 days based on literature.
     """
-    pred_physical  = torch.sinh(pred_nox).squeeze()
+    pred_physical  = torch.sinh(pred_nox).flatten()
     days           = days_post_fire.squeeze().float()
 
     # Expected decay: E(t) = E(0) * exp(-t/30)
@@ -147,7 +145,7 @@ def temporal_decay_loss(pred_nox, days_post_fire):
     return (violation ** 2).mean()
 
 
-def deposition_consistency_loss(pred_nox, no2_vcd, month):
+def deposition_consistency_loss(pred_nox, no2_vcd, month, molar_columns=False):
     """
     Normalized deposition consistency.
     Penalize predictions much larger than deposition flux,
@@ -155,12 +153,11 @@ def deposition_consistency_loss(pred_nox, no2_vcd, month):
     """
     pred_physical = torch.sinh(pred_nox)
 
-    AVOGADRO     = 6.022e23
-    N_MOLAR_MASS = 14.0067
+    column_conversion = 1.0 if molar_columns else 6.022e23
 
     vd              = get_vd(month)
     deposition_flux = (vd * no2_vcd / Z_PBL) \
-                      * (N_MOLAR_MASS / AVOGADRO) * 1e9
+                      * 14.0067e9 / column_conversion
 
     # Normalize
     pred_norm = pred_physical / (pred_physical.abs().mean() + 1e-8)
@@ -180,7 +177,7 @@ def spatial_smoothness_loss(pred_nox, centroid_lat, centroid_lon):
 
     Penalizes large differences between spatially close predictions.
     """
-    pred_physical = torch.sinh(pred_nox).squeeze()
+    pred_physical = torch.sinh(pred_nox).flatten()
 
     # Compute pairwise distances between plots in the batch
     lat_scale = 111320.0  # meters per degree lat
@@ -194,7 +191,7 @@ def spatial_smoothness_loss(pred_nox, centroid_lat, centroid_lon):
     nearby_mask = (dist < 20000.0) & (dist > 0.0)
 
     if nearby_mask.sum() == 0:
-        return torch.tensor(0.0)
+        return pred_nox.new_zeros(())
 
     # Penalize large NOx differences between nearby plots
     pred_diff   = (pred_physical.unsqueeze(1) - pred_physical.unsqueeze(0)) ** 2
@@ -213,7 +210,7 @@ def wind_advection_consistency_loss(pred_nox, wind_u, wind_v,
     Penalizes cases where a downwind plot has much lower
     NOx than an upwind plot.
     """
-    pred_physical = torch.sinh(pred_nox).squeeze()
+    pred_physical = torch.sinh(pred_nox).flatten()
     wind_speed    = torch.sqrt(wind_u ** 2 + wind_v ** 2 + 1e-8)
 
     # Unit wind vector (direction of transport)
@@ -265,7 +262,10 @@ class PhysicsLoss(nn.Module):
                  lambda_deposition=0.5,
                  lambda_spatial=0.3,
                  lambda_wind=0.3,
-                 min_lifetime_hr=5.0):
+                 min_lifetime_hr=5.0,
+                 molar_columns=False,
+                 acute_weight=1.0,
+                 flux_loss_beta=None):
 
         super(PhysicsLoss, self).__init__()
 
@@ -278,7 +278,9 @@ class PhysicsLoss(nn.Module):
         self.lambda_wind       = lambda_wind
         self.min_lifetime_hr   = min_lifetime_hr
 
-        self.data_criterion    = nn.MSELoss()
+        self.molar_columns = molar_columns
+        self.acute_weight = acute_weight
+        self.flux_loss_beta = flux_loss_beta
 
     def forward(self, pred, target, batch_features, feature_names):
         """
@@ -291,6 +293,23 @@ class PhysicsLoss(nn.Module):
         Returns:
             total_loss, data_loss, physics_loss, loss_components dict
         """
+
+        if self.flux_loss_beta is not None:
+            errors = nn.functional.smooth_l1_loss(
+                torch.sinh(pred), torch.sinh(target),
+                beta=self.flux_loss_beta, reduction='none',
+            )
+        else:
+            errors = (pred - target).square()
+        if self.acute_weight != 1.0:
+            days = batch_features[:, feature_names.index('days_post_fire')]
+            acute = (days >= 0) & (days <= 30)
+            weights = 1.0 + (self.acute_weight - 1.0) * acute
+            data_loss = (weights * errors.flatten()).sum() / weights.sum()
+        else:
+            data_loss = errors.mean()
+        if self.lambda_physics == 0:
+            return data_loss, data_loss, pred.new_zeros(()), {}
 
         def get_feat(name):
             """Extract a feature column by name."""
@@ -318,24 +337,26 @@ class PhysicsLoss(nn.Module):
         day_of_year   = day_of_year.long()
         month         = ((day_of_year // 30) + 1).clamp(1, 12)
 
-        # Data loss
-        data_loss = self.data_criterion(pred, target)
+        if self.molar_columns:
+            day_of_year = get_feat('day_of_year')
+            month = get_feat('month').long()
 
         # Physics terms
         loss_box        = box_model_residual(
-            pred.squeeze(), no2_vcd, no2_upwind,
-            wind_speed, day_of_year.float(), month, self.min_lifetime_hr
-        )
-        loss_nonneg     = non_negativity_loss(pred.squeeze())
-        loss_decay      = temporal_decay_loss(pred.squeeze(), days_post)
+            pred.flatten(), no2_vcd, no2_upwind,
+            wind_speed, day_of_year.float(), month, self.min_lifetime_hr,
+            molar_columns=self.molar_columns,
+        ) if self.lambda_box else pred.new_zeros(())
+        loss_nonneg     = non_negativity_loss(pred.flatten())
+        loss_decay      = temporal_decay_loss(pred.flatten(), days_post)
         loss_deposition = deposition_consistency_loss(
-            pred.squeeze(), no2_vcd, month
-        )
+            pred.flatten(), no2_vcd, month, molar_columns=self.molar_columns,
+        ) if self.lambda_deposition else pred.new_zeros(())
         loss_spatial    = spatial_smoothness_loss(
-            pred.squeeze(), centroid_lat, centroid_lon
+            pred.flatten(), centroid_lat, centroid_lon
         )
         loss_wind       = wind_advection_consistency_loss(
-            pred.squeeze(), wind_u, wind_v, centroid_lat, centroid_lon
+            pred.flatten(), wind_u, wind_v, centroid_lat, centroid_lon
         )
 
         # Weighted sum of physics terms

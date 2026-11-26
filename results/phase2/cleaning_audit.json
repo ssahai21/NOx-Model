@@ -1,0 +1,33 @@
+{
+  "source": "data/phase_2_nox_df.csv",
+  "raw_rows": 93648,
+  "daily_rows": 75311,
+  "aggregated_extra_observations": 18337,
+  "aggregation": "Arithmetic mean of numeric observations within fire/plot/date.",
+  "matched_feature_rows": 56716,
+  "unmatched_daily_rows": 18595,
+  "daily_rows_per_fire": {
+    "August Complex": 22329,
+    "Camp Fire": 4209,
+    "Carr": 5346,
+    "Cascade": 181,
+    "Cherokee": 179,
+    "Dixie Fire": 21905,
+    "Fawn": 572,
+    "Gold": 1021,
+    "Hog": 535,
+    "North Complex": 8448,
+    "Red Bank": 560,
+    "Sheep": 1348,
+    "Sugar": 3496,
+    "Walker": 2155,
+    "Whaleback": 738,
+    "Zogg": 2289
+  },
+  "matched_rows_per_fire": {
+    "August Complex": 22245,
+    "Camp Fire": 4173,
+    "Dixie Fire": 21872,
+    "North Complex": 8426
+  }
+}

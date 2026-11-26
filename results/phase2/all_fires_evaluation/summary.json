@@ -1,0 +1,181 @@
+{
+  "fires": 16,
+  "rows": 74581,
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "coverage": {
+    "August Complex": {
+      "min_day": 0,
+      "max_day": 356,
+      "first_month_rows": 1347
+    },
+    "Camp Fire": {
+      "min_day": 2,
+      "max_day": 364,
+      "first_month_rows": 238
+    },
+    "Carr": {
+      "min_day": 0,
+      "max_day": 364,
+      "first_month_rows": 465
+    },
+    "Cascade": {
+      "min_day": 262,
+      "max_day": 363,
+      "first_month_rows": 0
+    },
+    "Cherokee": {
+      "min_day": 262,
+      "max_day": 363,
+      "first_month_rows": 0
+    },
+    "Dixie Fire": {
+      "min_day": 0,
+      "max_day": 364,
+      "first_month_rows": 1809
+    },
+    "Fawn": {
+      "min_day": 0,
+      "max_day": 363,
+      "first_month_rows": 51
+    },
+    "Gold": {
+      "min_day": 0,
+      "max_day": 363,
+      "first_month_rows": 91
+    },
+    "Hog": {
+      "min_day": 0,
+      "max_day": 364,
+      "first_month_rows": 57
+    },
+    "North Complex": {
+      "min_day": 0,
+      "max_day": 364,
+      "first_month_rows": 783
+    },
+    "Red Bank": {
+      "min_day": 0,
+      "max_day": 363,
+      "first_month_rows": 55
+    },
+    "Sheep": {
+      "min_day": 0,
+      "max_day": 364,
+      "first_month_rows": 122
+    },
+    "Sugar": {
+      "min_day": 0,
+      "max_day": 364,
+      "first_month_rows": 309
+    },
+    "Walker": {
+      "min_day": 0,
+      "max_day": 365,
+      "first_month_rows": 183
+    },
+    "Whaleback": {
+      "min_day": 10,
+      "max_day": 373,
+      "first_month_rows": 59
+    },
+    "Zogg": {
+      "min_day": 0,
+      "max_day": 364,
+      "first_month_rows": 202
+    }
+  },
+  "models": {
+    "baseline": {
+      "equal_fire_mean_mae": 14.782780971466916,
+      "equal_fire_mean_r2_physical": 0.071837308139057,
+      "pooled": {
+        "r2_arcsinh": 0.4224800411879954,
+        "r2_physical": 0.08452231191119819,
+        "mae": 17.752556116746746,
+        "percent_bias": -66.0232909740017
+      },
+      "days_0_to_30_rows": 5771,
+      "days_0_to_30_fires": 14,
+      "days_0_to_30_pooled": {
+        "r2_arcsinh": 0.13264944671991874,
+        "r2_physical": -0.059449376187487246,
+        "mae": 52.96278372069327,
+        "percent_bias": -78.55281236255614
+      },
+      "seed_equal_fire_mean_mae": [
+        14.994470715834431,
+        14.804017638049029,
+        14.950133660458826
+      ],
+      "seed_equal_fire_mae_mean": 14.916207338114097,
+      "seed_equal_fire_mae_std": 0.08136887291981748
+    },
+    "pinn_without_box_deposition": {
+      "equal_fire_mean_mae": 15.722274426502553,
+      "equal_fire_mean_r2_physical": -0.003960364917252067,
+      "pooled": {
+        "r2_arcsinh": 0.4093384507528064,
+        "r2_physical": 0.05048725484908234,
+        "mae": 18.434917610881648,
+        "percent_bias": -56.5256074198219
+      },
+      "days_0_to_30_rows": 5771,
+      "days_0_to_30_fires": 14,
+      "days_0_to_30_pooled": {
+        "r2_arcsinh": 0.09811758920311453,
+        "r2_physical": -0.09044690866263205,
+        "mae": 53.15654764354855,
+        "percent_bias": -83.69736878733767
+      },
+      "seed_equal_fire_mean_mae": [
+        15.80309426794999,
+        15.701708348540894,
+        15.749268587887451
+      ],
+      "seed_equal_fire_mae_mean": 15.751357068126111,
+      "seed_equal_fire_mae_std": 0.041416964928938885
+    },
+    "wind_season_ridge": {
+      "equal_fire_mean_mae": 16.99878836583692,
+      "equal_fire_mean_r2_physical": -0.07568673429912912,
+      "pooled": {
+        "r2_arcsinh": 0.10675494144635433,
+        "r2_physical": 0.01824001938489117,
+        "mae": 19.661164150049192,
+        "percent_bias": -52.330481180021124
+      },
+      "days_0_to_30_rows": 5771,
+      "days_0_to_30_fires": 14,
+      "days_0_to_30_pooled": {
+        "r2_arcsinh": -0.0693024247727334,
+        "r2_physical": -0.11481106312911038,
+        "mae": 54.70504126479087,
+        "percent_bias": -90.43681137417241
+      }
+    },
+    "train_median": {
+      "equal_fire_mean_mae": 17.74002496789589,
+      "equal_fire_mean_r2_physical": -0.1586535994853614,
+      "pooled": {
+        "r2_arcsinh": -0.19404195653486922,
+        "r2_physical": -0.002866752194663702,
+        "mae": 20.415273328576156,
+        "percent_bias": -29.08762822966314
+      },
+      "days_0_to_30_rows": 5771,
+      "days_0_to_30_fires": 14,
+      "days_0_to_30_pooled": {
+        "r2_arcsinh": -0.07314149247561108,
+        "r2_physical": -0.11892250908490487,
+        "mae": 55.68624272178811,
+        "percent_bias": -92.34585177055756
+      }
+    }
+  },
+  "pinn_mae_wins": 1,
+  "pinn_mae_ties": 0
+}

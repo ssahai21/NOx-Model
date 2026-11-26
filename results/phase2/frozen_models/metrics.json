@@ -1,0 +1,58 @@
+{
+  "August Complex": {
+    "baseline": {
+      "r2_arcsinh": -0.13747577074945494,
+      "r2_physical": 0.06541423471663632,
+      "mae": 13.651484662105284,
+      "percent_bias": 31.955619328431514
+    },
+    "pinn_without_box_deposition": {
+      "r2_arcsinh": -0.06033359500108704,
+      "r2_physical": 0.03947934799389374,
+      "mae": 12.63362576260256,
+      "percent_bias": -17.728697222276402
+    }
+  },
+  "Camp Fire": {
+    "baseline": {
+      "r2_arcsinh": 0.17666231583641634,
+      "r2_physical": 0.06660155577386351,
+      "mae": 14.740650518300962,
+      "percent_bias": -21.553925160380015
+    },
+    "pinn_without_box_deposition": {
+      "r2_arcsinh": 0.15772269436555308,
+      "r2_physical": 0.05705678430150163,
+      "mae": 14.997320188546656,
+      "percent_bias": -28.285118769145146
+    }
+  },
+  "Dixie Fire": {
+    "baseline": {
+      "r2_arcsinh": 0.1250824737410975,
+      "r2_physical": 0.0301426364352102,
+      "mae": 27.96512338738045,
+      "percent_bias": 12.220610805125771
+    },
+    "pinn_without_box_deposition": {
+      "r2_arcsinh": 0.1342191008470427,
+      "r2_physical": 0.028091474598138544,
+      "mae": 27.93392481191624,
+      "percent_bias": -1.6973807274337018
+    }
+  },
+  "North Complex": {
+    "baseline": {
+      "r2_arcsinh": 0.2562039312442814,
+      "r2_physical": 0.0455943984604289,
+      "mae": 21.498105237128122,
+      "percent_bias": 16.78845912749795
+    },
+    "pinn_without_box_deposition": {
+      "r2_arcsinh": 0.21962474879617677,
+      "r2_physical": 0.03760879955443297,
+      "mae": 21.65675697669667,
+      "percent_bias": 18.953520833156322
+    }
+  }
+}

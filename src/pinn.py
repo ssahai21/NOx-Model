@@ -3,7 +3,6 @@ import torch.nn as nn
 import numpy as np
 import pandas as pd
 from sklearn.metrics import r2_score, mean_absolute_error
-import matplotlib.pyplot as plt
 import json
 import os
 import sys
@@ -104,7 +103,7 @@ def train_pinn_epoch(model, loader, optimizer, criterion,
     return total_loss / n, total_data / n, total_physics / n, avg_components
 
 
-def evaluate_pinn(model, loader, criterion, feature_names, device):
+def evaluate_pinn(model, loader, criterion, feature_names, device, data_only=False):
     model.eval()
     total_loss = 0
     all_preds  = []
@@ -117,9 +116,10 @@ def evaluate_pinn(model, loader, criterion, feature_names, device):
             batch_raw = batch_raw.to(device)
 
             preds = model(batch_X)
-            total, _, _, _ = criterion(
-                preds, batch_y, batch_raw, feature_names
-            )
+            if data_only:
+                total = torch.nn.functional.mse_loss(preds, batch_y, reduction="sum")
+            else:
+                total, _, _, _ = criterion(preds, batch_y, batch_raw, feature_names)
 
             total_loss += total.item()
             all_preds.append(preds.cpu().numpy())
@@ -128,12 +128,13 @@ def evaluate_pinn(model, loader, criterion, feature_names, device):
     all_preds  = np.concatenate(all_preds).flatten()
     all_labels = np.concatenate(all_labels).flatten()
 
-    return total_loss / len(loader), all_preds, all_labels
+    denominator = len(all_labels) if data_only else len(loader)
+    return total_loss / denominator, all_preds, all_labels
 
 
 def train_pinn(model, train_loader, test_loader, criterion,
                feature_names, n_epochs=200, lr=1e-3,
-               patience=20, device='cpu'):
+               patience=20, device='cpu', data_only_validation=False):
 
     optimizer = torch.optim.Adam(
         model.parameters(), lr=lr, weight_decay=1e-4
@@ -156,7 +157,8 @@ def train_pinn(model, train_loader, test_loader, criterion,
             model, train_loader, optimizer, criterion, feature_names, device
         )
         val_loss, _, _ = evaluate_pinn(
-            model, test_loader, criterion, feature_names, device
+            model, test_loader, criterion, feature_names, device,
+            data_only=data_only_validation
         )
 
         history['train_total'].append(train_total)
@@ -353,6 +355,8 @@ def plot_pinn_vs_baseline(pinn_results, baseline_results_path):
                 for f in fire_order}
     base_mae = {f: baseline['per_fire'][f]['mae_physical']
                 for f in fire_order}
+
+    import matplotlib.pyplot as plt
 
     fig, axes = plt.subplots(1, 2, figsize=(14, 6))
     x     = np.arange(len(fire_order))

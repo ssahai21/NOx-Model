@@ -3,7 +3,6 @@ import torch.nn as nn
 import numpy as np
 import pandas as pd
 from sklearn.metrics import r2_score, mean_absolute_error
-import matplotlib.pyplot as plt
 import sys
 import os
 import json
@@ -209,6 +208,8 @@ def run_logo_cv(df, features, device='cpu'):
 
 #Plot training history
 def plot_training_history(results):
+    import matplotlib.pyplot as plt
+
     fig, axes = plt.subplots(2,2, figsize=(14,10))
     axes = axes.flatten()
 

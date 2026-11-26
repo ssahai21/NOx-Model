@@ -1,0 +1,256 @@
+{
+  "rows": 74581,
+  "fires": 16,
+  "thresholds": {
+    "August Complex": {
+      "high_flux_row": 41.79089425939864,
+      "extreme_flux_row": 221.78726757546428,
+      "peak_day_mean": 32.107985645644916
+    },
+    "Camp Fire": {
+      "high_flux_row": 37.734099169168715,
+      "extreme_flux_row": 201.89993351924858,
+      "peak_day_mean": 31.890295096064726
+    },
+    "Carr": {
+      "high_flux_row": 37.64551855676858,
+      "extreme_flux_row": 199.20830884171147,
+      "peak_day_mean": 31.360264469819068
+    },
+    "Cascade": {
+      "high_flux_row": 37.86867619645045,
+      "extreme_flux_row": 194.6657973311559,
+      "peak_day_mean": 31.29901096789732
+    },
+    "Cherokee": {
+      "high_flux_row": 37.87316621917663,
+      "extreme_flux_row": 194.6657973311559,
+      "peak_day_mean": 31.29901096789732
+    },
+    "Dixie Fire": {
+      "high_flux_row": 32.852809850607294,
+      "extreme_flux_row": 126.7856321233008,
+      "peak_day_mean": 30.355559336979308
+    },
+    "Fawn": {
+      "high_flux_row": 37.957560606823435,
+      "extreme_flux_row": 194.9479552852907,
+      "peak_day_mean": 31.934218354572607
+    },
+    "Gold": {
+      "high_flux_row": 38.26087311156218,
+      "extreme_flux_row": 196.67993728897673,
+      "peak_day_mean": 32.55870588445482
+    },
+    "Hog": {
+      "high_flux_row": 38.07854227470091,
+      "extreme_flux_row": 194.84284224784068,
+      "peak_day_mean": 32.55870588445482
+    },
+    "North Complex": {
+      "high_flux_row": 38.29352736537153,
+      "extreme_flux_row": 203.5408223464363,
+      "peak_day_mean": 32.13021113900198
+    },
+    "Red Bank": {
+      "high_flux_row": 38.0932430595734,
+      "extreme_flux_row": 195.52743418811647,
+      "peak_day_mean": 32.78392219036348
+    },
+    "Sheep": {
+      "high_flux_row": 38.296320435052074,
+      "extreme_flux_row": 196.84606137112993,
+      "peak_day_mean": 32.45429822432911
+    },
+    "Sugar": {
+      "high_flux_row": 37.64370659102713,
+      "extreme_flux_row": 179.12250212511628,
+      "peak_day_mean": 31.34790142115134
+    },
+    "Walker": {
+      "high_flux_row": 38.49777319515391,
+      "extreme_flux_row": 196.53993111183902,
+      "peak_day_mean": 32.63625481352262
+    },
+    "Whaleback": {
+      "high_flux_row": 38.26236136183665,
+      "extreme_flux_row": 196.2396617424484,
+      "peak_day_mean": 32.79997971875527
+    },
+    "Zogg": {
+      "high_flux_row": 38.66273024267245,
+      "extreme_flux_row": 199.17483606219875,
+      "peak_day_mean": 32.879463029636035
+    }
+  },
+  "arms": {
+    "arcsinh_capped": {
+      "equal_fire_mean_mae": 14.782780971466916,
+      "equal_fire_mean_r2_physical": 0.071837308139057,
+      "pooled": {
+        "r2_arcsinh": 0.4224800411879954,
+        "r2_physical": 0.08452231191119819,
+        "mae": 17.752556116746746,
+        "percent_bias": -66.0232909740017
+      },
+      "first_month_rows": 5771,
+      "first_month_fires": 14,
+      "first_month": {
+        "r2_arcsinh": 0.13264944671991874,
+        "r2_physical": -0.059449376187487246,
+        "mae": 52.96278372069327,
+        "percent_bias": -78.55281236255614
+      },
+      "high_flux_rows": 3555,
+      "high_flux": {
+        "r2_arcsinh": -17.963396001280206,
+        "r2_physical": -0.4141282544617315,
+        "mae": 122.90784187810358,
+        "percent_bias": -94.14685439022394
+      },
+      "extreme_flux_rows": 726,
+      "extreme_flux": {
+        "r2_arcsinh": -54.53620534968025,
+        "r2_physical": -1.7605732095171565,
+        "mae": 374.943725832568,
+        "percent_bias": -96.85641546449543
+      },
+      "peak_days": 214,
+      "peak_days_fires": 16,
+      "peak_days_scores": {
+        "r2_arcsinh": -15.592081773425761,
+        "r2_physical": -0.5607410336345016,
+        "mae": 79.81463223578847,
+        "percent_bias": -90.29237038408309
+      },
+      "seed_macro_mae_mean": 14.916207338114097,
+      "seed_macro_mae_std": 0.08136887291981805
+    },
+    "arcsinh_uncapped": {
+      "equal_fire_mean_mae": 14.855342349681921,
+      "equal_fire_mean_r2_physical": 0.06465734422850321,
+      "pooled": {
+        "r2_arcsinh": 0.41996722824287336,
+        "r2_physical": 0.08542989946645796,
+        "mae": 17.705260642605,
+        "percent_bias": -67.22198788238485
+      },
+      "first_month_rows": 5771,
+      "first_month_fires": 14,
+      "first_month": {
+        "r2_arcsinh": 0.11888883324522914,
+        "r2_physical": -0.06104247023320819,
+        "mae": 53.023349422089396,
+        "percent_bias": -76.60245232279158
+      },
+      "high_flux_rows": 3555,
+      "high_flux": {
+        "r2_arcsinh": -18.273920290714,
+        "r2_physical": -0.4154670500777622,
+        "mae": 122.57785179948839,
+        "percent_bias": -93.92967122017666
+      },
+      "extreme_flux_rows": 726,
+      "extreme_flux": {
+        "r2_arcsinh": -54.58085492021441,
+        "r2_physical": -1.7648634553960623,
+        "mae": 374.5803457139637,
+        "percent_bias": -96.76254618941708
+      },
+      "peak_days": 214,
+      "peak_days_fires": 16,
+      "peak_days_scores": {
+        "r2_arcsinh": -16.104728352415915,
+        "r2_physical": -0.5740045102999489,
+        "mae": 79.7788518919251,
+        "percent_bias": -90.2518929431668
+      },
+      "seed_macro_mae_mean": 14.991269588582076,
+      "seed_macro_mae_std": 0.06929528171009654
+    },
+    "flux_capped": {
+      "equal_fire_mean_mae": 14.074597215772318,
+      "equal_fire_mean_r2_physical": 0.13835770753701188,
+      "pooled": {
+        "r2_arcsinh": 0.3649189267987888,
+        "r2_physical": 0.13074363734627814,
+        "mae": 17.12851870510406,
+        "percent_bias": -52.66937035641189
+      },
+      "first_month_rows": 5771,
+      "first_month_fires": 14,
+      "first_month": {
+        "r2_arcsinh": 0.014049482603069818,
+        "r2_physical": -0.0024573386173081246,
+        "mae": 53.94682043994194,
+        "percent_bias": -66.37461932828238
+      },
+      "high_flux_rows": 3555,
+      "high_flux": {
+        "r2_arcsinh": -20.072224868550887,
+        "r2_physical": -0.3444997530051557,
+        "mae": 119.07607964921537,
+        "percent_bias": -90.46308612085436
+      },
+      "extreme_flux_rows": 726,
+      "extreme_flux": {
+        "r2_arcsinh": -53.50432300838041,
+        "r2_physical": -1.6212566755871416,
+        "mae": 363.6086280274458,
+        "percent_bias": -93.9086999877692
+      },
+      "peak_days": 214,
+      "peak_days_fires": 16,
+      "peak_days_scores": {
+        "r2_arcsinh": -16.810797866124982,
+        "r2_physical": -0.44772965129560083,
+        "mae": 75.58005741904137,
+        "percent_bias": -85.37061864652064
+      },
+      "seed_macro_mae_mean": 14.167334003013387,
+      "seed_macro_mae_std": 0.020638618658262903
+    },
+    "flux_uncapped": {
+      "equal_fire_mean_mae": 14.198358101096115,
+      "equal_fire_mean_r2_physical": 0.129275214405227,
+      "pooled": {
+        "r2_arcsinh": 0.36491422466668266,
+        "r2_physical": 0.1302938556585178,
+        "mae": 17.16664055670238,
+        "percent_bias": -55.09751976294536
+      },
+      "first_month_rows": 5771,
+      "first_month_fires": 14,
+      "first_month": {
+        "r2_arcsinh": 0.021650786212711215,
+        "r2_physical": -0.006778323351998239,
+        "mae": 55.24688571759093,
+        "percent_bias": -62.37144012337542
+      },
+      "high_flux_rows": 3555,
+      "high_flux": {
+        "r2_arcsinh": -19.677713593104343,
+        "r2_physical": -0.3395410563389025,
+        "mae": 119.11461604599415,
+        "percent_bias": -89.61141975084792
+      },
+      "extreme_flux_rows": 726,
+      "extreme_flux": {
+        "r2_arcsinh": -50.35564070599971,
+        "r2_physical": -1.6069128116791878,
+        "mae": 361.08448709350944,
+        "percent_bias": -93.1715693436112
+      },
+      "peak_days": 214,
+      "peak_days_fires": 16,
+      "peak_days_scores": {
+        "r2_arcsinh": -16.805860102846,
+        "r2_physical": -0.4661450599097088,
+        "mae": 76.093082812383,
+        "percent_bias": -85.47153723733103
+      },
+      "seed_macro_mae_mean": 14.291489265763902,
+      "seed_macro_mae_std": 0.026395732818555846
+    }
+  }
+}
