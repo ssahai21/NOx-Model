@@ -1,0 +1,26 @@
+{
+  "fire": "Cascade",
+  "source_arm": "inner_peak_capped",
+  "selected_scaling": "raw",
+  "bulk_anchor": {
+    "peak_score": 0.7688980144009957,
+    "full": 14.94838113606155,
+    "first_month": 24.13464770717519,
+    "high_rows": 104.34322014552117,
+    "peak_days": 66.64372968648397
+  },
+  "raw_validation": {
+    "peak_score": 0.6743219119847877,
+    "full": 12.662793715295074,
+    "first_month": 22.058327219420455,
+    "high_rows": 94.0095376161181,
+    "peak_days": 59.03574440174856
+  },
+  "asinh_validation": {
+    "peak_score": 0.6790408146192581,
+    "full": 12.697631843747978,
+    "first_month": 22.25635577704338,
+    "high_rows": 95.73171881021204,
+    "peak_days": 59.0521175543503
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "fire": "Gold",
+  "source_arm": "inner_peak_uncapped",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 0.8443759459265648,
+    "full": 16.50162734041592,
+    "first_month": 31.465394776235332,
+    "high_rows": 68.55807505400439,
+    "peak_days": 50.618426383835995
+  },
+  "raw_validation": {
+    "peak_score": 0.8245537733393621,
+    "full": 16.153187614641666,
+    "first_month": 30.33470889065001,
+    "high_rows": 67.35560027077464,
+    "peak_days": 49.49348645988434
+  },
+  "asinh_validation": {
+    "peak_score": 0.8174427571199743,
+    "full": 16.095384812525175,
+    "first_month": 29.641414083513656,
+    "high_rows": 66.3704369738542,
+    "peak_days": 49.60379846539861
+  }
+}

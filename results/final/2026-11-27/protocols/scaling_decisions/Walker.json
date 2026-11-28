@@ -1,0 +1,26 @@
+{
+  "fire": "Walker",
+  "source_arm": "inner_peak_weighted",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 1.0090563053788524,
+    "full": 12.874127929007003,
+    "first_month": 19.155847133460338,
+    "high_rows": 142.2506781529891,
+    "peak_days": 137.9126129857666
+  },
+  "raw_validation": {
+    "peak_score": 0.9445043855855805,
+    "full": 12.544270353028502,
+    "first_month": 20.28175949738921,
+    "high_rows": 128.66458848220373,
+    "peak_days": 123.70661389043292
+  },
+  "asinh_validation": {
+    "peak_score": 0.941996577067381,
+    "full": 12.807675715923788,
+    "first_month": 23.129153162191827,
+    "high_rows": 123.0954537763895,
+    "peak_days": 119.16234299495918
+  }
+}

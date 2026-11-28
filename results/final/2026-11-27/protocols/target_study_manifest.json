@@ -1,0 +1,47 @@
+{
+  "data": "data/phase_2_all_fires_model.csv",
+  "data_sha256": "a70c27c73cddb614eb22781738bf2bc0b115f413575f7724603e73bbf68656d0",
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "acute_weight": 3,
+  "input_z_limit": 5,
+  "validation": "Last 20% of observed dates per training fire; unweighted arcsinh MSE.",
+  "arms": {
+    "arcsinh_capped": {
+      "directory": "results/phase2/all_fires_evaluation",
+      "reused_model": "baseline",
+      "clip_training_target": true,
+      "flux_loss_beta": null
+    },
+    "arcsinh_uncapped": {
+      "directory": "results/phase2/target_cap_study/arcsinh_uncapped",
+      "clip_training_target": false,
+      "flux_loss_beta": null
+    },
+    "flux_capped": {
+      "directory": "results/phase2/target_cap_study/flux_capped",
+      "clip_training_target": true,
+      "flux_loss_beta": 10
+    },
+    "flux_uncapped": {
+      "directory": "results/phase2/target_cap_study/flux_uncapped",
+      "clip_training_target": false,
+      "flux_loss_beta": 10
+    }
+  },
+  "peak_definitions": {
+    "high_flux_rows": "Held-out row label above the training rows\u2019 95th percentile.",
+    "peak_days": "Held-out daily mean label above the training daily means\u2019 95th percentile.",
+    "extreme_flux_rows": "Held-out row label above the training rows\u2019 99th percentile (the cap boundary)."
+  },
+  "code_sha256": {
+    "src/final_pinn.py": "25440e0fffb06971c0547e08e64da0db398996f77071886b597599f7b59746f2",
+    "src/pinn.py": "b87ae915a71f4632d07f7500b863937ffa44de8d32360342607fe6ee8dcc484d",
+    "src/physics_loss.py": "07c6e2caf80648ec4bb2a6446eee6d88a01a48d57df7141044d29df3d066bd70",
+    "src/data_loader.py": "1de5f9866177a37b2099bfe21f1dd8070deb8c286c8efe8888952e54ed4b1560",
+    "src/baseline_nn.py": "e81fd6d6d4e3b87b948b69b4c6e3379a0a76a8e21fbcc7b86e2e630f0516e57b"
+  }
+}

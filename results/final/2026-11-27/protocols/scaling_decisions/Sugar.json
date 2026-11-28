@@ -1,0 +1,26 @@
+{
+  "fire": "Sugar",
+  "source_arm": "inner_peak_uncapped",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 1.1065904701981175,
+    "full": 17.007430765225067,
+    "first_month": 38.812625003387794,
+    "high_rows": 88.97315122587227,
+    "peak_days": 63.90763053604421
+  },
+  "raw_validation": {
+    "peak_score": 1.055027525010944,
+    "full": 16.392212532085125,
+    "first_month": 37.399313719274254,
+    "high_rows": 84.05580595980766,
+    "peak_days": 58.89403520296314
+  },
+  "asinh_validation": {
+    "peak_score": 1.0467933313948026,
+    "full": 16.260415228540808,
+    "first_month": 36.713220109923704,
+    "high_rows": 84.1030467937465,
+    "peak_days": 58.78004344069137
+  }
+}

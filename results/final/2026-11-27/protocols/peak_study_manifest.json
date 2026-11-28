@@ -1,0 +1,98 @@
+{
+  "data": "data/phase_2_no2_history_model.csv",
+  "source_sha256": {
+    "data/phase_2_no2_history_model.csv": "b9dd7e4f1941b66671c0b215c01582c4c66737c11f17ca369d3b69d14457b638",
+    "results/phase2/peak_validation_study/split_plan.json": "a1c5e6a1d1bb041e6e58890a5baa0109e6a56c80af25b3adbd3d99bf5ddf876b"
+  },
+  "training_code_sha256": {
+    "src/peak_validation_study.py": "a76abbb7d1db71db0b6e5d27d3a7ad8eb5a6b68a96fa596376379dd6b2cea241",
+    "src/baseline_nn.py": "e81fd6d6d4e3b87b948b69b4c6e3379a0a76a8e21fbcc7b86e2e630f0516e57b",
+    "src/data_loader.py": "1de5f9866177a37b2099bfe21f1dd8070deb8c286c8efe8888952e54ed4b1560",
+    "src/final_pinn.py": "3116ea034070f2c356adae5ec63dd07b9537af7131fb097fe74a907bdb6fe241",
+    "src/physics_loss.py": "cc3a846afce005fbe44a428da99c87f72d102f840961130d8ce094595bf51a23",
+    "src/pinn.py": "b87ae915a71f4632d07f7500b863937ffa44de8d32360342607fe6ee8dcc484d"
+  },
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "max_epochs": 200,
+  "batch_size": 512,
+  "torch_threads_per_job": 2,
+  "input_z_limit": 5,
+  "arms": {
+    "inner_arcsinh_capped": {
+      "selection": "arcsinh_mse",
+      "capped": true,
+      "tail_weight": 1.0
+    },
+    "inner_peak_capped": {
+      "selection": "peak_score",
+      "capped": true,
+      "tail_weight": 1.0
+    },
+    "inner_peak_uncapped": {
+      "selection": "peak_score",
+      "capped": false,
+      "tail_weight": 1.0
+    },
+    "inner_peak_weighted": {
+      "selection": "peak_score",
+      "capped": false,
+      "tail_weight": 5.0
+    }
+  },
+  "validation_component_weights": {
+    "full": 0.4,
+    "first_month": 0.2,
+    "high_rows": 0.2,
+    "peak_days": 0.2
+  },
+  "normalization": "Each component divided by equal-fire MAE of a training-median predictor on the corresponding training cohort, floored at 1 flux unit.",
+  "split_rule": "Outer test fire excluded. Three whole inner fires with at least three first-month dates. Hash choice using identifiers and row counts among groups containing 15-35% of outer training rows; nearest 20% fallback. No flux values used for split choice.",
+  "cohort_thresholds": "Internal high rows and peak daily means use p95 from inner training only. Reporting uses frozen previous training-only thresholds for matched comparisons.",
+  "training": "Physical SmoothL1 beta10; first-month weight3; weighted arm multiplies training raw-target-above-p95 weights by5; each batch normalizes by weight sum.",
+  "modes": [
+    "standardized",
+    "native"
+  ],
+  "architecture": "BaselineNN 60 -> 256 -> 128 -> 64 -> 1, dropout .3, BatchNorm",
+  "selection": "Per seed, checkpoint and land-cover mode use its arm validation objective. Final arm is minimum validation-ensemble peak score among arms whose validation full MAE is at most 1.05 times inner_arcsinh_capped. That control is always a fallback. Choices persisted before test files are read by comparison.",
+  "previous_history_nn": "results/phase2/information_physics_study/lagged_nn",
+  "shared_thresholds": "results/phase2/target_cap_study/summary.json",
+  "caveat": "Exploratory repeated evaluation. Past satellite inputs from the outer fire are available at prediction time; its labels are never used for fitting, thresholds, scaling, stopping, or objective selection. Comparisons to the previous study change training rows and validation protocol together; new arms have paired identical inner splits.",
+  "analysis_code_sha256": {
+    "src/compare_peak_validation.py": "953308207ada4e89ec2ec961be7aefc2f2a67f36661375ad47f15c0c8db1c020",
+    "src/audit_history_clipping.py": "7073ff1354f0857e66522cc5f7023a6f1160f6319ba12cfcca9014bd54324d5d",
+    "tests/test_peak_validation.py": "df58940a2a783d494f68ea1ec47972468dc564dd4364818e88ba857ceaa1f678",
+    "tests/test_peak_refit.py": "130e68e88833b830cd24641d4c2398e480e2343db52ab7f0e44e670bfebb20fc"
+  },
+  "completion": {
+    "status": "complete",
+    "held_out_fires": 16,
+    "seeds_per_fire": 3,
+    "shared_test_rows": 74581,
+    "candidate_fits": 384,
+    "refit_fits": 96,
+    "new_seed_checkpoints": 288,
+    "regression_tests_passed": 14,
+    "validation_only_choices_frozen": true,
+    "all_verification_checks_passed": true,
+    "candidate_epoch_ceiling_count": 0,
+    "prediction_replays": {
+      "candidate_arms": 4,
+      "candidate_seeds_per_arm": 3,
+      "candidate_partitions": [
+        "validation",
+        "test"
+      ],
+      "refit_arms": 2,
+      "refit_seeds_per_arm": 3,
+      "refit_partitions": [
+        "test"
+      ],
+      "fire": "August Complex"
+    }
+  }
+}

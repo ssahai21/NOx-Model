@@ -1,0 +1,26 @@
+{
+  "fire": "Carr",
+  "source_arm": "inner_peak_weighted",
+  "selected_scaling": "raw",
+  "bulk_anchor": {
+    "peak_score": 0.9987395928179803,
+    "full": 16.223639793814506,
+    "first_month": 40.16209894535987,
+    "high_rows": 87.21090398831967,
+    "peak_days": 66.06963664319838
+  },
+  "raw_validation": {
+    "peak_score": 0.9436880301746183,
+    "full": 16.978458657740337,
+    "first_month": 39.671509387813046,
+    "high_rows": 76.35493552542273,
+    "peak_days": 47.38496751584975
+  },
+  "asinh_validation": {
+    "peak_score": 0.9439779638227016,
+    "full": 16.673061251996472,
+    "first_month": 40.158851449839716,
+    "high_rows": 76.23007860068535,
+    "peak_days": 49.330448683599045
+  }
+}

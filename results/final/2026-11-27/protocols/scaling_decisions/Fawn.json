@@ -1,0 +1,26 @@
+{
+  "fire": "Fawn",
+  "source_arm": "inner_peak_uncapped",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 0.8226469570526382,
+    "full": 16.439963986509444,
+    "first_month": 31.459589810507353,
+    "high_rows": 67.52603355312198,
+    "peak_days": 48.55717958411705
+  },
+  "raw_validation": {
+    "peak_score": 0.8012050312312012,
+    "full": 16.148155325986952,
+    "first_month": 29.693670744476414,
+    "high_rows": 65.92699494429135,
+    "peak_days": 47.87856052269936
+  },
+  "asinh_validation": {
+    "peak_score": 0.7959890804377352,
+    "full": 15.851637387815302,
+    "first_month": 29.441635306830385,
+    "high_rows": 66.40453507168317,
+    "peak_days": 48.861920614461695
+  }
+}

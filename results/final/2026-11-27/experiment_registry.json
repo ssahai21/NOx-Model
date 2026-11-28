@@ -1,0 +1,222 @@
+[
+  {
+    "experiment_id": "env_arcsinh_capped",
+    "label": "Environment NN, transformed loss, capped",
+    "study": "target",
+    "source_arm": "arcsinh_capped",
+    "features": 55,
+    "headline": false,
+    "source_directory": "results/phase2/target_cap_study",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": false
+  },
+  {
+    "experiment_id": "env_arcsinh_uncapped",
+    "label": "Environment NN, transformed loss, uncapped",
+    "study": "target",
+    "source_arm": "arcsinh_uncapped",
+    "features": 55,
+    "headline": false,
+    "source_directory": "results/phase2/target_cap_study",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": false
+  },
+  {
+    "experiment_id": "environment_nn",
+    "label": "Environment NN, flux loss",
+    "study": "physics",
+    "source_arm": "environment_nn",
+    "features": 55,
+    "headline": true,
+    "source_directory": "results/phase2/information_physics_study",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": false
+  },
+  {
+    "experiment_id": "env_flux_uncapped",
+    "label": "Environment NN, flux loss, uncapped",
+    "study": "target",
+    "source_arm": "flux_uncapped",
+    "features": 55,
+    "headline": false,
+    "source_directory": "results/phase2/target_cap_study",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": false
+  },
+  {
+    "experiment_id": "history_nn",
+    "label": "NN with past NO2",
+    "study": "physics",
+    "source_arm": "history_nn",
+    "features": 60,
+    "headline": true,
+    "source_directory": "results/phase2/information_physics_study",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "legacy_pinn",
+    "label": "Legacy physics penalties",
+    "study": "physics",
+    "source_arm": "legacy_pinn",
+    "features": 55,
+    "headline": false,
+    "source_directory": "results/phase2/information_physics_study",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": false
+  },
+  {
+    "experiment_id": "repaired_pinn",
+    "label": "Repaired physics penalties",
+    "study": "physics",
+    "source_arm": "repaired_pinn",
+    "features": 55,
+    "headline": true,
+    "source_directory": "results/phase2/information_physics_study",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": false
+  },
+  {
+    "experiment_id": "pair_only_pinn",
+    "label": "Repaired spatial/wind penalties only",
+    "study": "physics",
+    "source_arm": "pair_only_pinn",
+    "features": 55,
+    "headline": true,
+    "source_directory": "results/phase2/information_physics_study",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": false
+  },
+  {
+    "experiment_id": "inner_mse_control",
+    "label": "Inner-fire MSE control",
+    "study": "peak",
+    "source_arm": "inner_arcsinh_capped",
+    "features": 60,
+    "headline": false,
+    "source_directory": "results/phase2/peak_validation_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "inner_peak_capped",
+    "label": "Peak validation, capped",
+    "study": "peak",
+    "source_arm": "inner_peak_capped",
+    "features": 60,
+    "headline": false,
+    "source_directory": "results/phase2/peak_validation_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "inner_peak_uncapped",
+    "label": "Peak validation, uncapped",
+    "study": "peak",
+    "source_arm": "inner_peak_uncapped",
+    "features": 60,
+    "headline": false,
+    "source_directory": "results/phase2/peak_validation_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "inner_peak_weighted",
+    "label": "Peak validation, fivefold tail weighting",
+    "study": "peak",
+    "source_arm": "inner_peak_weighted",
+    "features": 60,
+    "headline": false,
+    "source_directory": "results/phase2/peak_validation_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "inner_validation_selected",
+    "label": "Validation-selected loss before refit",
+    "study": "peak",
+    "source_arm": "validation_selected",
+    "features": 60,
+    "headline": false,
+    "source_directory": "results/phase2/peak_validation_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "refit_mse_control",
+    "label": "Refitted MSE control",
+    "study": "peak",
+    "source_arm": "refit_control",
+    "features": 60,
+    "headline": true,
+    "source_directory": "results/phase2/peak_validation_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "raw_peak_refit",
+    "label": "Peak-focused refit, raw inputs",
+    "study": "peak",
+    "source_arm": "refit_selected",
+    "features": 60,
+    "headline": true,
+    "source_directory": "results/phase2/peak_validation_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "asinh_inner",
+    "label": "Signed-log inputs before refit",
+    "study": "scaling",
+    "source_arm": "asinh_inner",
+    "features": 60,
+    "headline": false,
+    "source_directory": "results/phase2/history_scaling_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "asinh_refit",
+    "label": "Signed-log refit everywhere",
+    "study": "scaling",
+    "source_arm": "asinh_refit",
+    "features": 60,
+    "headline": true,
+    "source_directory": "results/phase2/history_scaling_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "scaling_selected",
+    "label": "Validation-selected input scaling",
+    "study": "scaling",
+    "source_arm": "validation_selected_scaling",
+    "features": 60,
+    "headline": true,
+    "source_directory": "results/phase2/history_scaling_study",
+    "validation": "whole inner fires; refit where specified",
+    "satellite_history_available": true
+  },
+  {
+    "experiment_id": "xgb_arcsinh",
+    "label": "XGBoost, transformed loss",
+    "study": "xgb",
+    "source_arm": "arcsinh",
+    "features": 55,
+    "headline": false,
+    "source_directory": "results/phase2/xgboost_evaluation",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": false
+  },
+  {
+    "experiment_id": "xgb_flux",
+    "label": "XGBoost, physical loss",
+    "study": "xgb",
+    "source_arm": "flux",
+    "features": 55,
+    "headline": true,
+    "source_directory": "results/phase2/xgboost_evaluation",
+    "validation": "late-date blocks inside training fires",
+    "satellite_history_available": false
+  }
+]

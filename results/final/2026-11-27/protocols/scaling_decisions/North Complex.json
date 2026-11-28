@@ -1,0 +1,26 @@
+{
+  "fire": "North Complex",
+  "source_arm": "inner_peak_uncapped",
+  "selected_scaling": "raw",
+  "bulk_anchor": {
+    "peak_score": 1.1844981707316835,
+    "full": 15.826269130902551,
+    "first_month": 32.635632701988115,
+    "high_rows": 99.20307142267879,
+    "peak_days": 107.89427963973174
+  },
+  "raw_validation": {
+    "peak_score": 1.138304539637863,
+    "full": 15.548170791105019,
+    "first_month": 32.052617254793304,
+    "high_rows": 94.3195085383081,
+    "peak_days": 100.46028200390668
+  },
+  "asinh_validation": {
+    "peak_score": 1.1437595067986406,
+    "full": 15.597660350719705,
+    "first_month": 31.57252097489703,
+    "high_rows": 94.80312528106792,
+    "peak_days": 102.37063658400344
+  }
+}

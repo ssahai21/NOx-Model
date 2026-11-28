@@ -1,0 +1,26 @@
+{
+  "fire": "Sheep",
+  "source_arm": "inner_peak_weighted",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 0.7323710822404148,
+    "full": 11.638329849862368,
+    "first_month": 29.241824020352723,
+    "high_rows": 79.68314296848754,
+    "peak_days": 71.33572732093909
+  },
+  "raw_validation": {
+    "peak_score": 0.6940026681663907,
+    "full": 11.77752026513872,
+    "first_month": 29.149140916157798,
+    "high_rows": 69.70428787019796,
+    "peak_days": 62.19886139867901
+  },
+  "asinh_validation": {
+    "peak_score": 0.6906042471277356,
+    "full": 11.957270855126179,
+    "first_month": 28.416531345802582,
+    "high_rows": 69.14905225819362,
+    "peak_days": 61.17923351589664
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "fire": "Red Bank",
+  "source_arm": "inner_peak_weighted",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 1.0676155068773616,
+    "full": 15.082855243041912,
+    "first_month": 36.0141164125003,
+    "high_rows": 135.78886505363974,
+    "peak_days": 89.5535763151335
+  },
+  "raw_validation": {
+    "peak_score": 0.921619032885474,
+    "full": 13.929967944334912,
+    "first_month": 36.03803073962477,
+    "high_rows": 109.66081432461289,
+    "peak_days": 66.71015781462057
+  },
+  "asinh_validation": {
+    "peak_score": 0.9208363179641368,
+    "full": 13.997382444001566,
+    "first_month": 37.27147688074591,
+    "high_rows": 108.43524274883137,
+    "peak_days": 64.53451517597219
+  }
+}

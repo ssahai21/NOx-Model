@@ -31,6 +31,8 @@ Applying fivefold tail weighting universally gave the best peak-day error among 
 
 ## Remaining limitation and recommended next test
 
+The signed-log scaling follow-up is now complete. See [its report](../history_scaling_study/README.md) for the matched experiment, clipping reduction, and modest accuracy tradeoff.
+
 The post-evaluation clipping audit found that at least one of the three NO2-history signal values reaches the positive five-standard-deviation ceiling on 742 of 74,581 rows, about 1.0% overall, but on 262 of 726 extreme rows, about 36.1%. All three history signal values reach the ceiling on 132 extreme rows, about 18.2%. This saturation removes some distinction among large input values. It does not establish that clipping caused the remaining errors.
 
 The highest-priority next test is a training-fitted signed-log/asinh transformation of the three history signal inputs before standardization. Keep the same nested validation, frozen selection rule, and outer evaluation, with a matched existing-scaling control. This tests whether retaining more detail at high NO2 values improves peaks. A subsequent small comparison of tail multipliers 2 and 3 could test a milder tradeoff than the current factor 5. These follow-up training experiments have not been executed here.

@@ -1,0 +1,626 @@
+{
+  "August Complex": {
+    "selected_arm": "inner_peak_weighted",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 0.8339202682585356,
+        "full": 13.511068299200836,
+        "first_month": 31.66548255636956,
+        "high_rows": 115.55605330658985,
+        "peak_days": 73.89912961088577
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.812677008337109,
+        "full": 13.518051603804853,
+        "first_month": 30.57895761728065,
+        "high_rows": 110.9829245260911,
+        "peak_days": 70.62212422306507
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.8021321245160338,
+        "full": 13.281206525702482,
+        "first_month": 30.23201878516414,
+        "high_rows": 110.13667605624471,
+        "peak_days": 69.70741884071931
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.79083209088527,
+        "full": 13.80532043178834,
+        "first_month": 31.82087949741649,
+        "high_rows": 101.24538298591915,
+        "peak_days": 62.65418473828698
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": true
+    }
+  },
+  "Camp Fire": {
+    "selected_arm": "inner_peak_uncapped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 0.7445878717006589,
+        "full": 13.286036109749967,
+        "first_month": 32.74652538018496,
+        "high_rows": 68.14095469397506,
+        "peak_days": 54.871448399681476
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.7217709895562586,
+        "full": 13.176837048772924,
+        "first_month": 31.401245073017442,
+        "high_rows": 65.18000361962008,
+        "peak_days": 51.93219740054775
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.7157813007512656,
+        "full": 13.239723851623594,
+        "first_month": 30.728682960563326,
+        "high_rows": 64.8266656275045,
+        "peak_days": 50.701851541059156
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.7111520244786667,
+        "full": 13.99446751705798,
+        "first_month": 31.90085213538585,
+        "high_rows": 59.483922362972876,
+        "peak_days": 43.24101676595771
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": false
+    }
+  },
+  "Carr": {
+    "selected_arm": "inner_peak_weighted",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 0.9987395928179803,
+        "full": 16.223639793814506,
+        "first_month": 40.16209894535987,
+        "high_rows": 87.21090398831967,
+        "peak_days": 66.06963664319838
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.9806734067487604,
+        "full": 16.115258326852,
+        "first_month": 39.645193581007845,
+        "high_rows": 85.62965119474424,
+        "peak_days": 62.55323833904467
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.9483012204387936,
+        "full": 15.949458532120397,
+        "first_month": 38.15240293004676,
+        "high_rows": 83.57406161189684,
+        "peak_days": 56.73445913563535
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.9436880301746183,
+        "full": 16.97845865774034,
+        "first_month": 39.671509387813046,
+        "high_rows": 76.35493552542273,
+        "peak_days": 47.38496751584975
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": true
+    }
+  },
+  "Cascade": {
+    "selected_arm": "inner_peak_capped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 0.7688980144009957,
+        "full": 14.94838113606155,
+        "first_month": 24.13464770717519,
+        "high_rows": 104.34322014552117,
+        "peak_days": 66.64372968648397
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.6743219119847877,
+        "full": 12.662793715295074,
+        "first_month": 22.058327219420455,
+        "high_rows": 94.0095376161181,
+        "peak_days": 59.03574440174856
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.6842299009844536,
+        "full": 12.612303525701169,
+        "first_month": 21.649077296042186,
+        "high_rows": 98.21819604292853,
+        "peak_days": 61.97346619094749
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.6858336299667884,
+        "full": 13.583781736725054,
+        "first_month": 24.139981977330788,
+        "high_rows": 87.40007964559463,
+        "peak_days": 54.893625869337384
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": true
+    }
+  },
+  "Cherokee": {
+    "selected_arm": "inner_peak_uncapped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 1.0291936863846125,
+        "full": 14.68788195724979,
+        "first_month": 32.14419123471761,
+        "high_rows": 99.46557444611788,
+        "peak_days": 90.92439215790792
+      },
+      "inner_peak_capped": {
+        "peak_score": 1.0066153413786192,
+        "full": 14.561417788075364,
+        "first_month": 31.564534569408792,
+        "high_rows": 96.60670822620136,
+        "peak_days": 87.73594944611882
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.9843296231177173,
+        "full": 14.525481890305759,
+        "first_month": 30.687156201830984,
+        "high_rows": 94.12425652542294,
+        "peak_days": 84.16968665523893
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.9878676722662537,
+        "full": 15.671409305298019,
+        "first_month": 33.99772929532057,
+        "high_rows": 86.70919108471938,
+        "peak_days": 76.51642443985149
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": false
+    }
+  },
+  "Dixie Fire": {
+    "selected_arm": "inner_peak_uncapped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 1.0127546774054634,
+        "full": 15.451516460899649,
+        "first_month": 35.112842355246684,
+        "high_rows": 76.42823051216784,
+        "peak_days": 69.51342715285092
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.9838109777648011,
+        "full": 14.835181797566102,
+        "first_month": 34.69360792834554,
+        "high_rows": 74.49809910386861,
+        "peak_days": 67.51749389301868
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.9592016618281094,
+        "full": 15.137383598715289,
+        "first_month": 34.21465647309552,
+        "high_rows": 71.18068982876886,
+        "peak_days": 59.65004398737423
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.9912881596714241,
+        "full": 17.210861565330788,
+        "first_month": 36.123595480880866,
+        "high_rows": 64.93492311459116,
+        "peak_days": 53.18750208266904
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": false
+    }
+  },
+  "Fawn": {
+    "selected_arm": "inner_peak_uncapped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 0.8226469570526382,
+        "full": 16.439963986509444,
+        "first_month": 31.459589810507353,
+        "high_rows": 67.52603355312198,
+        "peak_days": 48.55717958411705
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.807456468877094,
+        "full": 16.028689450036083,
+        "first_month": 31.29235658944831,
+        "high_rows": 66.46700589066899,
+        "peak_days": 47.6606848874753
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.8012050312312012,
+        "full": 16.148155325986952,
+        "first_month": 29.693670744476414,
+        "high_rows": 65.92699494429135,
+        "peak_days": 47.87856052269936
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.8247380237844276,
+        "full": 17.82295568849537,
+        "first_month": 31.526041343497262,
+        "high_rows": 59.94619029112697,
+        "peak_days": 42.06931920740172
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": false
+    }
+  },
+  "Gold": {
+    "selected_arm": "inner_peak_uncapped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 0.8443759459265648,
+        "full": 16.50162734041592,
+        "first_month": 31.465394776235332,
+        "high_rows": 68.55807505400439,
+        "peak_days": 50.618426383836
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.8306475602120701,
+        "full": 16.22153578032493,
+        "first_month": 31.396611777954305,
+        "high_rows": 66.96335303361562,
+        "peak_days": 49.346682595176574
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.8245537733393621,
+        "full": 16.153187614641666,
+        "first_month": 30.33470889065001,
+        "high_rows": 67.35560027077464,
+        "peak_days": 49.49348645988434
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.8460400266609174,
+        "full": 17.839344379950475,
+        "first_month": 31.076474509599098,
+        "high_rows": 61.84831597929321,
+        "peak_days": 43.26082292284795
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": false
+    }
+  },
+  "Hog": {
+    "selected_arm": "inner_peak_uncapped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 0.7451921019717334,
+        "full": 12.054718817212851,
+        "first_month": 24.47768895582683,
+        "high_rows": 113.42846157319124,
+        "peak_days": 80.92377554998762
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.6707675620254632,
+        "full": 10.6850854519629,
+        "first_month": 22.852429602052787,
+        "high_rows": 102.91678383914702,
+        "peak_days": 71.96771864297156
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.669980532406469,
+        "full": 10.720100889519957,
+        "first_month": 22.43189863876038,
+        "high_rows": 102.68594966784245,
+        "peak_days": 72.39275323157514
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.6761793712561361,
+        "full": 11.399700260870297,
+        "first_month": 24.98095933920418,
+        "high_rows": 96.69778029622356,
+        "peak_days": 67.6141085245051
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": true
+    }
+  },
+  "North Complex": {
+    "selected_arm": "inner_peak_uncapped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 1.1844981707316835,
+        "full": 15.82626913090255,
+        "first_month": 32.635632701988115,
+        "high_rows": 99.20307142267879,
+        "peak_days": 107.89427963973174
+      },
+      "inner_peak_capped": {
+        "peak_score": 1.1666029687176094,
+        "full": 15.618837307603977,
+        "first_month": 32.456607009015826,
+        "high_rows": 97.35861125254004,
+        "peak_days": 105.71347427254844
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 1.138304539637863,
+        "full": 15.548170791105019,
+        "first_month": 32.052617254793304,
+        "high_rows": 94.3195085383081,
+        "peak_days": 100.46028200390668
+      },
+      "inner_peak_weighted": {
+        "peak_score": 1.1648414497892507,
+        "full": 17.196598938886293,
+        "first_month": 34.885920115619506,
+        "high_rows": 89.11975978488807,
+        "peak_days": 95.04477463435904
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": false
+    }
+  },
+  "Red Bank": {
+    "selected_arm": "inner_peak_weighted",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 1.0676155068773616,
+        "full": 15.082855243041912,
+        "first_month": 36.0141164125003,
+        "high_rows": 135.78886505363974,
+        "peak_days": 89.5535763151335
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.9406679952266054,
+        "full": 12.908376447703958,
+        "first_month": 33.553277194275005,
+        "high_rows": 121.3666784055839,
+        "peak_days": 77.1758521579464
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.9467616712348248,
+        "full": 12.961368687500563,
+        "first_month": 33.70559526332493,
+        "high_rows": 122.13744960395563,
+        "peak_days": 78.04474597901293
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.921619032885474,
+        "full": 13.929967944334912,
+        "first_month": 36.03803073962477,
+        "high_rows": 109.66081432461289,
+        "peak_days": 66.71015781462057
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": true
+    }
+  },
+  "Sheep": {
+    "selected_arm": "inner_peak_weighted",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 0.7323710822404148,
+        "full": 11.638329849862368,
+        "first_month": 29.241824020352723,
+        "high_rows": 79.68314296848753,
+        "peak_days": 71.33572732093909
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.7165334008007074,
+        "full": 11.595280771345257,
+        "first_month": 28.34484908058858,
+        "high_rows": 77.15597514590179,
+        "peak_days": 69.1216375259985
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.7017664746408331,
+        "full": 11.607400107807532,
+        "first_month": 27.497670520368533,
+        "high_rows": 75.74154551982275,
+        "peak_days": 65.73430484604009
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.6940026681663907,
+        "full": 11.77752026513872,
+        "first_month": 29.149140916157798,
+        "high_rows": 69.70428787019796,
+        "peak_days": 62.19886139867901
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": true
+    }
+  },
+  "Sugar": {
+    "selected_arm": "inner_peak_uncapped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 1.1065904701981175,
+        "full": 17.007430765225067,
+        "first_month": 38.812625003387794,
+        "high_rows": 88.97315122587227,
+        "peak_days": 63.90763053604421
+      },
+      "inner_peak_capped": {
+        "peak_score": 1.0754191768520582,
+        "full": 16.380749334644634,
+        "first_month": 38.60828655259849,
+        "high_rows": 86.73483876107954,
+        "peak_days": 60.92193148198609
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 1.055027525010944,
+        "full": 16.392212532085125,
+        "first_month": 37.399313719274254,
+        "high_rows": 84.05580595980766,
+        "peak_days": 58.894035202963146
+      },
+      "inner_peak_weighted": {
+        "peak_score": 1.0747840482150115,
+        "full": 17.718178653222175,
+        "first_month": 39.355299476772814,
+        "high_rows": 78.1723845417341,
+        "peak_days": 54.28298801245299
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": true
+    }
+  },
+  "Walker": {
+    "selected_arm": "inner_peak_weighted",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 1.0090563053788524,
+        "full": 12.874127929007003,
+        "first_month": 19.155847133460338,
+        "high_rows": 142.2506781529891,
+        "peak_days": 137.9126129857666
+      },
+      "inner_peak_capped": {
+        "peak_score": 0.96416014215231,
+        "full": 11.787123409013008,
+        "first_month": 18.991465720634068,
+        "high_rows": 138.30013874711517,
+        "peak_days": 133.0003562926925
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 0.9600517149598127,
+        "full": 11.941953058980248,
+        "first_month": 19.61250097245832,
+        "high_rows": 135.23585749652207,
+        "peak_days": 131.19986583765456
+      },
+      "inner_peak_weighted": {
+        "peak_score": 0.9445043855855805,
+        "full": 12.544270353028502,
+        "first_month": 20.28175949738921,
+        "high_rows": 128.66458848220373,
+        "peak_days": 123.70661389043292
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": true
+    }
+  },
+  "Whaleback": {
+    "selected_arm": "inner_peak_uncapped",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 1.3640101383820236,
+        "full": 15.877199516363774,
+        "first_month": 40.293091383004274,
+        "high_rows": 125.32334772283787,
+        "peak_days": 150.21229852062254
+      },
+      "inner_peak_capped": {
+        "peak_score": 1.3355062077796465,
+        "full": 15.714397785510561,
+        "first_month": 39.684396661298564,
+        "high_rows": 121.82721037938519,
+        "peak_days": 145.99230564806953
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 1.3106363086469692,
+        "full": 15.667983425903003,
+        "first_month": 38.82622385343045,
+        "high_rows": 119.32770842045076,
+        "peak_days": 141.59703501368958
+      },
+      "inner_peak_weighted": {
+        "peak_score": 1.3159253273942189,
+        "full": 17.161837721210777,
+        "first_month": 41.71824797408499,
+        "high_rows": 111.62654717335582,
+        "peak_days": 132.22821569981082
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": false
+    }
+  },
+  "Zogg": {
+    "selected_arm": "inner_peak_weighted",
+    "validation_scores": {
+      "inner_arcsinh_capped": {
+        "peak_score": 1.2713715238645749,
+        "full": 13.013983615955595,
+        "first_month": 32.49598550082386,
+        "high_rows": 176.2534220444307,
+        "peak_days": 160.77526731634185
+      },
+      "inner_peak_capped": {
+        "peak_score": 1.175375020079272,
+        "full": 12.110178125547172,
+        "first_month": 30.689379173912464,
+        "high_rows": 162.0809166951624,
+        "peak_days": 147.52291442781814
+      },
+      "inner_peak_uncapped": {
+        "peak_score": 1.1582422718468177,
+        "full": 12.130904082548929,
+        "first_month": 30.55874235436159,
+        "high_rows": 159.44455151271455,
+        "peak_days": 143.5288743730498
+      },
+      "inner_peak_weighted": {
+        "peak_score": 1.1508947430825558,
+        "full": 13.094189295543826,
+        "first_month": 34.505672542017514,
+        "high_rows": 149.636395391551,
+        "peak_days": 133.9199452005499
+      }
+    },
+    "eligible": {
+      "inner_arcsinh_capped": true,
+      "inner_peak_capped": true,
+      "inner_peak_uncapped": true,
+      "inner_peak_weighted": true
+    }
+  }
+}

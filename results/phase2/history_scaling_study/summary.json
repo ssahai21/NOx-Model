@@ -1,0 +1,289 @@
+{
+  "rows": 74581,
+  "fires": 16,
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "arms": {
+    "raw_inner": {
+      "equal_fire_mean_mae": 13.845449756891334,
+      "pooled": {
+        "r2_arcsinh": 0.34238572340161355,
+        "r2_physical": 0.25157042012776454,
+        "mae": 16.58205185254132,
+        "percent_bias": -1.5685426403075229
+      },
+      "first_month": {
+        "r2_arcsinh": 0.18906816990258235,
+        "r2_physical": 0.13914252564755392,
+        "mae": 48.640915366095115,
+        "percent_bias": -40.56170037594428
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -12.464641115216708,
+        "r2_physical": -0.12386800702775513,
+        "mae": 100.33824231974721,
+        "percent_bias": -70.796319852218
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -18.45578841989085,
+        "r2_physical": -1.1784288820708295,
+        "mae": 312.3003965003978,
+        "percent_bias": -78.0248436548643
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -6.04235060232261,
+        "r2_physical": -0.3044517988758628,
+        "mae": 18.575312648970232,
+        "percent_bias": -83.03017959676646
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -12.059942388059937,
+        "r2_physical": -0.15674080349723396,
+        "mae": 61.39918888681325,
+        "percent_bias": -64.85343205388234
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_raw_refit": 2,
+      "macro_mae_change_percent": 2.4596378718105605
+    },
+    "asinh_inner": {
+      "equal_fire_mean_mae": 13.83041334015253,
+      "pooled": {
+        "r2_arcsinh": 0.3476015388485514,
+        "r2_physical": 0.26596286957304405,
+        "mae": 16.373796766393614,
+        "percent_bias": -12.48125594951687
+      },
+      "first_month": {
+        "r2_arcsinh": 0.19161503016841697,
+        "r2_physical": 0.16588391364398214,
+        "mae": 47.024656419083186,
+        "percent_bias": -43.02734352886278
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -12.442167541519082,
+        "r2_physical": -0.1061177646112279,
+        "mae": 99.6181754324115,
+        "percent_bias": -71.90749414610943
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -18.131115300351876,
+        "r2_physical": -1.169039073197863,
+        "mae": 309.8182750626794,
+        "percent_bias": -79.17182165683836
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.852376153901561,
+        "r2_physical": -0.24761045824587358,
+        "mae": 18.108946500384327,
+        "percent_bias": -80.08806883434295
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -12.291577836225946,
+        "r2_physical": -0.15347523898272297,
+        "mae": 60.96607753726537,
+        "percent_bias": -65.29821517284465
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_raw_refit": 5,
+      "macro_mae_change_percent": 2.3483647935791607
+    },
+    "raw_refit": {
+      "equal_fire_mean_mae": 13.513076997415968,
+      "pooled": {
+        "r2_arcsinh": 0.3682416261859224,
+        "r2_physical": 0.24198448462481448,
+        "mae": 16.203244787781667,
+        "percent_bias": -13.313459560874886
+      },
+      "first_month": {
+        "r2_arcsinh": 0.2136115959407674,
+        "r2_physical": 0.12218741200424987,
+        "mae": 47.53185671372367,
+        "percent_bias": -52.33034668533362
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -12.391209581492532,
+        "r2_physical": -0.15770259668648934,
+        "mae": 102.63300395431763,
+        "percent_bias": -75.84777790651529
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -20.84027890390332,
+        "r2_physical": -1.2807384727671742,
+        "mae": 321.2887548308416,
+        "percent_bias": -82.6370394866578
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.85800405890616,
+        "r2_physical": -0.2153558322408784,
+        "mae": 17.969635664313273,
+        "percent_bias": -79.69310323337
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -11.199307339659109,
+        "r2_physical": -0.19546712249144482,
+        "mae": 62.623899237894946,
+        "percent_bias": -68.40646858413481
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_raw_refit": 0,
+      "macro_mae_change_percent": 0.0
+    },
+    "asinh_refit": {
+      "equal_fire_mean_mae": 13.556466226769523,
+      "pooled": {
+        "r2_arcsinh": 0.36595353079616555,
+        "r2_physical": 0.25608285504608264,
+        "mae": 16.117135725798917,
+        "percent_bias": -10.096870365542898
+      },
+      "first_month": {
+        "r2_arcsinh": 0.20784439721873837,
+        "r2_physical": 0.13963018143499872,
+        "mae": 47.02027144624307,
+        "percent_bias": -45.565105850685185
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -11.989426019736877,
+        "r2_physical": -0.1311868341129503,
+        "mae": 100.32287842502386,
+        "percent_bias": -72.11182053597629
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -18.466265323668253,
+        "r2_physical": -1.2176974362330117,
+        "mae": 311.1688311437153,
+        "percent_bias": -79.21979031028866
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.8796075327029005,
+        "r2_physical": -0.21570144736451535,
+        "mae": 17.946212524741284,
+        "percent_bias": -79.40796068045206
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -11.340532015447996,
+        "r2_physical": -0.19082480596999352,
+        "mae": 62.092587286555485,
+        "percent_bias": -66.8252807475944
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_raw_refit": 8,
+      "macro_mae_change_percent": 0.3210906691484938
+    },
+    "validation_selected_scaling": {
+      "equal_fire_mean_mae": 13.572057585986158,
+      "pooled": {
+        "r2_arcsinh": 0.36599841501724606,
+        "r2_physical": 0.2659328293788573,
+        "mae": 16.09980993729436,
+        "percent_bias": -12.75179497890755
+      },
+      "first_month": {
+        "r2_arcsinh": 0.20367925812529963,
+        "r2_physical": 0.15732729889791142,
+        "mae": 46.77577955135732,
+        "percent_bias": -47.51692230003382
+      },
+      "first_month_rows": 5771,
+      "high_flux": {
+        "r2_arcsinh": -12.053008798095826,
+        "r2_physical": -0.11448066377373656,
+        "mae": 100.15293065478036,
+        "percent_bias": -73.04018755724013
+      },
+      "high_flux_rows": 3555,
+      "extreme_flux": {
+        "r2_arcsinh": -18.74279650096348,
+        "r2_physical": -1.1913603495220886,
+        "mae": 310.610571193653,
+        "percent_bias": -79.79034806381487
+      },
+      "extreme_flux_rows": 726,
+      "negative_label": {
+        "r2_arcsinh": -5.84143243498279,
+        "r2_physical": -0.20983642840667027,
+        "mae": 17.89469948593042,
+        "percent_bias": -79.10639097433446
+      },
+      "negative_label_rows": 27111,
+      "peak_days": {
+        "r2_arcsinh": -11.337720060822374,
+        "r2_physical": -0.18198063818954302,
+        "mae": 62.28631942711888,
+        "percent_bias": -68.4758109546711
+      },
+      "peak_days_rows": 214,
+      "fires_better_than_raw_refit": 6,
+      "macro_mae_change_percent": 0.4364704543714737
+    }
+  },
+  "selection_counts": {
+    "asinh": 12,
+    "raw": 4
+  },
+  "clipping": {
+    "asinh": {
+      "all": {
+        "rows": 74581,
+        "any_signal_clipped_rows": 442,
+        "any_signal_clipped_fraction": 0.005926442391493812,
+        "all_signals_upper_clipped_rows": 3
+      },
+      "first_month": {
+        "rows": 5771,
+        "any_signal_clipped_rows": 285,
+        "any_signal_clipped_fraction": 0.04938485531103795,
+        "all_signals_upper_clipped_rows": 3
+      },
+      "extreme": {
+        "rows": 726,
+        "any_signal_clipped_rows": 168,
+        "any_signal_clipped_fraction": 0.23140495867768596,
+        "all_signals_upper_clipped_rows": 0
+      }
+    },
+    "raw": {
+      "all": {
+        "rows": 74581,
+        "any_signal_clipped_rows": 742,
+        "any_signal_clipped_fraction": 0.009948914602914952,
+        "all_signals_upper_clipped_rows": 261
+      },
+      "first_month": {
+        "rows": 5771,
+        "any_signal_clipped_rows": 480,
+        "any_signal_clipped_fraction": 0.08317449315543234,
+        "all_signals_upper_clipped_rows": 191
+      },
+      "extreme": {
+        "rows": 726,
+        "any_signal_clipped_rows": 262,
+        "any_signal_clipped_fraction": 0.3608815426997245,
+        "all_signals_upper_clipped_rows": 132
+      }
+    }
+  },
+  "caveat": "Conditional scaling comparison with previously selected loss choices; not a joint scaling/loss search. Repeated outer-fire evaluation is exploratory. Past satellite observations from the outer fire are prediction-time inputs; its labels never enter selection or fitting.",
+  "epoch_ceiling_candidates": 0
+}

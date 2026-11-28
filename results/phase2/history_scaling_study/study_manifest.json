@@ -1,0 +1,90 @@
+{
+  "data": "data/phase_2_no2_history_model.csv",
+  "control_study": "results/phase2/peak_validation_study",
+  "source_sha256": {
+    "data/phase_2_no2_history_model.csv": "b9dd7e4f1941b66671c0b215c01582c4c66737c11f17ca369d3b69d14457b638",
+    "results/phase2/peak_validation_study/validation_selection.json": "109a19b8e6f1c9c20729d91fbc8290692c69a2eb1e9f30b98dde00ff92693ee6",
+    "results/phase2/peak_validation_study/inner_arcsinh_capped/report.json": "9b9d0330490da1c9a7e8624f120bd3085cc079a729ed98f33f46935c3a3c7116",
+    "results/phase2/peak_validation_study/inner_peak_capped/report.json": "78e09c8a233659944cf3d00d18e1862d3d35cd4b70c6c7c4fe037c704e062635",
+    "results/phase2/peak_validation_study/inner_peak_uncapped/report.json": "8aa2d22a9cf7945f13f99023f7fc49b3de40f87f21e3fa4d57191d4ebc1c47b2",
+    "results/phase2/peak_validation_study/inner_peak_weighted/report.json": "beb5d71c9329002891ac031002940942f56ab9c828829bedb5b0bee59170f6fe",
+    "results/phase2/peak_validation_study/refit_selected/August Complex_report.json": "ac8812f76906198711395aef2e0a3b967fb76a7d1ae4e78dcb002bb4c6b461b7",
+    "results/phase2/peak_validation_study/refit_selected/Camp Fire_report.json": "7740b1ff2204b331cbde45f4a1d07914e3c6fd6d5694423547955c67323a194a",
+    "results/phase2/peak_validation_study/refit_selected/Carr_report.json": "c0ec565f9f6fb825aed5596447f9e5bb7a227438b5b2c0dc31cc8bcdf7bf37a7",
+    "results/phase2/peak_validation_study/refit_selected/Cascade_report.json": "6091557f5a96f448fd9822e78c5cce5dd312b6d14128311f446abecdb88b6a21",
+    "results/phase2/peak_validation_study/refit_selected/Cherokee_report.json": "0c6e0c8c426cb7e9cef88d9c1108babd48b2a2154b204bf41bae86ab102bd336",
+    "results/phase2/peak_validation_study/refit_selected/Dixie Fire_report.json": "f49424ddc441ed17ce141fa8e28645784fad6e34ae6ecc0ec4ed34090796b398",
+    "results/phase2/peak_validation_study/refit_selected/Fawn_report.json": "5ca5ba24c233346703fc50e346379329b9c7ba91e3adbbc1743d6f3e8bf2c452",
+    "results/phase2/peak_validation_study/refit_selected/Gold_report.json": "5a76255cce37c898cdcd56fb3af394a1b34667e0c7e9ed5e06ce0c6f413e0079",
+    "results/phase2/peak_validation_study/refit_selected/Hog_report.json": "9634235f758ddd0b92f0108d440596bd833500d445567afbd516b22ae27ba613",
+    "results/phase2/peak_validation_study/refit_selected/North Complex_report.json": "58558fc35acf2dcadafe218bdad818dcf8b76d5e7085e8e0cd62ab26b1b407ea",
+    "results/phase2/peak_validation_study/refit_selected/Red Bank_report.json": "6407706a1067430bdb5116cae5d2879d31b6bc90ee0d944fd4049d6ff6cce331",
+    "results/phase2/peak_validation_study/refit_selected/Sheep_report.json": "3117026a9f50d707ab1c503724ecca78950bc8a60ab22827b93743b875bac5bc",
+    "results/phase2/peak_validation_study/refit_selected/Sugar_report.json": "fb3b207e087551f38a96e04e2b7f5482e0deac4893230d673e627784c8c74511",
+    "results/phase2/peak_validation_study/refit_selected/Walker_report.json": "e7278ea780869b5ed0d692d15d75fbfc604c1c117a2901154e1037b83bbb93bf",
+    "results/phase2/peak_validation_study/refit_selected/Whaleback_report.json": "66de6c24923be37989a4a93e5723f83e8db4c57af5a00e038a81960d976d6f11",
+    "results/phase2/peak_validation_study/refit_selected/Zogg_report.json": "62fbcd2040205856ae425d2728bd40fdd31e94791f4e86114e4ded347231ba59"
+  },
+  "training_code_sha256": {
+    "src/history_scaling_study.py": "e68717038e81eb31897c3dcaecff6beafb4e83cd3da2681c6fd0d432a4f0dff0",
+    "src/peak_validation_study.py": "a76abbb7d1db71db0b6e5d27d3a7ad8eb5a6b68a96fa596376379dd6b2cea241",
+    "src/refit_peak_selection.py": "bf428d1b7098338910f030055d069b658b95f005b92b6ff0552e9cac18f6c76b",
+    "src/baseline_nn.py": "e81fd6d6d4e3b87b948b69b4c6e3379a0a76a8e21fbcc7b86e2e630f0516e57b",
+    "src/data_loader.py": "1de5f9866177a37b2099bfe21f1dd8070deb8c286c8efe8888952e54ed4b1560"
+  },
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "max_epochs": 200,
+  "shared_thresholds": "results/phase2/target_cap_study/summary.json",
+  "transform": "Impute raw missing values with training medians. For three history signals apply asinh(x / median(abs(nonzero training x))). Use scale1 when all training values are zero. Fit StandardScaler on transformed training values; retain +/-5 z cap and existing land-cover mode selection.",
+  "signals": [
+    "no2_previous_observed",
+    "delta_no2_previous_observed",
+    "no2_past_week_mean"
+  ],
+  "paired_control": "Reuse previous raw-scaling selected pipeline. Keep its chosen loss per outer fold fixed for both methods. Re-select epoch, land-cover mode and LR schedule from the same inner validation for asinh scaling.",
+  "selection": "Choose asinh only if its validation-ensemble peak score is lower than raw scaling and its validation full MAE is <=1.05 times the original inner_arcsinh_capped anchor. Otherwise use raw. Freeze per-fire choice before asinh refit. No outer test score is used.",
+  "refit": "Train asinh from scratch on all 15 outer-training fires using its inner-selected mode, best epoch budget and replayed LR schedule. Refit imputation, signal scales and standardization on all 15. Raw refits are reused unchanged.",
+  "caveat": "Conditional scaling comparison with previously selected loss choices; not a joint scaling/loss search. Repeated outer-fire evaluation is exploratory. Past satellite observations from the outer fire are prediction-time inputs; its labels never enter selection or fitting.",
+  "analysis_code_sha256": {
+    "src/compare_history_scaling.py": "4e1fa5c9451d24e47a1d3cf2110dff20a50e3ec380af6bdf4b01518c7b70d50c",
+    "tests/test_history_scaling.py": "06cc07d850cf72e09dd5ec473f4b4065ad2c824cfe208a7fad561c94d7dad465"
+  },
+  "completion": {
+    "status": "complete",
+    "held_out_fires": 16,
+    "seeds_per_fire": 3,
+    "shared_test_rows": 74581,
+    "inner_candidate_fits": 96,
+    "refit_fits": 48,
+    "new_seed_checkpoints": 96,
+    "regression_tests_passed": 18,
+    "all_verification_checks_passed": true,
+    "epoch_ceiling_candidates": 0,
+    "prediction_replay_fire": "August Complex",
+    "new_inner_validation_and_test_models": 3,
+    "new_refit_test_models": 3,
+    "cached_raw_refit_test_models": 3
+  },
+  "decision_sha256": {
+    "August Complex.json": "6af63c16f75cb9027eca55c68285968e953866c269381f4138f5fcf8aae01cd7",
+    "Camp Fire.json": "49dc39a3a4fee85461e557eb4785915079b7144e646ea5db482afe9c03290d06",
+    "Carr.json": "dbd42f77e601564f281feb7637bd3964120e52afca2a54c6e338728f7edac1b9",
+    "Cascade.json": "759c4c311fdaa7c72971859e4d4fc900211dba04670e4198bd42e58443daf629",
+    "Cherokee.json": "f771e7147b4e85c3e1a23471b45b700995425a638758e8131e5c8829e7404e4f",
+    "Dixie Fire.json": "0ab3bd3c7c956bf8c9e74f8a3e69fa36ee1dad5788e02076ada214326b38d67c",
+    "Fawn.json": "2dfde26ff2b37aa53c2c87bda80778e208b80cc9464c06f5b9a5dfdff50ef833",
+    "Gold.json": "c1b0014c5ace81c83daabb943f2c1c1f875a3889ded72f9504ee50b863251a7d",
+    "Hog.json": "aefae3abfe940950e6fb8115e5f2e9af54195f557ca9667655d4b4eb45da0a92",
+    "North Complex.json": "e6edbc1f90ecff608ba82c267435ac3075a5d15fcb4f1edd8ddf61c9b6911127",
+    "Red Bank.json": "aff9cfc58166769b375779be51f0c5fd873c3068ac0ce809c9c765b5a5ab16a9",
+    "Sheep.json": "d088450045ab23e69e05700da5082b496846545260836b2ac7e151bb222d1ebe",
+    "Sugar.json": "83035ee0421f1969b27aff5f37504f6653de933e0620661035b8c8596f370293",
+    "Walker.json": "a340e05c48505769d7bc59ae170636e61b58364af46f4b2da927ed4157a0d9cf",
+    "Whaleback.json": "0869498b5b62c9a24ed651e5e16d991515bbdecb1d9aebcc29f3a2a9e5e60f28",
+    "Zogg.json": "a134c9e65e2ccf1d39634c41c21526cb3f00fe03884640840a878bfbafd3e3db"
+  }
+}

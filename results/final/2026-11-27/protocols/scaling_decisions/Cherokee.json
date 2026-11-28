@@ -1,0 +1,26 @@
+{
+  "fire": "Cherokee",
+  "source_arm": "inner_peak_uncapped",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 1.0291936863846125,
+    "full": 14.68788195724979,
+    "first_month": 32.14419123471761,
+    "high_rows": 99.46557444611788,
+    "peak_days": 90.92439215790792
+  },
+  "raw_validation": {
+    "peak_score": 0.9843296231177173,
+    "full": 14.525481890305759,
+    "first_month": 30.687156201830984,
+    "high_rows": 94.12425652542294,
+    "peak_days": 84.16968665523893
+  },
+  "asinh_validation": {
+    "peak_score": 0.9792470318836967,
+    "full": 14.532524806274271,
+    "first_month": 30.428479415005377,
+    "high_rows": 92.98721211413016,
+    "peak_days": 83.85987912138957
+  }
+}

@@ -1,0 +1,418 @@
+{
+  "August Complex": {
+    "fire": "August Complex",
+    "source_arm": "inner_peak_weighted",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 0.8339202682585356,
+      "full": 13.511068299200836,
+      "first_month": 31.66548255636956,
+      "high_rows": 115.55605330658985,
+      "peak_days": 73.89912961088577
+    },
+    "raw_validation": {
+      "peak_score": 0.79083209088527,
+      "full": 13.80532043178834,
+      "first_month": 31.82087949741649,
+      "high_rows": 101.24538298591916,
+      "peak_days": 62.65418473828698
+    },
+    "asinh_validation": {
+      "peak_score": 0.7891391793833094,
+      "full": 13.834604702914199,
+      "first_month": 31.361537084903013,
+      "high_rows": 101.19766137212625,
+      "peak_days": 62.79478547519527
+    }
+  },
+  "Camp Fire": {
+    "fire": "Camp Fire",
+    "source_arm": "inner_peak_uncapped",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 0.7445878717006589,
+      "full": 13.286036109749967,
+      "first_month": 32.74652538018496,
+      "high_rows": 68.14095469397506,
+      "peak_days": 54.871448399681476
+    },
+    "raw_validation": {
+      "peak_score": 0.7157813007512656,
+      "full": 13.239723851623594,
+      "first_month": 30.728682960563326,
+      "high_rows": 64.8266656275045,
+      "peak_days": 50.701851541059156
+    },
+    "asinh_validation": {
+      "peak_score": 0.7155416033255898,
+      "full": 13.289064676551614,
+      "first_month": 30.750899514670927,
+      "high_rows": 64.85038725967475,
+      "peak_days": 50.052959866068306
+    }
+  },
+  "Carr": {
+    "fire": "Carr",
+    "source_arm": "inner_peak_weighted",
+    "selected_scaling": "raw",
+    "bulk_anchor": {
+      "peak_score": 0.9987395928179803,
+      "full": 16.223639793814506,
+      "first_month": 40.16209894535987,
+      "high_rows": 87.21090398831967,
+      "peak_days": 66.06963664319838
+    },
+    "raw_validation": {
+      "peak_score": 0.9436880301746183,
+      "full": 16.978458657740337,
+      "first_month": 39.671509387813046,
+      "high_rows": 76.35493552542273,
+      "peak_days": 47.38496751584975
+    },
+    "asinh_validation": {
+      "peak_score": 0.9439779638227016,
+      "full": 16.673061251996472,
+      "first_month": 40.158851449839716,
+      "high_rows": 76.23007860068535,
+      "peak_days": 49.330448683599045
+    }
+  },
+  "Cascade": {
+    "fire": "Cascade",
+    "source_arm": "inner_peak_capped",
+    "selected_scaling": "raw",
+    "bulk_anchor": {
+      "peak_score": 0.7688980144009957,
+      "full": 14.94838113606155,
+      "first_month": 24.13464770717519,
+      "high_rows": 104.34322014552117,
+      "peak_days": 66.64372968648397
+    },
+    "raw_validation": {
+      "peak_score": 0.6743219119847877,
+      "full": 12.662793715295074,
+      "first_month": 22.058327219420455,
+      "high_rows": 94.0095376161181,
+      "peak_days": 59.03574440174856
+    },
+    "asinh_validation": {
+      "peak_score": 0.6790408146192581,
+      "full": 12.697631843747978,
+      "first_month": 22.25635577704338,
+      "high_rows": 95.73171881021204,
+      "peak_days": 59.0521175543503
+    }
+  },
+  "Cherokee": {
+    "fire": "Cherokee",
+    "source_arm": "inner_peak_uncapped",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 1.0291936863846125,
+      "full": 14.68788195724979,
+      "first_month": 32.14419123471761,
+      "high_rows": 99.46557444611788,
+      "peak_days": 90.92439215790792
+    },
+    "raw_validation": {
+      "peak_score": 0.9843296231177173,
+      "full": 14.525481890305759,
+      "first_month": 30.687156201830984,
+      "high_rows": 94.12425652542294,
+      "peak_days": 84.16968665523893
+    },
+    "asinh_validation": {
+      "peak_score": 0.9792470318836967,
+      "full": 14.532524806274271,
+      "first_month": 30.428479415005377,
+      "high_rows": 92.98721211413016,
+      "peak_days": 83.85987912138957
+    }
+  },
+  "Dixie Fire": {
+    "fire": "Dixie Fire",
+    "source_arm": "inner_peak_uncapped",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 1.0127546774054632,
+      "full": 15.451516460899647,
+      "first_month": 35.112842355246684,
+      "high_rows": 76.42823051216784,
+      "peak_days": 69.51342715285092
+    },
+    "raw_validation": {
+      "peak_score": 0.9592016618281094,
+      "full": 15.13738359871529,
+      "first_month": 34.21465647309552,
+      "high_rows": 71.18068982876886,
+      "peak_days": 59.65004398737424
+    },
+    "asinh_validation": {
+      "peak_score": 0.9513769363772409,
+      "full": 14.822485976747792,
+      "first_month": 33.82244297516349,
+      "high_rows": 71.4979544132823,
+      "peak_days": 60.412118269802725
+    }
+  },
+  "Fawn": {
+    "fire": "Fawn",
+    "source_arm": "inner_peak_uncapped",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 0.8226469570526382,
+      "full": 16.439963986509444,
+      "first_month": 31.459589810507353,
+      "high_rows": 67.52603355312198,
+      "peak_days": 48.55717958411705
+    },
+    "raw_validation": {
+      "peak_score": 0.8012050312312012,
+      "full": 16.148155325986952,
+      "first_month": 29.693670744476414,
+      "high_rows": 65.92699494429135,
+      "peak_days": 47.87856052269936
+    },
+    "asinh_validation": {
+      "peak_score": 0.7959890804377352,
+      "full": 15.851637387815302,
+      "first_month": 29.441635306830385,
+      "high_rows": 66.40453507168317,
+      "peak_days": 48.861920614461695
+    }
+  },
+  "Gold": {
+    "fire": "Gold",
+    "source_arm": "inner_peak_uncapped",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 0.8443759459265648,
+      "full": 16.50162734041592,
+      "first_month": 31.465394776235332,
+      "high_rows": 68.55807505400439,
+      "peak_days": 50.618426383835995
+    },
+    "raw_validation": {
+      "peak_score": 0.8245537733393621,
+      "full": 16.153187614641666,
+      "first_month": 30.33470889065001,
+      "high_rows": 67.35560027077464,
+      "peak_days": 49.49348645988434
+    },
+    "asinh_validation": {
+      "peak_score": 0.8174427571199743,
+      "full": 16.095384812525175,
+      "first_month": 29.641414083513656,
+      "high_rows": 66.3704369738542,
+      "peak_days": 49.60379846539861
+    }
+  },
+  "Hog": {
+    "fire": "Hog",
+    "source_arm": "inner_peak_uncapped",
+    "selected_scaling": "raw",
+    "bulk_anchor": {
+      "peak_score": 0.7451921019717334,
+      "full": 12.054718817212851,
+      "first_month": 24.47768895582683,
+      "high_rows": 113.42846157319124,
+      "peak_days": 80.92377554998762
+    },
+    "raw_validation": {
+      "peak_score": 0.669980532406469,
+      "full": 10.720100889519955,
+      "first_month": 22.43189863876038,
+      "high_rows": 102.68594966784245,
+      "peak_days": 72.39275323157514
+    },
+    "asinh_validation": {
+      "peak_score": 0.6706194525280176,
+      "full": 10.77695540774209,
+      "first_month": 22.906355835541532,
+      "high_rows": 101.59065700316917,
+      "peak_days": 71.94214772484096
+    }
+  },
+  "North Complex": {
+    "fire": "North Complex",
+    "source_arm": "inner_peak_uncapped",
+    "selected_scaling": "raw",
+    "bulk_anchor": {
+      "peak_score": 1.1844981707316835,
+      "full": 15.826269130902551,
+      "first_month": 32.635632701988115,
+      "high_rows": 99.20307142267879,
+      "peak_days": 107.89427963973174
+    },
+    "raw_validation": {
+      "peak_score": 1.138304539637863,
+      "full": 15.548170791105019,
+      "first_month": 32.052617254793304,
+      "high_rows": 94.3195085383081,
+      "peak_days": 100.46028200390668
+    },
+    "asinh_validation": {
+      "peak_score": 1.1437595067986406,
+      "full": 15.597660350719705,
+      "first_month": 31.57252097489703,
+      "high_rows": 94.80312528106792,
+      "peak_days": 102.37063658400344
+    }
+  },
+  "Red Bank": {
+    "fire": "Red Bank",
+    "source_arm": "inner_peak_weighted",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 1.0676155068773616,
+      "full": 15.082855243041912,
+      "first_month": 36.0141164125003,
+      "high_rows": 135.78886505363974,
+      "peak_days": 89.5535763151335
+    },
+    "raw_validation": {
+      "peak_score": 0.921619032885474,
+      "full": 13.929967944334912,
+      "first_month": 36.03803073962477,
+      "high_rows": 109.66081432461289,
+      "peak_days": 66.71015781462057
+    },
+    "asinh_validation": {
+      "peak_score": 0.9208363179641368,
+      "full": 13.997382444001566,
+      "first_month": 37.27147688074591,
+      "high_rows": 108.43524274883137,
+      "peak_days": 64.53451517597219
+    }
+  },
+  "Sheep": {
+    "fire": "Sheep",
+    "source_arm": "inner_peak_weighted",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 0.7323710822404148,
+      "full": 11.638329849862368,
+      "first_month": 29.241824020352723,
+      "high_rows": 79.68314296848754,
+      "peak_days": 71.33572732093909
+    },
+    "raw_validation": {
+      "peak_score": 0.6940026681663907,
+      "full": 11.77752026513872,
+      "first_month": 29.149140916157798,
+      "high_rows": 69.70428787019796,
+      "peak_days": 62.19886139867901
+    },
+    "asinh_validation": {
+      "peak_score": 0.6906042471277356,
+      "full": 11.957270855126179,
+      "first_month": 28.416531345802582,
+      "high_rows": 69.14905225819362,
+      "peak_days": 61.17923351589664
+    }
+  },
+  "Sugar": {
+    "fire": "Sugar",
+    "source_arm": "inner_peak_uncapped",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 1.1065904701981175,
+      "full": 17.007430765225067,
+      "first_month": 38.812625003387794,
+      "high_rows": 88.97315122587227,
+      "peak_days": 63.90763053604421
+    },
+    "raw_validation": {
+      "peak_score": 1.055027525010944,
+      "full": 16.392212532085125,
+      "first_month": 37.399313719274254,
+      "high_rows": 84.05580595980766,
+      "peak_days": 58.89403520296314
+    },
+    "asinh_validation": {
+      "peak_score": 1.0467933313948026,
+      "full": 16.260415228540808,
+      "first_month": 36.713220109923704,
+      "high_rows": 84.1030467937465,
+      "peak_days": 58.78004344069137
+    }
+  },
+  "Walker": {
+    "fire": "Walker",
+    "source_arm": "inner_peak_weighted",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 1.0090563053788524,
+      "full": 12.874127929007003,
+      "first_month": 19.155847133460338,
+      "high_rows": 142.2506781529891,
+      "peak_days": 137.9126129857666
+    },
+    "raw_validation": {
+      "peak_score": 0.9445043855855805,
+      "full": 12.544270353028502,
+      "first_month": 20.28175949738921,
+      "high_rows": 128.66458848220373,
+      "peak_days": 123.70661389043292
+    },
+    "asinh_validation": {
+      "peak_score": 0.941996577067381,
+      "full": 12.807675715923788,
+      "first_month": 23.129153162191827,
+      "high_rows": 123.0954537763895,
+      "peak_days": 119.16234299495918
+    }
+  },
+  "Whaleback": {
+    "fire": "Whaleback",
+    "source_arm": "inner_peak_uncapped",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 1.3640101383820236,
+      "full": 15.877199516363774,
+      "first_month": 40.293091383004274,
+      "high_rows": 125.32334772283787,
+      "peak_days": 150.21229852062254
+    },
+    "raw_validation": {
+      "peak_score": 1.3106363086469692,
+      "full": 15.667983425903003,
+      "first_month": 38.82622385343045,
+      "high_rows": 119.32770842045076,
+      "peak_days": 141.59703501368958
+    },
+    "asinh_validation": {
+      "peak_score": 1.3084720611728418,
+      "full": 15.654420514986557,
+      "first_month": 38.47352829561379,
+      "high_rows": 118.9418045094616,
+      "peak_days": 142.02125151362114
+    }
+  },
+  "Zogg": {
+    "fire": "Zogg",
+    "source_arm": "inner_peak_weighted",
+    "selected_scaling": "asinh",
+    "bulk_anchor": {
+      "peak_score": 1.2713715238645749,
+      "full": 13.013983615955595,
+      "first_month": 32.49598550082386,
+      "high_rows": 176.2534220444307,
+      "peak_days": 160.77526731634185
+    },
+    "raw_validation": {
+      "peak_score": 1.1508947430825558,
+      "full": 13.094189295543826,
+      "first_month": 34.505672542017514,
+      "high_rows": 149.636395391551,
+      "peak_days": 133.9199452005499
+    },
+    "asinh_validation": {
+      "peak_score": 1.1410553141168416,
+      "full": 13.375510761275667,
+      "first_month": 32.641368895769475,
+      "high_rows": 148.5308744477434,
+      "peak_days": 132.531215413165
+    }
+  }
+}

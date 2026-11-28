@@ -1,0 +1,26 @@
+{
+  "fire": "Camp Fire",
+  "source_arm": "inner_peak_uncapped",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 0.7445878717006589,
+    "full": 13.286036109749967,
+    "first_month": 32.74652538018496,
+    "high_rows": 68.14095469397506,
+    "peak_days": 54.871448399681476
+  },
+  "raw_validation": {
+    "peak_score": 0.7157813007512656,
+    "full": 13.239723851623594,
+    "first_month": 30.728682960563326,
+    "high_rows": 64.8266656275045,
+    "peak_days": 50.701851541059156
+  },
+  "asinh_validation": {
+    "peak_score": 0.7155416033255898,
+    "full": 13.289064676551614,
+    "first_month": 30.750899514670927,
+    "high_rows": 64.85038725967475,
+    "peak_days": 50.052959866068306
+  }
+}

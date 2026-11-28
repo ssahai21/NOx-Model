@@ -1,0 +1,10 @@
+{
+  "fire": "August Complex",
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "partition": "validation only",
+  "passed": true
+}

@@ -1,0 +1,82 @@
+{
+  "August Complex": {
+    "high_flux_row": 41.79089425939864,
+    "extreme_flux_row": 221.78726757546428,
+    "peak_day_mean": 32.107985645644916
+  },
+  "Camp Fire": {
+    "high_flux_row": 37.734099169168715,
+    "extreme_flux_row": 201.89993351924858,
+    "peak_day_mean": 31.890295096064726
+  },
+  "Carr": {
+    "high_flux_row": 37.64551855676858,
+    "extreme_flux_row": 199.20830884171147,
+    "peak_day_mean": 31.360264469819068
+  },
+  "Cascade": {
+    "high_flux_row": 37.86867619645045,
+    "extreme_flux_row": 194.6657973311559,
+    "peak_day_mean": 31.29901096789732
+  },
+  "Cherokee": {
+    "high_flux_row": 37.87316621917663,
+    "extreme_flux_row": 194.6657973311559,
+    "peak_day_mean": 31.29901096789732
+  },
+  "Dixie Fire": {
+    "high_flux_row": 32.852809850607294,
+    "extreme_flux_row": 126.7856321233008,
+    "peak_day_mean": 30.355559336979308
+  },
+  "Fawn": {
+    "high_flux_row": 37.957560606823435,
+    "extreme_flux_row": 194.9479552852907,
+    "peak_day_mean": 31.934218354572607
+  },
+  "Gold": {
+    "high_flux_row": 38.26087311156218,
+    "extreme_flux_row": 196.67993728897673,
+    "peak_day_mean": 32.55870588445482
+  },
+  "Hog": {
+    "high_flux_row": 38.07854227470091,
+    "extreme_flux_row": 194.84284224784068,
+    "peak_day_mean": 32.55870588445482
+  },
+  "North Complex": {
+    "high_flux_row": 38.29352736537153,
+    "extreme_flux_row": 203.5408223464363,
+    "peak_day_mean": 32.13021113900198
+  },
+  "Red Bank": {
+    "high_flux_row": 38.0932430595734,
+    "extreme_flux_row": 195.52743418811647,
+    "peak_day_mean": 32.78392219036348
+  },
+  "Sheep": {
+    "high_flux_row": 38.296320435052074,
+    "extreme_flux_row": 196.84606137112993,
+    "peak_day_mean": 32.45429822432911
+  },
+  "Sugar": {
+    "high_flux_row": 37.64370659102713,
+    "extreme_flux_row": 179.12250212511628,
+    "peak_day_mean": 31.34790142115134
+  },
+  "Walker": {
+    "high_flux_row": 38.49777319515391,
+    "extreme_flux_row": 196.53993111183902,
+    "peak_day_mean": 32.63625481352262
+  },
+  "Whaleback": {
+    "high_flux_row": 38.26236136183665,
+    "extreme_flux_row": 196.2396617424484,
+    "peak_day_mean": 32.79997971875527
+  },
+  "Zogg": {
+    "high_flux_row": 38.66273024267245,
+    "extreme_flux_row": 199.17483606219875,
+    "peak_day_mean": 32.879463029636035
+  }
+}

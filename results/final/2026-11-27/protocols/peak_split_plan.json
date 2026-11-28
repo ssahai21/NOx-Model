@@ -1,0 +1,1202 @@
+[
+  {
+    "fire": "August Complex",
+    "rows": [
+      36830,
+      16061,
+      21690
+    ],
+    "train_fires": [
+      "Camp Fire",
+      "Cascade",
+      "Cherokee",
+      "Dixie Fire",
+      "Fawn",
+      "Gold",
+      "Hog",
+      "Red Bank",
+      "Sheep",
+      "Sugar",
+      "Walker",
+      "Whaleback"
+    ],
+    "validation_fires": [
+      "Carr",
+      "North Complex",
+      "Zogg"
+    ],
+    "training_statistics": {
+      "p1": -87.11395547159825,
+      "p99": 219.32216726519516,
+      "high_threshold": 40.83129171194189,
+      "peak_threshold": 31.300235252619853,
+      "scales": {
+        "full": 18.639633357218685,
+        "first_month": 35.97391823702985,
+        "high_rows": 114.44407497389143,
+        "peak_days": 89.04189985359493
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 36830,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 2974,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 1842,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 157,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 16061,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1450,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 601,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 47,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Camp Fire",
+    "rows": [
+      56064,
+      14344,
+      4173
+    ],
+    "train_fires": [
+      "August Complex",
+      "Cascade",
+      "Cherokee",
+      "Dixie Fire",
+      "Gold",
+      "Hog",
+      "Red Bank",
+      "Sheep",
+      "Sugar",
+      "Walker",
+      "Whaleback",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "Carr",
+      "Fawn",
+      "North Complex"
+    ],
+    "training_statistics": {
+      "p1": -78.04661651811728,
+      "p99": 176.60724479074656,
+      "high_threshold": 34.81610673717056,
+      "peak_threshold": 30.47267410129297,
+      "scales": {
+        "full": 18.027947006678257,
+        "first_month": 35.22594872493013,
+        "high_rows": 99.94800380674545,
+        "peak_days": 86.05614652555899
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 56064,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 4234,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2804,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 159,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 14344,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1299,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 813,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 56,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Carr",
+    "rows": [
+      56292,
+      12943,
+      5346
+    ],
+    "train_fires": [
+      "August Complex",
+      "Camp Fire",
+      "Cascade",
+      "Cherokee",
+      "Dixie Fire",
+      "Fawn",
+      "Hog",
+      "Red Bank",
+      "Sheep",
+      "Walker",
+      "Whaleback",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "Gold",
+      "North Complex",
+      "Sugar"
+    ],
+    "training_statistics": {
+      "p1": -77.26956038701127,
+      "p99": 160.00409435789572,
+      "high_threshold": 34.925617111657296,
+      "peak_threshold": 30.4782000069616,
+      "scales": {
+        "full": 16.610937019734752,
+        "first_month": 31.665663257636332,
+        "high_rows": 91.75478507683053,
+        "peak_days": 80.4222236738542
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 56292,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 4123,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2815,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 158,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 12943,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1183,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 739,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 54,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Cascade",
+    "rows": [
+      50624,
+      23776,
+      181
+    ],
+    "train_fires": [
+      "Camp Fire",
+      "Carr",
+      "Cherokee",
+      "Dixie Fire",
+      "Fawn",
+      "Gold",
+      "Hog",
+      "North Complex",
+      "Red Bank",
+      "Sugar",
+      "Walker",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "August Complex",
+      "Sheep",
+      "Whaleback"
+    ],
+    "training_statistics": {
+      "p1": -88.06629305405899,
+      "p99": 188.25265771478297,
+      "high_threshold": 39.42156375971978,
+      "peak_threshold": 31.505960771495687,
+      "scales": {
+        "full": 17.935479317423514,
+        "first_month": 39.252526225791684,
+        "high_rows": 118.79939857929337,
+        "peak_days": 97.37348096771129
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 50624,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 4243,
+          "fires": 11
+        },
+        "high_rows": {
+          "rows": 2532,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 169,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 23776,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1528,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 609,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 33,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Cherokee",
+    "rows": [
+      51398,
+      23004,
+      179
+    ],
+    "train_fires": [
+      "August Complex",
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Gold",
+      "Hog",
+      "North Complex",
+      "Sheep",
+      "Sugar",
+      "Walker",
+      "Whaleback",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "Dixie Fire",
+      "Fawn",
+      "Red Bank"
+    ],
+    "training_statistics": {
+      "p1": -69.65771323305525,
+      "p99": 103.94137740430965,
+      "high_threshold": 32.29752231132818,
+      "peak_threshold": 30.059305778848604,
+      "scales": {
+        "full": 17.55094299257832,
+        "first_month": 36.006204687603244,
+        "high_rows": 77.9261346138872,
+        "peak_days": 69.77668904184264
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 51398,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 3856,
+          "fires": 11
+        },
+        "high_rows": {
+          "rows": 2570,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 168,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 23004,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1915,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 1835,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 66,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Dixie Fire",
+    "rows": [
+      41593,
+      11116,
+      21872
+    ],
+    "train_fires": [
+      "August Complex",
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Fawn",
+      "Gold",
+      "Red Bank",
+      "Sheep",
+      "Sugar",
+      "Whaleback",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "Hog",
+      "North Complex",
+      "Walker"
+    ],
+    "training_statistics": {
+      "p1": -56.45382207216713,
+      "p99": 104.46953217153914,
+      "high_threshold": 31.653987275674744,
+      "peak_threshold": 30.40201627207395,
+      "scales": {
+        "full": 15.582501174399422,
+        "first_month": 30.61354469859371,
+        "high_rows": 73.3964469061163,
+        "peak_days": 77.90300532508564
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 41593,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 2939,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2080,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 156,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 11116,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1023,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 685,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 40,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Fawn",
+    "rows": [
+      50864,
+      23145,
+      572
+    ],
+    "train_fires": [
+      "August Complex",
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Gold",
+      "North Complex",
+      "Red Bank",
+      "Sheep",
+      "Sugar",
+      "Walker",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "Dixie Fire",
+      "Hog",
+      "Whaleback"
+    ],
+    "training_statistics": {
+      "p1": -67.86198934651776,
+      "p99": 105.59516625497896,
+      "high_threshold": 32.56766531948413,
+      "peak_threshold": 31.201692043536156,
+      "scales": {
+        "full": 16.584849168884507,
+        "first_month": 38.16680040128654,
+        "high_rows": 87.45729223268013,
+        "peak_days": 90.87353125468691
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 50864,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 3795,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2544,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 160,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 23145,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1925,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 1786,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 46,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Gold",
+    "rows": [
+      50415,
+      23145,
+      1021
+    ],
+    "train_fires": [
+      "August Complex",
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Fawn",
+      "North Complex",
+      "Red Bank",
+      "Sheep",
+      "Sugar",
+      "Walker",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "Dixie Fire",
+      "Hog",
+      "Whaleback"
+    ],
+    "training_statistics": {
+      "p1": -65.93117722483083,
+      "p99": 106.68697810104513,
+      "high_threshold": 32.73531643144034,
+      "peak_threshold": 31.67745731027281,
+      "scales": {
+        "full": 15.7116974566584,
+        "first_month": 38.28145254742108,
+        "high_rows": 87.82595052712723,
+        "peak_days": 97.57489465010633
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 50415,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 3755,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2521,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 161,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 23145,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1925,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 1777,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 44,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Hog",
+    "rows": [
+      49495,
+      24551,
+      535
+    ],
+    "train_fires": [
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Dixie Fire",
+      "Gold",
+      "North Complex",
+      "Red Bank",
+      "Sheep",
+      "Sugar",
+      "Walker",
+      "Whaleback"
+    ],
+    "validation_fires": [
+      "August Complex",
+      "Fawn",
+      "Zogg"
+    ],
+    "training_statistics": {
+      "p1": -88.5329706539463,
+      "p99": 189.58894588221463,
+      "high_threshold": 39.90694091111572,
+      "peak_threshold": 32.72545931235755,
+      "scales": {
+        "full": 18.78343220732109,
+        "first_month": 41.319247992594015,
+        "high_rows": 114.76237958352893,
+        "peak_days": 93.91921337381785
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 49495,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 4114,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2475,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 159,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 24551,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1600,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 607,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 33,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "North Complex",
+    "rows": [
+      43188,
+      22967,
+      8426
+    ],
+    "train_fires": [
+      "August Complex",
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Fawn",
+      "Gold",
+      "Sheep",
+      "Sugar",
+      "Walker",
+      "Whaleback",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "Dixie Fire",
+      "Hog",
+      "Red Bank"
+    ],
+    "training_statistics": {
+      "p1": -57.61448346541735,
+      "p99": 103.71705110659778,
+      "high_threshold": 31.433965018257105,
+      "peak_threshold": 30.360575418401606,
+      "scales": {
+        "full": 16.128016015712802,
+        "first_month": 34.34930905871691,
+        "high_rows": 70.02823794251789,
+        "peak_days": 67.7224120424745
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 43188,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 3067,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2160,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 157,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 22967,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1921,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 1892,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 52,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Red Bank",
+    "rows": [
+      48828,
+      25193,
+      560
+    ],
+    "train_fires": [
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Dixie Fire",
+      "Fawn",
+      "Gold",
+      "Hog",
+      "North Complex",
+      "Sugar",
+      "Whaleback",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "August Complex",
+      "Sheep",
+      "Walker"
+    ],
+    "training_statistics": {
+      "p1": -89.21687920693614,
+      "p99": 189.65683442633215,
+      "high_threshold": 39.910439272899346,
+      "peak_threshold": 32.682592068646336,
+      "scales": {
+        "full": 18.15290539533163,
+        "first_month": 37.68999726540785,
+        "high_rows": 94.10282610454782,
+        "peak_days": 70.08408581025182
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 48828,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 4064,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2442,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 157,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 25193,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1652,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 638,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 38,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Sheep",
+    "rows": [
+      61425,
+      11808,
+      1348
+    ],
+    "train_fires": [
+      "August Complex",
+      "Cascade",
+      "Cherokee",
+      "Dixie Fire",
+      "Fawn",
+      "Gold",
+      "Hog",
+      "North Complex",
+      "Red Bank",
+      "Sugar",
+      "Walker",
+      "Whaleback"
+    ],
+    "validation_fires": [
+      "Camp Fire",
+      "Carr",
+      "Zogg"
+    ],
+    "training_statistics": {
+      "p1": -83.42028964323072,
+      "p99": 167.39974791612,
+      "high_threshold": 35.696263533404874,
+      "peak_threshold": 31.2981947780823,
+      "scales": {
+        "full": 18.321593753096156,
+        "first_month": 37.67304724711312,
+        "high_rows": 98.60839182219686,
+        "peak_days": 88.38205462435826
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 61425,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 4744,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 3072,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 160,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 11808,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 905,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 563,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 39,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Sugar",
+    "rows": [
+      46320,
+      24765,
+      3496
+    ],
+    "train_fires": [
+      "August Complex",
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Fawn",
+      "Gold",
+      "Hog",
+      "North Complex",
+      "Red Bank",
+      "Sheep",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "Dixie Fire",
+      "Walker",
+      "Whaleback"
+    ],
+    "training_statistics": {
+      "p1": -69.77232498974693,
+      "p99": 95.89523994031754,
+      "high_threshold": 32.31647409667889,
+      "peak_threshold": 30.821020329647506,
+      "scales": {
+        "full": 15.552251921522886,
+        "first_month": 29.293242651069157,
+        "high_rows": 73.44192806467265,
+        "peak_days": 78.95939086778426
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 46320,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 3411,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2316,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 157,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 24765,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 2051,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 1850,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 46,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Walker",
+    "rows": [
+      49438,
+      22988,
+      2155
+    ],
+    "train_fires": [
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Dixie Fire",
+      "Fawn",
+      "Gold",
+      "Hog",
+      "North Complex",
+      "Sheep",
+      "Sugar",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "August Complex",
+      "Red Bank",
+      "Whaleback"
+    ],
+    "training_statistics": {
+      "p1": -88.663224192773,
+      "p99": 190.18597386840145,
+      "high_threshold": 40.04126610484757,
+      "peak_threshold": 33.48391173449966,
+      "scales": {
+        "full": 18.30687782538909,
+        "first_month": 39.89401508487529,
+        "high_rows": 102.41177079811176,
+        "peak_days": 77.93319506884018
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 49438,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 4127,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2472,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 159,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 22988,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1461,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 557,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 20,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Whaleback",
+    "rows": [
+      49256,
+      24587,
+      738
+    ],
+    "train_fires": [
+      "August Complex",
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Fawn",
+      "Gold",
+      "Hog",
+      "North Complex",
+      "Sheep",
+      "Sugar",
+      "Zogg"
+    ],
+    "validation_fires": [
+      "Dixie Fire",
+      "Red Bank",
+      "Walker"
+    ],
+    "training_statistics": {
+      "p1": -69.31475968023895,
+      "p99": 106.43212776366414,
+      "high_threshold": 32.86285810197271,
+      "peak_threshold": 32.49762022458205,
+      "scales": {
+        "full": 16.584115098305634,
+        "first_month": 35.873373275951145,
+        "high_rows": 73.72521504583914,
+        "peak_days": 72.14015654421227
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 49256,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 3665,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2463,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 159,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 24587,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 2047,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 1819,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 44,
+        "fires": 3
+      }
+    }
+  },
+  {
+    "fire": "Zogg",
+    "rows": [
+      47887,
+      24405,
+      2289
+    ],
+    "train_fires": [
+      "Camp Fire",
+      "Carr",
+      "Cascade",
+      "Cherokee",
+      "Dixie Fire",
+      "Fawn",
+      "Gold",
+      "Hog",
+      "North Complex",
+      "Sheep",
+      "Sugar",
+      "Whaleback"
+    ],
+    "validation_fires": [
+      "August Complex",
+      "Red Bank",
+      "Walker"
+    ],
+    "training_statistics": {
+      "p1": -89.50984773334574,
+      "p99": 190.99504102006787,
+      "high_threshold": 40.42654613307286,
+      "peak_threshold": 33.23973239183689,
+      "scales": {
+        "full": 18.83437352952123,
+        "first_month": 39.096101156012104,
+        "high_rows": 94.59640894035067,
+        "peak_days": 70.499358161555
+      },
+      "training_coverage": {
+        "full": {
+          "rows": 47887,
+          "fires": 12
+        },
+        "first_month": {
+          "rows": 3984,
+          "fires": 10
+        },
+        "high_rows": {
+          "rows": 2395,
+          "fires": 12
+        },
+        "peak_days": {
+          "days": 157,
+          "fires": 12
+        }
+      }
+    },
+    "validation_coverage": {
+      "full": {
+        "rows": 24405,
+        "fires": 3
+      },
+      "first_month": {
+        "rows": 1585,
+        "fires": 3
+      },
+      "high_rows": {
+        "rows": 595,
+        "fires": 3
+      },
+      "peak_days": {
+        "days": 25,
+        "fires": 3
+      }
+    }
+  }
+]

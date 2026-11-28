@@ -1,0 +1,26 @@
+{
+  "fire": "Hog",
+  "source_arm": "inner_peak_uncapped",
+  "selected_scaling": "raw",
+  "bulk_anchor": {
+    "peak_score": 0.7451921019717334,
+    "full": 12.054718817212851,
+    "first_month": 24.47768895582683,
+    "high_rows": 113.42846157319124,
+    "peak_days": 80.92377554998762
+  },
+  "raw_validation": {
+    "peak_score": 0.669980532406469,
+    "full": 10.720100889519955,
+    "first_month": 22.43189863876038,
+    "high_rows": 102.68594966784245,
+    "peak_days": 72.39275323157514
+  },
+  "asinh_validation": {
+    "peak_score": 0.6706194525280176,
+    "full": 10.77695540774209,
+    "first_month": 22.906355835541532,
+    "high_rows": 101.59065700316917,
+    "peak_days": 71.94214772484096
+  }
+}

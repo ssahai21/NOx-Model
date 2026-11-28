@@ -1,0 +1,26 @@
+{
+  "fire": "August Complex",
+  "source_arm": "inner_peak_weighted",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 0.8339202682585356,
+    "full": 13.511068299200836,
+    "first_month": 31.66548255636956,
+    "high_rows": 115.55605330658985,
+    "peak_days": 73.89912961088577
+  },
+  "raw_validation": {
+    "peak_score": 0.79083209088527,
+    "full": 13.80532043178834,
+    "first_month": 31.82087949741649,
+    "high_rows": 101.24538298591916,
+    "peak_days": 62.65418473828698
+  },
+  "asinh_validation": {
+    "peak_score": 0.7891391793833094,
+    "full": 13.834604702914199,
+    "first_month": 31.361537084903013,
+    "high_rows": 101.19766137212625,
+    "peak_days": 62.79478547519527
+  }
+}

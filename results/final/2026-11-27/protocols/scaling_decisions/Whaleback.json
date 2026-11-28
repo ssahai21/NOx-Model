@@ -1,0 +1,26 @@
+{
+  "fire": "Whaleback",
+  "source_arm": "inner_peak_uncapped",
+  "selected_scaling": "asinh",
+  "bulk_anchor": {
+    "peak_score": 1.3640101383820236,
+    "full": 15.877199516363774,
+    "first_month": 40.293091383004274,
+    "high_rows": 125.32334772283787,
+    "peak_days": 150.21229852062254
+  },
+  "raw_validation": {
+    "peak_score": 1.3106363086469692,
+    "full": 15.667983425903003,
+    "first_month": 38.82622385343045,
+    "high_rows": 119.32770842045076,
+    "peak_days": 141.59703501368958
+  },
+  "asinh_validation": {
+    "peak_score": 1.3084720611728418,
+    "full": 15.654420514986557,
+    "first_month": 38.47352829561379,
+    "high_rows": 118.9418045094616,
+    "peak_days": 142.02125151362114
+  }
+}
